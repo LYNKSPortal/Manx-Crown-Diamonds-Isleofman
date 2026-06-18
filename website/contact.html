@@ -6,7 +6,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Montserrat', sans-serif; }
+        body { font-family: 'Montserrat', sans-serif; background: #fff; }
         .top-bar { background: #0A0A0A; color: #F8F6F0; padding: 12px 40px; font-size: 13px; display: flex; justify-content: space-between; align-items: center; }
         .top-bar a { white-space: nowrap; color: #F8F6F0; text-decoration: none; margin-right: 20px; }
         .logo-image { height: 60px; }
@@ -76,6 +76,16 @@
         .mobile-nav a { display: block; font-size: 24px; font-family: 'Cormorant Garamond', serif; color: #2B2D42; padding: 14px 0; border-bottom: 1px solid rgba(0,0,0,0.06); text-decoration: none; transition: color 0.2s; }
         .mobile-nav a:hover { color: #C9A961; }
         @media (max-width: 1024px) { nav { display: none; } .mobile-menu-btn { display: block; } }
+        @media (max-width: 768px) {
+            .top-bar { padding: 8px 16px; align-items: flex-start; justify-content: space-between; font-size: 11px; }
+            .top-bar > div:first-child { display: flex; flex-direction: column; gap: 2px; }
+            .top-bar > div:last-child { text-align: right; padding-left: 10px; max-width: 45%; }
+            .top-bar a { margin-right: 0; white-space: nowrap; }
+            .content { margin: 50px auto; padding: 0 20px; }
+            .content-heading { font-size: 32px; }
+            .content-intro { font-size: 14px; }
+            .btn { display: block; width: 100%; margin-right: 0; margin-bottom: 12px; text-align: center; box-sizing: border-box; }
+        }
     </style>
 </head>
 <body>
@@ -117,6 +127,21 @@
             </div>
         </div>
     </header>
+    <div class="mobile-nav" id="mobileNav">
+        <div class="mobile-nav-top">
+            <img src="../images/logo-mcd.jpg" alt="Manx Crown Diamonds" style="height:40px;">
+            <button class="mobile-nav-close" onclick="closeMobileNav()">&#10005;</button>
+        </div>
+        <a href="../index.html">Home</a>
+        <a href="../diamond-rings.html">Rings</a>
+        <a href="earrings.html">Earrings</a>
+        <a href="bracelets.html">Bracelets</a>
+        <a href="necklaces.html">Necklaces</a>
+        <a href="../watches.html">Watches</a>
+        <a href="../bespoke-request.html">Bespoke</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+    </div>
     <script>function openMobileNav(){document.getElementById("mobileNav").classList.add("open");}
     function closeMobileNav(){document.getElementById('mobileNav').classList.remove('open');}</script>
     <div class="page-header">
@@ -130,9 +155,9 @@
         <h2 class="content-heading">Begin Your Journey</h2>
         <p class="content-intro">Whether you're looking for the perfect engagement ring, a bespoke piece, or simply want to learn more about our services, we're here to help.</p>
 
-        <div style="margin-bottom: 60px;">
-            <a href="../bespoke-request.html" class="btn">Enquire Now</a>
-            <button onclick="document.getElementById('phoneModal').classList.add('open')" class="btn btn-outline">Call Now</button>
+        <div style="margin-bottom: 60px; display: flex; flex-direction: column; gap: 12px; max-width: 300px;">
+            <a href="../bespoke-request.html" class="btn" style="margin-right:0; text-align:center;">Enquire Now</a>
+            <button onclick="document.getElementById('phoneModal').classList.add('open')" class="btn btn-outline" style="width:100%;">Call Now</button>
         </div>
 
         <div class="contact-divider"></div>
