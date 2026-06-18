@@ -2,6 +2,7 @@
 <html>
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shopping Cart - Manx Crown Diamonds</title>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
     <style>
@@ -35,7 +36,15 @@
         .btn-outline { background: transparent; border: 2px solid #C9A961; color: #C9A961; }
         .empty-cart { text-align: center; padding: 100px 40px; }
         footer { background: #0A0A0A; color: white; padding: 40px; text-align: center; }
-    </style>
+    
+        @media (max-width: 768px) {
+            .top-bar { padding: 8px 16px; align-items: flex-start; justify-content: space-between; font-size: 11px; }
+            .top-bar > div:first-child { display: flex; flex-direction: column; gap: 2px; }
+            .top-bar > div:last-child { text-align: right; padding-left: 10px; max-width: 45%; }
+            .top-bar a { margin-right: 0; white-space: nowrap; }
+        }
+        /* mobile-top-bar-fix */
+</style>
 </head>
 <body>
         <div class="top-bar">
