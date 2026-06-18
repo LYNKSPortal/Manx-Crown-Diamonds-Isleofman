@@ -1,0 +1,12 @@
+# Internal docs — never publish these
+*.txt
+*.docx
+*.py
+*.md
+README*
+checkout-stripe.html
+checkout-working.html
+footer-snippet.html
+cancel.html
+website/
+.claude/

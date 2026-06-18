@@ -1,0 +1,96 @@
+# Manx Crown Diamonds Website - WORKING VERSION
+
+## ✅ THIS VERSION WORKS!
+
+All files are self-contained and will work when you open them.
+
+## 📁 Files Included:
+
+- **index.html** - Home page (START HERE)
+- **collections.html** - View all collections
+- **rings.html** - Rings collection
+- **necklaces.html** - Necklaces collection  
+- **earrings.html** - Earrings collection
+- **bracelets.html** - Bracelets collection
+- **cart.html** - Shopping cart
+- **about.html** - About page
+- **services.html** - Services page
+- **contact.html** - Contact page
+- **logo.jpeg** - Your logo
+
+## 🚀 How to Use:
+
+### To Test Locally:
+1. Download ALL files to one folder
+2. Double-click **index.html**
+3. Click through the navigation!
+
+### To Upload to Your Website:
+1. Log into your web hosting (cPanel, etc.)
+2. Upload ALL files to your website folder (usually `public_html`)
+3. Your site will be live!
+
+## 🔗 How Navigation Works:
+
+- **Home** → Click collections → View category → Add to cart
+- **Collections** → Browse all categories
+- **Cart Icon** → View your shopping cart
+- **Add to Cart** → Items save in your browser
+- All links work between pages!
+
+## 🛒 Shopping Cart:
+
+- Click "Add to Cart" on any product
+- Cart icon shows item count
+- Click cart icon to view cart
+- Increase/decrease quantities with +/- buttons
+- Click "Proceed to Checkout" to complete order
+
+## 💎 To Add Your Products:
+
+Open any category page (like **rings.html**) in a text editor and find this section:
+
+```javascript
+const allProducts = [
+    {
+        id: 1, 
+        name: "Your Product Name",
+        category: "rings",
+        price: 3500,
+        description: "Your description",
+        icon: "💍"  // Replace with your image path
+    },
+```
+
+Change:
+- **name** - Your product name
+- **price** - Your price
+- **description** - Your description
+- **icon** - Replace "💍" with path to your photo like "images/ring1.jpg"
+
+## 📸 To Add Photos:
+
+1. Create an "images" folder
+2. Put your product photos in it
+3. Replace icon: "💍" with icon: "images/yourphoto.jpg"
+
+## ✨ Features:
+
+✅ Multi-page website
+✅ Working navigation between all pages
+✅ Shopping cart that saves items
+✅ Add/remove products
+✅ Update quantities
+✅ Luxury design with your logo
+✅ Works on mobile & desktop
+✅ No database needed
+✅ Ready to upload!
+
+## 📞 Need Help?
+
+Email: andy@manxcrowndiamonds.com
+Phone: +44 7624 368505
+
+---
+
+**Just open index.html to start using your website!** 🎉

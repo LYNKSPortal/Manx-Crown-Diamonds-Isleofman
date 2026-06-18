@@ -1,0 +1,142 @@
+
+🔐 STRIPE PAYMENT SETUP INSTRUCTIONS
+====================================
+
+Your checkout page is ready! Follow these steps to accept real payments:
+
+STEP 1: CREATE STRIPE ACCOUNT
+------------------------------
+1. Go to: https://stripe.com
+2. Click "Start now" 
+3. Sign up with your business email
+4. Fill in your business details:
+   - Business name: Manx Crown Diamonds
+   - Country: Isle of Man / United Kingdom
+   - Business type: Limited Company
+   - Company number: 137799C
+
+STEP 2: VERIFY YOUR ACCOUNT
+----------------------------
+Stripe will ask you to verify:
+- Your identity (passport/ID)
+- Bank account details (for receiving payments)
+- Business documents (if required)
+
+STEP 3: GET YOUR API KEYS
+--------------------------
+1. Log into Stripe Dashboard
+2. Click "Developers" in the left menu
+3. Click "API keys"
+4. You'll see two keys:
+   
+   a) TEST KEY (for testing):
+      pk_test_xxxxxxxxxxxxxxx
+   
+   b) LIVE KEY (for real payments):
+      pk_live_xxxxxxxxxxxxxxx
+
+STEP 4: ADD KEY TO YOUR WEBSITE
+--------------------------------
+1. Open checkout-stripe.html in a text editor
+2. Find this line (near the top of the JavaScript):
+   
+   const STRIPE_PUBLISHABLE_KEY = 'pk_test_YOUR_KEY_HERE';
+
+3. Replace 'pk_test_YOUR_KEY_HERE' with your actual key:
+   
+   const STRIPE_PUBLISHABLE_KEY = 'pk_test_abc123...';
+
+4. Save the file
+
+STEP 5: TEST PAYMENTS
+---------------------
+Use these test card numbers:
+
+✅ Successful payment:
+   Card: 4242 4242 4242 4242
+   Expiry: Any future date (e.g., 12/25)
+   CVV: Any 3 digits (e.g., 123)
+
+❌ Card declined:
+   Card: 4000 0000 0000 0002
+
+STEP 6: GO LIVE
+---------------
+When ready for real payments:
+
+1. In Stripe dashboard, complete all verification
+2. Get your LIVE key (starts with pk_live_)
+3. Replace the test key in your website with live key
+4. Upload to your website
+
+Now you'll receive REAL payments!
+
+HOW IT WORKS:
+-------------
+1. Customer fills out checkout form
+2. Enters card details (secured by Stripe)
+3. Clicks "Complete Purchase"
+4. Payment is authorized (but not charged yet)
+5. You receive email with:
+   - Order details
+   - Payment Method ID
+   - Card last 4 digits
+6. YOU manually charge in Stripe dashboard OR
+7. Set up automatic charging (requires backend server)
+
+FEES:
+-----
+UK Cards: 1.5% + 20p per transaction
+EU Cards: 2.5% + 20p per transaction
+International: 3.25% + 20p per transaction
+
+Example: £5,000 sale = £5,000 - £75.20 (fee) = £4,924.80 in your account
+
+WHEN YOU GET PAID:
+------------------
+- First payout: 7-14 days after first sale
+- After that: Every 2-7 days automatically
+- Money goes directly to your bank account
+
+MANUAL CHARGING (Current Setup):
+---------------------------------
+1. Receive order email with Payment Method ID
+2. Log into Stripe dashboard
+3. Go to: Payments → Create Payment
+4. Enter: Payment Method ID and amount
+5. Click "Charge"
+6. Money is processed!
+
+AUTOMATIC CHARGING (Advanced):
+-------------------------------
+Requires a backend server (Node.js/PHP/Python)
+Contact a developer or I can help set this up later!
+
+SECURITY:
+---------
+✅ Stripe handles ALL card data (PCI compliant)
+✅ You NEVER see or store card numbers
+✅ 256-bit SSL encryption
+✅ 3D Secure authentication
+✅ Fraud detection included
+
+SUPPORT:
+--------
+Stripe Support: https://support.stripe.com
+Email: support@stripe.com
+Phone: +44 20 3868 9620
+
+Your Stripe Dashboard: https://dashboard.stripe.com
+
+---
+
+QUICK START CHECKLIST:
+☐ 1. Sign up at stripe.com
+☐ 2. Verify your account
+☐ 3. Get API key from Developers → API keys
+☐ 4. Add key to checkout-stripe.html
+☐ 5. Test with 4242 4242 4242 4242
+☐ 6. When verified, switch to live key
+☐ 7. Start accepting real payments!
+
+Questions? Email andy@manxcrowndiamonds.com

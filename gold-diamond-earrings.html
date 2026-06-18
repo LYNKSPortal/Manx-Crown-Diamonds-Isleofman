@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diamond Drop Earrings - Configure Your Earrings - Manx Crown Diamonds</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        :root {
+            --primary-gold: #C9A961;
+            --dark-navy: #2B2D42;
+            --deep-black: #0A0A0A;
+            --cream: #F8F6F0;
+        }
+        body { font-family: 'Montserrat', sans-serif; color: var(--dark-navy); }
+        h1, h2, h3 { font-family: 'Cormorant Garamond', serif; font-weight: 400; }
+        .top-bar { background: var(--deep-black); color: var(--cream); padding: 12px 40px; font-size: 13px; display: flex; justify-content: space-between; }
+        .top-bar a { white-space: nowrap; color: var(--cream); text-decoration: none; margin-right: 20px; }
+        .product-detail { max-width: 1400px; margin: 60px auto; padding: 0 40px; display: grid; grid-template-columns: 1fr 1fr; gap: 80px; }
+        .main-image { width: 100%; height: 600px; object-fit: cover; margin-bottom: 20px; border: 1px solid rgba(201, 169, 97, 0.1); }
+        .thumbnail-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 15px; }
+        .thumbnail { width: 100%; height: 150px; object-fit: cover; cursor: pointer; border: 2px solid transparent; transition: all 0.3s; }
+        .thumbnail:hover, .thumbnail.active { border-color: var(--primary-gold); }
+        .product-title { font-size: 42px; margin-bottom: 15px; }
+        .product-price { font-size: 48px; color: var(--primary-gold); margin-bottom: 30px; font-family: 'Cormorant Garamond', serif; }
+        .product-description { font-size: 16px; line-height: 1.8; color: #8D8D8D; margin-bottom: 40px; padding-bottom: 40px; border-bottom: 1px solid rgba(201, 169, 97, 0.1); }
+        .config-label { font-size: 13px; letter-spacing: 2px; text-transform: uppercase; font-weight: 500; margin-bottom: 15px; display: block; }
+        .config-options { display: grid; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); gap: 12px; margin-bottom: 35px; }
+        .config-option { padding: 15px 10px; border: 2px solid #E0E0E0; background: white; text-align: center; cursor: pointer; transition: all 0.3s; font-size: 14px; font-weight: 500; }
+        .config-option:hover { border-color: var(--primary-gold); background: var(--cream); }
+        .config-option.selected { border-color: var(--primary-gold); background: var(--primary-gold); color: white; }
+        .btn { flex: 1; padding: 20px; font-size: 14px; letter-spacing: 2px; text-transform: uppercase; border: none; cursor: pointer; transition: all 0.3s; text-align: center; }
+        .btn-primary { background: var(--primary-gold); color: white; }
+        .btn-primary:hover { background: #B89852; transform: translateY(-2px); }
+        .product-actions { display: flex; gap: 15px; margin-top: 10px; }
+        footer { background: #0A0A0A; color: white; padding: 60px 40px 30px; text-align: center; }
+        footer a { color: #999; text-decoration: none; }
+        footer a:hover { color: #C9A961; }
+        @media (max-width: 968px) {
+            .product-detail { grid-template-columns: 1fr; gap: 40px; }
+            .main-image { height: 400px; }
+        }
+
+        /* ── HEADER NAV ── */
+        header { background: #fff; position: sticky; top: 0; z-index: 1000; box-shadow: 0 1px 0 rgba(0,0,0,0.08); }
+        .header-inner { max-width: 1400px; margin: 0 auto; padding: 0 40px; height: 80px; display: flex; align-items: center; justify-content: space-between; gap: 40px; }
+        .logo-img { height: 52px; width: auto; display: block; }
+        nav { flex: 1; display: flex; justify-content: center; }
+        nav ul { list-style: none; display: flex; align-items: center; gap: 0; }
+        nav ul li { position: relative; }
+        nav ul li a { display: block; padding: 28px 20px; font-size: 13px; letter-spacing: 1.5px; text-transform: uppercase; color: #2B2D42; text-decoration: none; transition: color 0.2s; }
+        nav ul li a:hover { color: #C9A961; }
+        .has-dropdown > a::after { content: ' ▾'; font-size: 10px; vertical-align: middle; }
+        .dropdown-panel { position: absolute; top: 100%; left: 50%; background: #fff; min-width: 200px; box-shadow: 0 12px 40px rgba(0,0,0,0.12); border-top: 2px solid #C9A961; opacity: 0; visibility: hidden; transform: translateX(-50%) translateY(-6px); transition: all 0.25s ease; }
+        .has-dropdown:hover .dropdown-panel { opacity: 1; visibility: visible; transform: translateX(-50%) translateY(0); }
+        .dropdown-panel a { display: block; padding: 14px 22px; font-size: 12px; letter-spacing: 1px; text-transform: uppercase; color: #2B2D42; border-bottom: 1px solid rgba(0,0,0,0.05); transition: all 0.2s; }
+        .dropdown-panel a:last-child { border-bottom: none; }
+        .dropdown-panel a:hover { color: #C9A961; background: #F8F6F0; padding-left: 28px; }
+        .header-actions { display: flex; align-items: center; gap: 16px; }
+        .cart-link { position: relative; font-size: 22px; color: #2B2D42; text-decoration: none; transition: color 0.2s; }
+        .cart-link:hover { color: #C9A961; }
+        .cart-badge { position: absolute; top: -6px; right: -8px; background: #2B2D42; color: white; border-radius: 50%; width: 18px; height: 18px; font-size: 11px; font-family: 'Montserrat', sans-serif; font-weight: 600; display: none; align-items: center; justify-content: center; }
+        .mobile-menu-btn { display: none; background: none; border: none; cursor: pointer; font-size: 24px; color: #2B2D42; }
+        .mobile-nav { display: none; position: fixed; inset: 0; background: #fff; z-index: 2000; flex-direction: column; padding: 30px; overflow-y: auto; }
+        .mobile-nav.open { display: flex; }
+        .mobile-nav-top { display: flex; justify-content: space-between; align-items: center; margin-bottom: 40px; }
+        .mobile-nav-close { background: none; border: none; font-size: 24px; cursor: pointer; color: #2B2D42; }
+        .mobile-nav a { display: block; font-size: 24px; font-family: 'Cormorant Garamond', serif; color: #2B2D42; padding: 14px 0; border-bottom: 1px solid rgba(0,0,0,0.06); text-decoration: none; transition: color 0.2s; }
+        .mobile-nav a:hover { color: #C9A961; }
+        @media (max-width: 1024px) { nav { display: none; } .mobile-menu-btn { display: block; } }
+    </style>
+</head>
+<body>
+            <div class="top-bar">
+        <div>
+            <a href="mailto:andy@manxcrowndiamonds.com">andy@manxcrowndiamonds.com</a>
+            <a href="tel:+447624368505" style="white-space:nowrap;">+44 7624 368505</a>
+        </div>
+
+        <div>Isle of Man | IGI &amp; GIA Certified</div>
+    </div>
+    <div class="mobile-nav" id="mobileNav">
+        <div class="mobile-nav-top">
+            <img src="images/logo-mcd.jpg" alt="Manx Crown Diamonds" class="logo-img">
+            <button class="mobile-nav-close" onclick="closeMobileNav()">&#x2715;</button>
+        </div>
+        <a href="index.html">Home</a>
+        <a href="diamond-rings.html">Rings</a>
+        <a href="website/earrings.html">Earrings</a>
+        <a href="website/bracelets.html">Bracelets</a>
+        <a href="website/necklaces.html">Necklaces</a>
+        <a href="watches.html">Watches</a>
+        <a href="bespoke-request.html">Bespoke</a>
+        <a href="website/about.html">About</a>
+        <a href="website/contact.html">Contact</a>
+    </div>
+
+    <header>
+        <div class="header-inner">
+            <a href="index.html">
+                <img src="images/logo-mcd.jpg" alt="Manx Crown Diamonds" class="logo-img">
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li class="has-dropdown">
+                        <a href="#">Jewellery</a>
+                        <div class="dropdown-panel">
+                            <a href="diamond-rings.html">Rings</a>
+                            <a href="website/earrings.html">Earrings</a>
+                            <a href="website/bracelets.html">Bracelets</a>
+                            <a href="website/necklaces.html">Necklaces</a>
+                        </div>
+                    </li>
+                    <li><a href="watches.html">Watches</a></li>
+                    <li><a href="bespoke-request.html">Bespoke</a></li>
+                    <li><a href="website/about.html">About</a></li>
+                    <li><a href="website/contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <a href="basket.html" class="cart-link">&#128722;<span class="cart-badge" id="basketCount">0</span></a>
+                <button class="mobile-menu-btn" onclick="openMobileNav()">&#9776;</button>
+            </div>
+        </div>
+    </header>
+    <script>(function(){var b=JSON.parse(localStorage.getItem('mcdBasket')||'[]');var e=document.getElementById('basketCount');if(e){e.textContent=b.length;e.style.display=b.length>0?'flex':'none';}})();
+    function openMobileNav(){document.getElementById('mobileNav').classList.add('open');}
+    function closeMobileNav(){document.getElementById('mobileNav').classList.remove('open');}</script>
+
+    <div class="product-detail">
+        <!-- Image Column -->
+        <div>
+            <img id="mainImage" src="images/Gold-diamondearrings.JPG" alt="Diamond Drop Earrings" class="main-image">
+            <div class="thumbnail-grid">
+                <img src="images/Gold-diamondearrings.JPG" alt="View 1" class="thumbnail active" onclick="changeImage(0)">
+                <img src="images/Gold-diamondearrings2.JPG" alt="View 2" class="thumbnail" onclick="changeImage(1)">
+                <img src="images/Gold-diamondearrings3.JPG" alt="View 3" class="thumbnail" onclick="changeImage(2)">
+            </div>
+            <div style="margin-top: 24px; border-top: 1px solid rgba(201,169,97,0.2); padding-top: 20px; display: flex; flex-direction: column; gap: 12px;">
+                <div style="display: flex; align-items: flex-start; gap: 12px;">
+                    <span style="color: #C9A961; font-size: 14px; flex-shrink: 0; margin-top: 2px;">&#9670;</span>
+                    <div>
+                        <p style="font-size: 11px; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; color: #2B2D42; margin-bottom: 4px; font-family: 'Montserrat', sans-serif;">Diamond or Moissanite</p>
+                        <p style="font-size: 12px; color: #8D8D8D; line-height: 1.6; font-family: 'Montserrat', sans-serif;">Gold options are set with IGI certified lab-grown diamonds. The silver option features moissanite — a brilliant alternative with exceptional fire and sparkle.</p>
+                    </div>
+                </div>
+                <div style="display: flex; align-items: flex-start; gap: 12px;">
+                    <span style="color: #C9A961; font-size: 14px; flex-shrink: 0; margin-top: 2px;">&#9670;</span>
+                    <div>
+                        <p style="font-size: 11px; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; color: #2B2D42; margin-bottom: 4px; font-family: 'Montserrat', sans-serif;">3–5 Week Delivery</p>
+                        <p style="font-size: 12px; color: #8D8D8D; line-height: 1.6; font-family: 'Montserrat', sans-serif;">Every piece is handcrafted to order on the Isle of Man. We always aim to be as quick as we possibly can — but we ask for 3–5 weeks to make sure we meet your expectations.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Config Column -->
+        <div>
+            <h1 class="product-title">Diamond Drop Earrings</h1>
+            <div class="product-price" id="totalPrice">£275</div>
+            <p class="product-description">Beautifully crafted drop earrings handcrafted on the Isle of Man. Available in sterling silver with moissanite, or in 9K and 18K gold with IGI certified lab-grown diamonds. Elegant as an everyday piece or a special occasion statement.</p>
+
+            <label class="config-label">Select Metal</label>
+            <div class="config-options" id="metalOptions">
+                <div class="config-option selected" data-metal="silver" data-price="275" onclick="selectMetal(this)">Silver &amp; Moissanite</div>
+                <div class="config-option" data-metal="9k-white" data-price="1400" onclick="selectMetal(this)">9K White Gold</div>
+                <div class="config-option" data-metal="9k-yellow" data-price="1400" onclick="selectMetal(this)">9K Yellow Gold</div>
+                <div class="config-option" data-metal="9k-rose" data-price="1400" onclick="selectMetal(this)">9K Rose Gold</div>
+                <div class="config-option" data-metal="18k-white" data-price="2400" onclick="selectMetal(this)">18K White Gold</div>
+                <div class="config-option" data-metal="18k-yellow" data-price="2400" onclick="selectMetal(this)">18K Yellow Gold</div>
+                <div class="config-option" data-metal="18k-rose" data-price="2400" onclick="selectMetal(this)">18K Rose Gold</div>
+            </div>
+
+            <div class="product-actions">
+                <button class="btn btn-primary" onclick="addToBasket()">Add to Basket</button>
+            </div>
+        </div>
+    </div>
+
+        <footer>
+        <p style="color: var(--primary-gold); margin-bottom: 15px; font-size: 16px;">Manx Crown Diamonds</p>
+        <p style="color: #999; margin-bottom: 20px;"><a href="mailto:andy@manxcrowndiamonds.com">andy@manxcrowndiamonds.com</a> | +44 7624 368505</p>
+        <p style="margin-bottom: 20px;">
+            <a href="terms.html">Terms &amp; Conditions</a> | 
+            <a href="privacy-policy.html">Privacy Policy</a>
+        </p>
+        <p style="color: #666;">&copy; 2025 Manx Crown Diamonds. All rights reserved.</p>
+    </footer>
+
+    <script>
+        const images = [
+            'images/Gold-diamondearrings.JPG',
+            'images/Gold-diamondearrings2.JPG',
+            'images/Gold-diamondearrings3.JPG'
+        ];
+        let config = { metal: 'Silver', metalKey: 'silver', price: 275 };
+
+        function changeImage(index) {
+            document.getElementById('mainImage').src = images[index];
+            document.querySelectorAll('.thumbnail').forEach((t, i) => t.classList.toggle('active', i === index));
+        }
+
+        function selectMetal(el) {
+            document.querySelectorAll('[data-metal]').forEach(o => o.classList.remove('selected'));
+            el.classList.add('selected');
+            config.metalKey = el.dataset.metal;
+            config.metal = el.textContent.trim();
+            config.price = parseInt(el.dataset.price);
+            updatePrice();
+        }
+
+        function updatePrice() {
+            document.getElementById('totalPrice').textContent = '£' + config.price.toLocaleString();
+        }
+
+        function addToBasket() {
+            const priceText = document.getElementById('totalPrice').textContent.trim();
+            const imgEl = document.getElementById('mainImage');
+            const image = imgEl ? imgEl.src : '';
+            const stone = config.metalKey === 'silver' ? 'Moissanite' : 'Diamond';
+
+            const item = {
+                id: Date.now(),
+                name: 'Diamond Drop Earrings',
+                priceText: priceText,
+                price: config.price,
+                configText: 'Metal: ' + config.metal + ', Stone: ' + stone,
+                image: image,
+                url: window.location.href
+            };
+
+            const basket = JSON.parse(localStorage.getItem('mcdBasket') || '[]');
+            basket.push(item);
+            localStorage.setItem('mcdBasket', JSON.stringify(basket));
+            updateBasketCount();
+            document.getElementById('basketConfirm').style.display = 'flex';
+        }
+
+        function updateBasketCount() {
+            const basket = JSON.parse(localStorage.getItem('mcdBasket') || '[]');
+            const el = document.getElementById('basketCount');
+            if (el) { el.textContent = basket.length; el.style.display = basket.length > 0 ? 'flex' : 'none'; }
+        }
+
+        document.addEventListener('DOMContentLoaded', function() { updateBasketCount(); updatePrice(); });
+    </script>
+
+    <!-- Added to basket confirmation -->
+    <div id="basketConfirm" style="display:none; position:fixed; inset:0; background:rgba(0,0,0,0.6); z-index:2000; align-items:center; justify-content:center;">
+        <div style="background:white; padding:50px; text-align:center; max-width:420px; width:90%;">
+            <div style="font-size:50px; color:#C9A961; margin-bottom:15px;">&#10003;</div>
+            <h3 style="font-family:'Cormorant Garamond',serif; font-size:30px; margin-bottom:12px; font-weight:400;">Added to Basket</h3>
+            <p style="color:#8D8D8D; margin-bottom:30px; font-size:14px; line-height:1.6;">Your item has been added to your basket.</p>
+            <div style="display:flex; gap:12px;">
+                <button onclick="document.getElementById('basketConfirm').style.display='none'" style="flex:1; padding:16px; border:2px solid #C9A961; background:white; color:#C9A961; cursor:pointer; text-transform:uppercase; font-size:12px; letter-spacing:2px; font-family:'Montserrat',sans-serif;">Continue</button>
+                <a href="basket.html" style="flex:1; padding:16px; background:#C9A961; color:white; text-decoration:none; text-transform:uppercase; font-size:12px; letter-spacing:2px; display:flex; align-items:center; justify-content:center; font-family:'Montserrat',sans-serif;">View Basket</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

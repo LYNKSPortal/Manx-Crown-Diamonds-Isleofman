@@ -1,0 +1,15 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python3:*)",
+      "WebFetch(domain:docs.worldpay.com)",
+      "WebFetch(domain:developer.worldpay.com)",
+      "Bash(chmod +x /tmp/mcd_serve.sh)",
+      "mcp__Claude_Preview__preview_start",
+      "Bash(cd '/Users/andyasbridge/Desktop/manx-crown-diamonds-complete-project 2/pages' && sed -i '' 's|href=\"../mailto:|href=\"mailto:|g' *.html && echo \"fixed\")",
+      "Bash(sed -i '' 's/let basePrice = 1650;/let basePrice = 1250;/' \"/Users/andyasbridge/Desktop/manx-crown-diamonds-complete-project 2/eternity-diamond-ring.html\")",
+      "Bash(sed -i '' 's/let basePrice = 1000;/let basePrice = 1250;/' \"/Users/andyasbridge/Desktop/manx-crown-diamonds-complete-project 2/baguette-eternity-band.html\")",
+      "Bash(sed -i '' 's/let basePrice = 900;/let basePrice = 1250;/' \"/Users/andyasbridge/Desktop/manx-crown-diamonds-complete-project 2/princess-band.html\")"
+    ]
+  }
+}

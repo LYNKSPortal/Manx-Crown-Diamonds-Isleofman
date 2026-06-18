@@ -1,0 +1,30 @@
+LOGO INSTRUCTIONS
+==================
+
+I've embedded your logo directly into the HTML file, so it should work automatically!
+
+HOWEVER, if you want to use your actual logo file:
+
+1. Make sure "logo.jpeg" is in the SAME folder as your HTML files
+
+2. The logo should automatically load
+
+3. If it doesn't show, replace this line in EACH HTML file:
+
+   <img src="data:image/jpeg;base64,..." 
+
+   with:
+
+   <img src="logo.jpeg"
+
+WHAT I'VE DONE:
+✅ Embedded the logo as base64 data (works without external file)
+✅ Added fallback text "MANX CROWN DIAMONDS" if image fails
+✅ Dropdown menu added to "Collections"
+✅ Mobile-friendly dropdown
+
+DROPDOWN MENU:
+- Hover over "Collections" on desktop to see dropdown
+- Click "Collections" on mobile to expand menu
+- Shows: Rings, Necklaces, Earrings, Bracelets, View All
+

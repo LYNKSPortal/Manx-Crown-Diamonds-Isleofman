@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Baguette & Round Diamond Eternity Band - Configure Your Ring - Manx Crown Diamonds</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        :root {
+            --primary-gold: #C9A961;
+            --dark-navy: #2B2D42;
+            --deep-black: #0A0A0A;
+            --cream: #F8F6F0;
+        }
+        body { font-family: 'Montserrat', sans-serif; color: var(--dark-navy); }
+        h1, h2, h3 { font-family: 'Cormorant Garamond', serif; font-weight: 400; }
+        .top-bar { background: var(--deep-black); color: var(--cream); padding: 12px 40px; font-size: 13px; display: flex; justify-content: space-between; }
+        .top-bar a { white-space: nowrap; color: var(--cream); text-decoration: none; margin-right: 20px; }
+        .product-detail { max-width: 1400px; margin: 60px auto; padding: 0 40px; display: grid; grid-template-columns: 1fr 1fr; gap: 80px; }
+        .main-image { width: 100%; height: 600px; object-fit: cover; margin-bottom: 20px; border: 1px solid rgba(201, 169, 97, 0.1); }
+        .thumbnail-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 15px; }
+        .thumbnail { width: 100%; height: 150px; object-fit: cover; cursor: pointer; border: 2px solid transparent; transition: all 0.3s; }
+        .thumbnail:hover, .thumbnail.active { border-color: var(--primary-gold); }
+        .product-title { font-size: 42px; margin-bottom: 15px; }
+        .product-price { font-size: 48px; color: var(--primary-gold); margin-bottom: 30px; font-family: 'Cormorant Garamond', serif; }
+        .product-description { font-size: 16px; line-height: 1.8; color: #8D8D8D; margin-bottom: 40px; padding-bottom: 40px; border-bottom: 1px solid rgba(201, 169, 97, 0.1); }
+        .config-label { font-size: 13px; letter-spacing: 2px; text-transform: uppercase; font-weight: 500; margin-bottom: 15px; display: block; }
+        .config-options { display: grid; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); gap: 12px; margin-bottom: 35px; }
+        .config-option { padding: 15px 10px; border: 2px solid #E0E0E0; background: white; text-align: center; cursor: pointer; transition: all 0.3s; font-size: 14px; font-weight: 500; }
+        .config-option:hover { border-color: var(--primary-gold); background: var(--cream); }
+        .config-option.selected { border-color: var(--primary-gold); background: var(--primary-gold); color: white; }
+        .size-select { width: 100%; padding: 15px 20px; border: 2px solid #E0E0E0; background: white; font-family: 'Montserrat', sans-serif; font-size: 14px; font-weight: 500; color: var(--dark-navy); cursor: pointer; appearance: none; -webkit-appearance: none; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%23C9A961' stroke-width='2'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 16px center; margin-bottom: 35px; transition: border-color 0.3s; }
+        .size-select:focus { outline: none; border-color: var(--primary-gold); }
+        .size-select:hover { border-color: var(--primary-gold); }
+        .config-label-row { display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px; }
+        .config-label-row .config-label { margin-bottom: 0; }
+        .size-guide-link { font-size: 12px; color: var(--primary-gold); text-decoration: underline; cursor: pointer; letter-spacing: 1px; text-transform: uppercase; }
+        .btn { flex: 1; padding: 20px; font-size: 14px; letter-spacing: 2px; text-transform: uppercase; border: none; cursor: pointer; transition: all 0.3s; text-align: center; }
+        .btn-primary { background: var(--primary-gold); color: white; }
+        .btn-primary:hover { background: #B89852; transform: translateY(-2px); }
+        .product-actions { display: flex; gap: 15px; margin-top: 40px; }
+
+        /* Size Guide Modal */
+        .modal-overlay { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.6); z-index: 9999; align-items: center; justify-content: center; }
+        .modal-overlay.open { display: flex; }
+        .modal { background: white; max-width: 680px; width: 90%; max-height: 90vh; overflow-y: auto; padding: 50px; position: relative; }
+        .modal-close { position: absolute; top: 20px; right: 25px; font-size: 24px; cursor: pointer; color: #999; background: none; border: none; line-height: 1; }
+        .modal-close:hover { color: var(--dark-navy); }
+        .modal h2 { font-size: 34px; margin-bottom: 10px; }
+        .modal-subtitle { color: #8D8D8D; font-size: 14px; margin-bottom: 35px; line-height: 1.6; }
+        .guide-method { margin-bottom: 35px; padding-bottom: 35px; border-bottom: 1px solid rgba(201,169,97,0.15); }
+        .guide-method:last-of-type { border-bottom: none; }
+        .guide-method h3 { font-size: 22px; margin-bottom: 12px; color: var(--dark-navy); }
+        .guide-method p { font-size: 14px; color: #8D8D8D; line-height: 1.8; margin-bottom: 12px; }
+        .guide-method ol { padding-left: 20px; }
+        .guide-method li { font-size: 14px; color: #8D8D8D; line-height: 1.8; margin-bottom: 6px; }
+        .size-table { width: 100%; border-collapse: collapse; margin-top: 20px; font-size: 13px; }
+        .size-table th { background: var(--dark-navy); color: white; padding: 12px 16px; text-align: left; letter-spacing: 1px; font-size: 11px; text-transform: uppercase; }
+        .size-table td { padding: 10px 16px; border-bottom: 1px solid #f0f0f0; }
+        .size-table tr:hover td { background: var(--cream); }
+        .guide-tip { background: var(--cream); border-left: 3px solid var(--primary-gold); padding: 16px 20px; margin-top: 20px; font-size: 13px; color: #666; line-height: 1.7; }
+
+        @media (max-width: 968px) {
+            .product-detail { grid-template-columns: 1fr; gap: 40px; }
+            .main-image { height: 400px; }
+            .modal { padding: 30px 20px; }
+        }
+
+            /* ── HEADER NAV ── */
+        header { background: #fff; position: sticky; top: 0; z-index: 1000; box-shadow: 0 1px 0 rgba(0,0,0,0.08); }
+        .header-inner { max-width: 1400px; margin: 0 auto; padding: 0 40px; height: 80px; display: flex; align-items: center; justify-content: space-between; gap: 40px; }
+        .logo-img { height: 52px; width: auto; display: block; }
+        nav { flex: 1; display: flex; justify-content: center; }
+        nav ul { list-style: none; display: flex; align-items: center; gap: 0; }
+        nav ul li { position: relative; }
+        nav ul li a { display: block; padding: 28px 20px; font-size: 13px; letter-spacing: 1.5px; text-transform: uppercase; color: #2B2D42; text-decoration: none; transition: color 0.2s; }
+        nav ul li a:hover { color: #C9A961; }
+        .has-dropdown > a::after { content: ' ▾'; font-size: 10px; vertical-align: middle; }
+        .dropdown-panel { position: absolute; top: 100%; left: 50%; background: #fff; min-width: 200px; box-shadow: 0 12px 40px rgba(0,0,0,0.12); border-top: 2px solid #C9A961; opacity: 0; visibility: hidden; transform: translateX(-50%) translateY(-6px); transition: all 0.25s ease; }
+        .has-dropdown:hover .dropdown-panel { opacity: 1; visibility: visible; transform: translateX(-50%) translateY(0); }
+        .dropdown-panel a { display: block; padding: 14px 22px; font-size: 12px; letter-spacing: 1px; text-transform: uppercase; color: #2B2D42; border-bottom: 1px solid rgba(0,0,0,0.05); transition: all 0.2s; }
+        .dropdown-panel a:last-child { border-bottom: none; }
+        .dropdown-panel a:hover { color: #C9A961; background: #F8F6F0; padding-left: 28px; }
+        .header-actions { display: flex; align-items: center; gap: 16px; }
+        .cart-link { position: relative; font-size: 22px; color: #2B2D42; text-decoration: none; transition: color 0.2s; }
+        .cart-link:hover { color: #C9A961; }
+        .cart-badge { position: absolute; top: -6px; right: -8px; background: #2B2D42; color: white; border-radius: 50%; width: 18px; height: 18px; font-size: 11px; font-family: 'Montserrat', sans-serif; font-weight: 600; display: none; align-items: center; justify-content: center; }
+        .mobile-menu-btn { display: none; background: none; border: none; cursor: pointer; font-size: 24px; color: #2B2D42; }
+        .mobile-nav { display: none; position: fixed; inset: 0; background: #fff; z-index: 2000; flex-direction: column; padding: 30px; overflow-y: auto; }
+        .mobile-nav.open { display: flex; }
+        .mobile-nav-top { display: flex; justify-content: space-between; align-items: center; margin-bottom: 40px; }
+        .mobile-nav-close { background: none; border: none; font-size: 24px; cursor: pointer; color: #2B2D42; }
+        .mobile-nav a { display: block; font-size: 24px; font-family: 'Cormorant Garamond', serif; color: #2B2D42; padding: 14px 0; border-bottom: 1px solid rgba(0,0,0,0.06); text-decoration: none; transition: color 0.2s; }
+        .mobile-nav a:hover { color: #C9A961; }
+        @media (max-width: 1024px) { nav { display: none; } .mobile-menu-btn { display: block; } }
+    
+        footer { background: #0A0A0A; color: white; padding: 60px 40px 30px; text-align: center; }
+        footer a { color: #C9A961; text-decoration: none; }
+        footer a:hover { text-decoration: underline; }
+        </style>
+</head>
+<body>
+            <div class="top-bar">
+        <div>
+            <a href="mailto:andy@manxcrowndiamonds.com">andy@manxcrowndiamonds.com</a>
+            <a href="tel:+447624368505" style="white-space:nowrap;">+44 7624 368505</a>
+        </div>
+
+        <div>Isle of Man | IGI &amp; GIA Certified</div>
+    </div>
+    <div class="mobile-nav" id="mobileNav">
+    <div class="mobile-nav-top">
+        <img src="images/logo-mcd.jpg" alt="Manx Crown Diamonds" class="logo-img">
+        <button class="mobile-nav-close" onclick="closeMobileNav()">&#x2715;</button>
+    </div>
+    <a href="index.html">Home</a>
+    <a href="diamond-rings.html">Rings</a>
+    <a href="website/earrings.html">Earrings</a>
+    <a href="website/bracelets.html">Bracelets</a>
+    <a href="website/necklaces.html">Necklaces</a>
+    <a href="watches.html">Watches</a>
+    <a href="bespoke-request.html">Bespoke</a>
+    <a href="website/about.html">About</a>
+    <a href="website/contact.html">Contact</a>
+</div>
+
+<header>
+    <div class="header-inner">
+        <a href="index.html">
+            <img src="images/logo-mcd.jpg" alt="Manx Crown Diamonds" class="logo-img">
+        </a>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li class="has-dropdown">
+                    <a href="#">Jewellery</a>
+                    <div class="dropdown-panel">
+                        <a href="diamond-rings.html">Rings</a>
+                        <a href="website/earrings.html">Earrings</a>
+                        <a href="website/bracelets.html">Bracelets</a>
+                        <a href="website/necklaces.html">Necklaces</a>
+                    </div>
+                </li>
+                <li><a href="watches.html">Watches</a></li>
+                <li><a href="bespoke-request.html">Bespoke</a></li>
+                <li><a href="website/about.html">About</a></li>
+                <li><a href="website/contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="header-actions">
+            <a href="basket.html" class="cart-link">&#128722;<span class="cart-badge" id="basketCount">0</span></a>
+            <button class="mobile-menu-btn" onclick="openMobileNav()">&#9776;</button>
+        </div>
+    </div>
+</header>
+<script>(function(){var b=JSON.parse(localStorage.getItem('mcdBasket')||'[]');var e=document.getElementById('basketCount');if(e){e.textContent=b.length;e.style.display=b.length>0?'flex':'none';}})();
+function openMobileNav(){document.getElementById('mobileNav').classList.add('open');}
+function closeMobileNav(){document.getElementById('mobileNav').classList.remove('open');}</script>
+
+    <div class="product-detail">
+        <!-- Image Column -->
+        <div>
+            <img id="mainImage" src="images/Bagguette-band.jpg" alt="Baguette and Round Diamond Eternity Band" class="main-image">
+            <div class="thumbnail-grid">
+                <img src="images/Bagguette-band.jpg" alt="View 1" class="thumbnail active" onclick="changeImage(0)">
+                <img src="images/Bagguette-band2.jpg" alt="View 2" class="thumbnail" onclick="changeImage(1)">
+                <img src="images/Bagguette-band3.jpg" alt="View 3" class="thumbnail" onclick="changeImage(2)">
+            </div>
+        <div style="margin-top: 24px; border-top: 1px solid rgba(201,169,97,0.2); padding-top: 20px; display: flex; flex-direction: column; gap: 12px;">
+            <div style="display: flex; align-items: flex-start; gap: 12px;">
+                <span style="color: #C9A961; font-size: 14px; flex-shrink: 0; margin-top: 2px;">&#9670;</span>
+                <div>
+                    <p style="font-size: 11px; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; color: #2B2D42; margin-bottom: 4px; font-family: 'Montserrat', sans-serif;">IGI Certified Lab-Grown Diamonds</p>
+                    <p style="font-size: 12px; color: #8D8D8D; line-height: 1.6; font-family: 'Montserrat', sans-serif;">All our diamonds are IGI certified lab-grown stones. Diamonds of 0.5ct and above come with an individual IGI certificate as standard.</p>
+                </div>
+            </div>
+            <div style="display: flex; align-items: flex-start; gap: 12px;">
+                <span style="color: #C9A961; font-size: 14px; flex-shrink: 0; margin-top: 2px;">&#9670;</span>
+                <div>
+                    <p style="font-size: 11px; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; color: #2B2D42; margin-bottom: 4px; font-family: 'Montserrat', sans-serif;">3–5 Week Delivery</p>
+                    <p style="font-size: 12px; color: #8D8D8D; line-height: 1.6; font-family: 'Montserrat', sans-serif;">Every piece is handcrafted to order on the Isle of Man. We always aim to be as quick as we possibly can — but we ask for 3–5 weeks to make sure we meet your expectations.</p>
+                </div>
+            </div>
+        </div>
+        </div>
+
+        <!-- Config Column -->
+        <div>
+            <h1 class="product-title">Baguette &amp; Round Diamond Eternity Band</h1>
+            <div class="product-price" id="totalPrice">£1,000</div>
+            <p class="product-description">An elegant eternity band alternating baguette and round brilliant-cut lab-grown diamonds, set in your choice of precious metal. IGI certified diamonds throughout.</p>
+
+            <label class="config-label">Select Metal</label>
+            <div class="config-options" id="metalOptions">
+                <div class="config-option" data-metal="9k-white" data-price="-200" onclick="selectMetal(this)">9K White Gold</div>
+                <div class="config-option" data-metal="9k-yellow" data-price="-200" onclick="selectMetal(this)">9K Yellow Gold</div>
+                <div class="config-option" data-metal="9k-rose" data-price="-200" onclick="selectMetal(this)">9K Rose Gold</div>
+                <div class="config-option selected" data-metal="18k-white" data-price="0" onclick="selectMetal(this)">18K White Gold</div>
+                <div class="config-option" data-metal="18k-yellow" data-price="0" onclick="selectMetal(this)">18K Yellow Gold</div>
+                <div class="config-option" data-metal="18k-rose" data-price="0" onclick="selectMetal(this)">18K Rose Gold</div>
+                <div class="config-option" data-metal="platinum" data-price="100" onclick="selectMetal(this)">Platinum</div>
+            </div>
+
+            <div class="config-label-row">
+                <span class="config-label">Select Ring Size (UK)</span>
+                <span class="size-guide-link" onclick="openSizeGuide()">Size Guide</span>
+            </div>
+            <select class="size-select" id="sizeSelect" onchange="selectSize(this.value)">
+                <option value="">— Please select a size —</option>
+                <option value="D">D</option>
+                <option value="E">E</option>
+                <option value="F">F</option>
+                <option value="G">G</option>
+                <option value="H">H</option>
+                <option value="I">I</option>
+                <option value="J">J</option>
+                <option value="K">K</option>
+                <option value="L">L</option>
+                <option value="M">M</option>
+                <option value="N">N</option>
+                <option value="O">O</option>
+                <option value="P">P</option>
+                <option value="Q">Q</option>
+                <option value="R">R</option>
+                <option value="S">S</option>
+                <option value="T">T</option>
+                <option value="U">U</option>
+                <option value="V">V</option>
+                <option value="W">W</option>
+                <option value="X">X</option>
+                <option value="Y">Y</option>
+                <option value="Z">Z</option>
+            </select>
+
+            <div class="product-actions">
+                <button class="btn btn-primary" onclick="addToBasket()">Add to Basket</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Size Guide Modal -->
+    <div class="modal-overlay" id="sizeGuideModal" onclick="closeSizeGuideOutside(event)">
+        <div class="modal">
+            <button class="modal-close" onclick="closeSizeGuide()">&times;</button>
+            <h2>Ring Size Guide</h2>
+            <p class="modal-subtitle">Not sure of your size? Use one of the methods below to find your perfect fit. If you're still unsure, contact us and we'll be happy to help.</p>
+            <div class="guide-method">
+                <h3>Method 1 — Measure an Existing Ring</h3>
+                <p>If you already own a ring that fits the correct finger, simply measure the inside diameter in millimetres and use the chart below to find your UK size.</p>
+                <ol>
+                    <li>Place the ring flat on a ruler.</li>
+                    <li>Measure the inside diameter (from inner edge to inner edge) in mm.</li>
+                    <li>Match your measurement to the table below.</li>
+                </ol>
+            </div>
+            <div class="guide-method">
+                <h3>Method 2 — Measure Your Finger</h3>
+                <ol>
+                    <li>Cut a thin strip of paper or use a piece of string.</li>
+                    <li>Wrap it snugly around the base of the finger you intend to wear the ring on.</li>
+                    <li>Mark where the paper or string meets and measure the length in mm — this is your circumference.</li>
+                    <li>Match to the table below.</li>
+                </ol>
+                <div class="guide-tip">💡 <strong>Tip:</strong> Fingers change size throughout the day — they're larger in the evening and when warm. We recommend measuring at the end of the day for the most accurate fit.</div>
+            </div>
+            <div class="guide-method">
+                <h3>UK Ring Size Chart</h3>
+                <table class="size-table">
+                    <thead><tr><th>UK Size</th><th>Inside Diameter (mm)</th><th>Circumference (mm)</th><th>US Size</th></tr></thead>
+                    <tbody>
+                        <tr><td>D</td><td>14.9</td><td>46.8</td><td>3</td></tr>
+                        <tr><td>E</td><td>15.3</td><td>48.0</td><td>3½</td></tr>
+                        <tr><td>F</td><td>15.7</td><td>49.3</td><td>3¾</td></tr>
+                        <tr><td>G</td><td>16.1</td><td>50.6</td><td>4</td></tr>
+                        <tr><td>H</td><td>16.5</td><td>51.9</td><td>4½</td></tr>
+                        <tr><td>I</td><td>16.9</td><td>53.1</td><td>4¾</td></tr>
+                        <tr><td>J</td><td>17.3</td><td>54.4</td><td>5</td></tr>
+                        <tr><td>K</td><td>17.7</td><td>55.7</td><td>5½</td></tr>
+                        <tr><td>L</td><td>18.1</td><td>56.9</td><td>5¾</td></tr>
+                        <tr><td>M</td><td>18.5</td><td>58.2</td><td>6</td></tr>
+                        <tr><td>N</td><td>18.9</td><td>59.5</td><td>6½</td></tr>
+                        <tr><td>O</td><td>19.3</td><td>60.8</td><td>6¾</td></tr>
+                        <tr><td>P</td><td>19.7</td><td>62.0</td><td>7</td></tr>
+                        <tr><td>Q</td><td>20.1</td><td>63.3</td><td>7½</td></tr>
+                        <tr><td>R</td><td>20.5</td><td>64.6</td><td>7¾</td></tr>
+                        <tr><td>S</td><td>20.9</td><td>65.9</td><td>8</td></tr>
+                        <tr><td>T</td><td>21.3</td><td>67.1</td><td>8½</td></tr>
+                        <tr><td>U</td><td>21.7</td><td>68.4</td><td>8¾</td></tr>
+                        <tr><td>V</td><td>22.1</td><td>69.7</td><td>9</td></tr>
+                        <tr><td>W</td><td>22.5</td><td>70.9</td><td>9½</td></tr>
+                        <tr><td>X</td><td>22.9</td><td>72.2</td><td>10</td></tr>
+                        <tr><td>Y</td><td>23.3</td><td>73.5</td><td>10½</td></tr>
+                        <tr><td>Z</td><td>23.7</td><td>74.8</td><td>11</td></tr>
+                    </tbody>
+                </table>
+                <div class="guide-tip">Not sure? We recommend ordering a half size up. All rings can be resized — contact us at <a href="mailto:andy@manxcrowndiamonds.com" style="color:var(--primary-gold)">andy@manxcrowndiamonds.com</a> and we'll advise you.</div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/prices.js"></script>
+    <script>
+        const images = [
+            'images/Bagguette-band.jpg',
+            'images/Bagguette-band2.jpg',
+            'images/Bagguette-band3.jpg'
+        ];
+        let config = { metal: '18k-white', metalPrice: 0, metalDisplay: '18K White Gold', size: '' };
+        let basePrice = 1250;
+
+        function changeImage(index) {
+            document.getElementById('mainImage').src = images[index];
+            document.querySelectorAll('.thumbnail').forEach((t, i) => t.classList.toggle('active', i === index));
+        }
+        function selectMetal(el) {
+            document.querySelectorAll('#metalOptions .config-option').forEach(o => o.classList.remove('selected'));
+            el.classList.add('selected');
+            config.metal = el.dataset.metal;
+            config.metalPrice = parseInt(el.dataset.price);
+            config.metalDisplay = el.textContent.trim();
+            updatePrice();
+        }
+        function selectSize(value) { config.size = value; }
+        function updatePrice() {
+            const total = basePrice + config.metalPrice;
+            document.getElementById('totalPrice').textContent = '£' + total.toLocaleString();
+        }
+        function openSizeGuide() {
+            document.getElementById('sizeGuideModal').classList.add('open');
+            document.body.style.overflow = 'hidden';
+        }
+        function closeSizeGuide() {
+            document.getElementById('sizeGuideModal').classList.remove('open');
+            document.body.style.overflow = '';
+        }
+        function closeSizeGuideOutside(e) {
+            if (e.target === document.getElementById('sizeGuideModal')) closeSizeGuide();
+        }
+        function enquireNow() {
+            const sizeText = config.size ? `Ring Size: UK ${config.size}` : 'Ring Size: Not yet selected';
+            const message = `Hi, I'm interested in the Baguette & Round Diamond Eternity Band:\n\nMetal: ${config.metalDisplay}\n${sizeText}\n\nCould you please provide more details?`;
+            window.location.href = `mailto:andy@manxcrowndiamonds.com?subject=Enquiry: Baguette & Round Diamond Eternity Band&body=${encodeURIComponent(message)}`;
+        }
+
+        function addToBasket() {
+            // Validate all options are selected
+            const unselected = Object.entries(config).filter(([k, v]) => !k.toLowerCase().includes('price') && k !== 'metal' && v === '');
+            if (unselected.length > 0) {
+                const lblMap = { length:'Chain Length', width:'Chain Width', size:'Ring Size', letter:'Letter', clarity:'Clarity', diamond:'Diamond Size', carat:'Carat' };
+                const missing = unselected.map(([k]) => lblMap[k] || k.charAt(0).toUpperCase() + k.slice(1)).join(', ');
+                let e = document.getElementById('atbError');
+                if (!e) {
+                    e = document.createElement('p');
+                    e.id = 'atbError';
+                    e.style.cssText = 'color:#c0392b;font-size:13px;margin-top:12px;text-align:center;font-family:Montserrat,sans-serif;';
+                    document.querySelector('.btn-primary').after(e);
+                }
+                e.textContent = 'Please select: ' + missing;
+                return;
+            }
+            const atbErr = document.getElementById('atbError'); if (atbErr) atbErr.remove();
+            const nameEl = document.querySelector('.product-title') || document.querySelector('h1');
+            const productName = nameEl ? nameEl.textContent.trim() : 'Item';
+            const priceEl = document.getElementById('totalPrice');
+            const priceText = priceEl ? priceEl.textContent.trim() : '£0';
+            const price = parseInt(priceText.replace(/[^\d]/g, '')) || 0;
+            const imgEl = document.getElementById('mainImage');
+            const image = imgEl ? imgEl.src : '';
+
+            const labels = { metal:'Metal', length:'Chain Length', width:'Chain Width', size:'Ring Size', letter:'Letter', clarity:'Clarity', diamond:'Diamond Size', carat:'Carat' };
+            const configLines = Object.entries(config)
+                .filter(([k, v]) => !k.toLowerCase().includes('price') && v !== '' && v !== 0)
+                .map(([k, v]) => (labels[k] || k.charAt(0).toUpperCase() + k.slice(1)) + ': ' + v);
+
+            const item = {
+                id: Date.now(),
+                name: productName,
+                priceText: priceText,
+                price: price,
+                configText: configLines.join(', '),
+                image: image,
+                url: window.location.href
+            };
+
+            const basket = JSON.parse(localStorage.getItem('mcdBasket') || '[]');
+            basket.push(item);
+            localStorage.setItem('mcdBasket', JSON.stringify(basket));
+            updateBasketCount();
+            document.getElementById('basketConfirm').style.display = 'flex';
+        }
+
+        function updateBasketCount() {
+            const basket = JSON.parse(localStorage.getItem('mcdBasket') || '[]');
+            const el = document.getElementById('basketCount');
+            if (el) { el.textContent = basket.length; el.style.display = basket.length > 0 ? 'flex' : 'none'; }
+        }
+
+        document.addEventListener('DOMContentLoaded', function() { initFromPrices('baguette-eternity-band', function(p) { basePrice = p; }); updateBasketCount(); updatePrice(); });
+    </script>
+
+    <!-- Added to basket confirmation -->
+    <div id="basketConfirm" style="display:none; position:fixed; inset:0; background:rgba(0,0,0,0.6); z-index:2000; align-items:center; justify-content:center;">
+        <div style="background:white; padding:50px; text-align:center; max-width:420px; width:90%;">
+            <div style="font-size:50px; color:#C9A961; margin-bottom:15px;">&#10003;</div>
+            <h3 style="font-family:'Cormorant Garamond',serif; font-size:30px; margin-bottom:12px; font-weight:400;">Added to Basket</h3>
+            <p style="color:#8D8D8D; margin-bottom:30px; font-size:14px; line-height:1.6;">Your item has been added to your basket.</p>
+            <div style="display:flex; gap:12px;">
+                <button onclick="document.getElementById('basketConfirm').style.display='none'" style="flex:1; padding:16px; border:2px solid #C9A961; background:white; color:#C9A961; cursor:pointer; text-transform:uppercase; font-size:12px; letter-spacing:2px; font-family:'Montserrat',sans-serif;">Continue</button>
+                <a href="basket.html" style="flex:1; padding:16px; background:#C9A961; color:white; text-decoration:none; text-transform:uppercase; font-size:12px; letter-spacing:2px; display:flex; align-items:center; justify-content:center; font-family:'Montserrat',sans-serif;">View Basket</a>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <p style="color: var(--primary-gold); margin-bottom: 15px; font-size: 16px;">Manx Crown Diamonds</p>
+        <p style="color: #999; margin-bottom: 20px;"><a href="mailto:andy@manxcrowndiamonds.com">andy@manxcrowndiamonds.com</a> | +44 7624 368505</p>
+        <p style="margin-bottom: 20px;">
+            <a href="terms.html">Terms &amp; Conditions</a> | 
+            <a href="privacy-policy.html">Privacy Policy</a>
+        </p>
+        <p style="color: #666;">&copy; 2025 Manx Crown Diamonds. All rights reserved.</p>
+    </footer>
+</body>
+</html>

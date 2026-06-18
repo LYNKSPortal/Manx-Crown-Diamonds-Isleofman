@@ -1,0 +1,259 @@
+📜 LEGAL PAGES SETUP GUIDE
+==========================
+
+✅ YOU NOW HAVE:
+================
+
+1. terms.html - Complete Terms & Conditions
+2. privacy-policy.html - Privacy Policy (Isle of Man compliant)
+3. footer-snippet.html - Footer code with links
+
+📋 WHAT'S INCLUDED:
+===================
+
+TERMS & CONDITIONS covers:
+- Company information (IOM 137799C)
+- Order acceptance and pricing
+- Diamond certification (IGI/GIA)
+- Delivery (UK, Europe, International)
+- 30-day returns policy
+- Free resizing
+- 12-month warranty
+- Isle of Man law jurisdiction
+
+PRIVACY POLICY covers:
+- Data collection and usage
+- Isle of Man Data Protection Act 2018 compliance
+- Customer rights (access, correction, deletion)
+- Cookie policy
+- Data security measures
+- GDPR compliance
+- Contact: IOM Information Commissioner
+
+🔗 ADDING LINKS TO YOUR PAGES:
+===============================
+
+METHOD 1 - QUICK (Use Footer Snippet):
+---------------------------------------
+
+1. Open footer-snippet.html
+2. Copy ALL the code
+3. Open each of your pages (rings-shop.html, basket.html, etc.)
+4. Find the existing <footer> tag
+5. REPLACE the entire footer with the snippet
+6. Save
+
+Pages to update:
+✓ home-with-bespoke-section.html
+✓ rings-shop.html
+✓ watches.html
+✓ basket.html
+✓ checkout-working.html
+✓ oval-ring-with-size.html
+✓ bespoke-request.html
+
+METHOD 2 - MANUAL (Add Links to Existing Footer):
+--------------------------------------------------
+
+Add this line to your existing footer:
+
+<p style="margin-bottom: 20px;">
+    <a href="terms.html" style="color: #C9A961; text-decoration: none;">Terms & Conditions</a> | 
+    <a href="privacy-policy.html" style="color: #C9A961; text-decoration: none;">Privacy Policy</a>
+</p>
+
+🎨 THE FOOTER LOOKS LIKE:
+=========================
+
+┌─────────────────────────────────────┐
+│     MANX CROWN DIAMONDS             │
+│     (in gold)                       │
+│                                     │
+│  andy@manxcrowndiamonds.com         │
+│  +44 7624 368505                    │
+│                                     │
+│  Terms & Conditions | Privacy Policy│
+│  (clickable gold links)             │
+│                                     │
+│  © 2025 Manx Crown Diamonds         │
+│  IOM Company No. 137799C            │
+└─────────────────────────────────────┘
+
+📁 FILE PLACEMENT:
+==================
+
+All files must be in the SAME folder:
+
+your-website/
+  ├── index.html (or home-with-bespoke-section.html)
+  ├── rings-shop.html
+  ├── watches.html
+  ├── basket.html
+  ├── checkout-working.html
+  ├── oval-ring-with-size.html
+  ├── bespoke-request.html
+  ├── terms.html ← NEW
+  └── privacy-policy.html ← NEW
+
+⚖️ LEGAL COMPLIANCE:
+====================
+
+ISLE OF MAN:
+✓ Data Protection Act 2018 compliant
+✓ Company number displayed (137799C)
+✓ IOM Information Commissioner contact included
+✓ Proper data retention periods (7 years for financial)
+✓ Customer rights clearly stated
+
+UK/GDPR COMPATIBLE:
+✓ Legal basis for processing
+✓ Right to access, correct, delete data
+✓ Data portability
+✓ Consent management
+✓ Cookie disclosure
+✓ Breach notification procedures
+
+CONSUMER PROTECTION:
+✓ 30-day return policy
+✓ Free resizing within 60 days
+✓ 12-month warranty
+✓ Clear pricing and delivery terms
+✓ Refund process explained
+
+📝 CUSTOMIZATION NOTES:
+=======================
+
+Terms & Conditions:
+- Business address: Currently shows "Isle of Man" 
+  → Update with your full address if needed
+  
+Privacy Policy:
+- Data retention: 7 years (UK/IOM law requirement)
+- Payment processor: Stripe (already included)
+- Email: andy@manxcrowndiamonds.com (already set)
+
+✏️ HOW TO EDIT:
+===============
+
+1. Open terms.html or privacy-policy.html in text editor
+2. Find the section you want to change
+3. Edit the text (keep HTML tags intact)
+4. Save the file
+
+Example - Change business address:
+Find: <strong>Registered Address:</strong> Isle of Man
+Change to: <strong>Registered Address:</strong> 123 Your Street, Douglas, Isle of Man
+
+🚨 IMPORTANT LEGAL NOTES:
+=========================
+
+1. REVIEW WITH LAWYER:
+   These documents are templates. Have them reviewed by 
+   an Isle of Man solicitor to ensure full compliance.
+
+2. KEEP UPDATED:
+   Update the "Last Updated" date when you make changes.
+
+3. COOKIE CONSENT:
+   If you add analytics (Google Analytics), you may need
+   a cookie consent banner. This is separate from the policy.
+
+4. PAYMENT PROCESSING:
+   Stripe handles card data - you never store it.
+   This is stated in the privacy policy.
+
+5. DATA BREACH:
+   If you experience a data breach, notify:
+   - Customers (within 72 hours)
+   - IOM Information Commissioner
+   - Email: ask@inforights.im
+
+📞 LEGAL CONTACTS:
+==================
+
+IOM Information Commissioner:
+Website: www.inforights.im
+Email: ask@inforights.im
+Address: PO Box 69, Douglas, Isle of Man, IM99 1EQ
+Phone: +44 (0)1624 693260
+
+For legal advice:
+Consult an Isle of Man solicitor specializing in:
+- E-commerce law
+- Data protection
+- Consumer rights
+
+🎯 TESTING CHECKLIST:
+=====================
+
+☐ Upload all files to same folder
+☐ Click "Terms & Conditions" link - does it work?
+☐ Click "Privacy Policy" link - does it work?
+☐ Check all pages have the footer
+☐ Read through both documents
+☐ Update any business details
+☐ Have lawyer review (recommended)
+☐ Test on mobile devices
+☐ Print PDFs for records
+
+💡 BEST PRACTICES:
+==================
+
+1. Display prominently:
+   ✓ Footer links on every page
+   ✓ Link in checkout process
+   ✓ Mention in order confirmation emails
+
+2. Make accessible:
+   ✓ Clear, readable text
+   ✓ Logical structure with headings
+   ✓ Mobile-friendly layout
+
+3. Keep records:
+   ✓ Save dated versions when you update
+   ✓ Note what changed and when
+   ✓ Keep for 7 years (legal requirement)
+
+4. Customer communication:
+   ✓ Email customers if you make major changes
+   ✓ Give them 30 days notice if reducing rights
+   ✓ Allow them to object or close account
+
+📧 IN YOUR ORDER EMAILS:
+========================
+
+Add this text to order confirmation emails:
+
+"By placing this order, you agree to our Terms & Conditions 
+(www.manxcrowndiamonds.com/terms.html) and acknowledge our 
+Privacy Policy (www.manxcrowndiamonds.com/privacy-policy.html)"
+
+✅ YOU'RE LEGALLY COVERED:
+==========================
+
+Once these pages are live on your site with links in the footer:
+
+✓ Terms protect your business
+✓ Privacy policy ensures compliance
+✓ Customers know their rights
+✓ You meet IOM legal requirements
+✓ GDPR compatible for EU customers
+✓ Professional and trustworthy appearance
+
+🚀 READY TO GO LIVE:
+====================
+
+1. ✅ Legal pages created
+2. ✅ Footer with links ready
+3. ⏳ Add footer to all pages
+4. ⏳ Upload to your website
+5. ⏳ Test all links
+6. ⏳ (Optional) Lawyer review
+7. ✅ Start selling with confidence!
+
+---
+
+Questions about legal compliance?
+Contact: andy@manxcrowndiamonds.com
+
+© 2025 Manx Crown Diamonds

@@ -1,0 +1,8 @@
+{
+  "name": "manx-crown-diamonds",
+  "version": "1.0.0",
+  "description": "Manx Crown Diamonds e-commerce site",
+  "engines": {
+    "node": ">=18"
+  }
+}

@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Confirmed - Manx Crown Diamonds</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        :root { --primary-gold: #C9A961; --dark-navy: #2B2D42; --deep-black: #0A0A0A; --cream: #F8F6F0; }
+        body { font-family: 'Montserrat', sans-serif; color: var(--dark-navy); background: var(--cream); min-height: 100vh; display: flex; flex-direction: column; }
+        h1, h2, h3 { font-family: 'Cormorant Garamond', serif; font-weight: 400; }
+
+        .top-bar { background: var(--deep-black); color: var(--cream); padding: 12px 40px; font-size: 13px; display: flex; justify-content: space-between; }
+        .top-bar a { white-space: nowrap; color: var(--cream); text-decoration: none; margin-right: 20px; }
+
+        header { background: #fff; box-shadow: 0 1px 0 rgba(0,0,0,0.08); }
+        .header-inner { max-width: 1400px; margin: 0 auto; padding: 0 40px; height: 80px; display: flex; align-items: center; justify-content: space-between; }
+        .logo-img { height: 52px; width: auto; display: block; }
+
+        .success-wrap { flex: 1; display: flex; align-items: center; justify-content: center; padding: 60px 20px; }
+
+        .success-card { background: white; max-width: 640px; width: 100%; padding: 70px 60px; text-align: center; box-shadow: 0 20px 60px rgba(0,0,0,0.08); border: 1px solid rgba(201,169,97,0.15); }
+
+        .tick-circle { width: 90px; height: 90px; border-radius: 50%; background: linear-gradient(135deg, var(--primary-gold), #B89852); display: flex; align-items: center; justify-content: center; margin: 0 auto 30px; }
+        .tick-circle svg { width: 42px; height: 42px; stroke: white; fill: none; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+
+        .success-card h1 { font-size: 42px; margin-bottom: 12px; color: var(--dark-navy); }
+        .success-card .subtitle { font-size: 15px; color: #8D8D8D; line-height: 1.7; margin-bottom: 40px; }
+
+        .order-items { text-align: left; border-top: 1px solid rgba(201,169,97,0.2); border-bottom: 1px solid rgba(201,169,97,0.2); padding: 24px 0; margin-bottom: 30px; }
+        .order-item { display: flex; align-items: center; gap: 14px; padding: 10px 0; }
+        .order-item-img { width: 56px; height: 56px; object-fit: cover; border: 1px solid rgba(201,169,97,0.2); flex-shrink: 0; }
+        .order-item-placeholder { width: 56px; height: 56px; background: var(--cream); display: flex; align-items: center; justify-content: center; font-size: 22px; flex-shrink: 0; }
+        .order-item-name { font-family: 'Cormorant Garamond', serif; font-size: 17px; margin-bottom: 2px; }
+        .order-item-config { font-size: 11px; color: #aaa; }
+        .order-item-price { margin-left: auto; font-family: 'Cormorant Garamond', serif; font-size: 17px; color: var(--primary-gold); flex-shrink: 0; }
+
+        .info-boxes { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 36px; text-align: left; }
+        .info-box { background: var(--cream); padding: 18px 20px; border-left: 3px solid var(--primary-gold); }
+        .info-box p { font-size: 11px; letter-spacing: 1.5px; text-transform: uppercase; color: #aaa; margin-bottom: 6px; }
+        .info-box strong { font-size: 13px; color: var(--dark-navy); font-weight: 600; font-family: 'Montserrat', sans-serif; }
+
+        .btn-home { display: inline-block; padding: 18px 50px; background: var(--primary-gold); color: white; text-decoration: none; text-transform: uppercase; font-size: 13px; letter-spacing: 2px; font-family: 'Montserrat', sans-serif; transition: background 0.3s; margin-right: 12px; margin-bottom: 12px; }
+        .btn-home:hover { background: #B89852; }
+        .btn-secondary { display: inline-block; padding: 18px 50px; border: 2px solid var(--primary-gold); color: var(--primary-gold); text-decoration: none; text-transform: uppercase; font-size: 13px; letter-spacing: 2px; font-family: 'Montserrat', sans-serif; transition: all 0.3s; margin-bottom: 12px; }
+        .btn-secondary:hover { background: var(--primary-gold); color: white; }
+
+        footer { background: var(--deep-black); color: #666; padding: 30px 40px; text-align: center; font-size: 13px; }
+        footer a { color: var(--primary-gold); text-decoration: none; }
+    </style>
+</head>
+<body>
+            <div class="top-bar">
+        <div>
+            <a href="mailto:andy@manxcrowndiamonds.com">andy@manxcrowndiamonds.com</a>
+            <a href="tel:+447624368505" style="white-space:nowrap;">+44 7624 368505</a>
+        </div>
+
+        <div>Isle of Man | IGI &amp; GIA Certified</div>
+    </div>
+
+    <header>
+        <div class="header-inner">
+            <a href="index.html">
+                <img src="images/logo-mcd.jpg" alt="Manx Crown Diamonds" class="logo-img">
+            </a>
+        </div>
+    </header>
+
+    <div class="success-wrap">
+        <div class="success-card">
+            <div class="tick-circle">
+                <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            </div>
+
+            <h1>Order Confirmed</h1>
+            <p class="subtitle">Thank you for your order. A confirmation email has been sent to you, and we'll be in touch within 24 hours to confirm your 3–5 week delivery timeline.</p>
+
+            <div class="order-items" id="orderItems">
+                <!-- Populated by JS -->
+            </div>
+
+            <div class="info-boxes">
+                <div class="info-box">
+                    <p>Delivery</p>
+                    <strong>3–5 Weeks</strong>
+                </div>
+                <div class="info-box">
+                    <p>Crafted On</p>
+                    <strong>Isle of Man</strong>
+                </div>
+                <div class="info-box">
+                    <p>Certified</p>
+                    <strong>IGI Lab-Grown</strong>
+                </div>
+                <div class="info-box">
+                    <p>Support</p>
+                    <strong>andy@manxcrowndiamonds.com</strong>
+                </div>
+            </div>
+
+            <a href="index.html" class="btn-home">Continue Shopping</a>
+            <a href="mailto:andy@manxcrowndiamonds.com" class="btn-secondary">Contact Us</a>
+        </div>
+    </div>
+
+        <footer>
+        <p style="color: var(--primary-gold); margin-bottom: 15px; font-size: 16px;">Manx Crown Diamonds</p>
+        <p style="color: #999; margin-bottom: 20px;"><a href="mailto:andy@manxcrowndiamonds.com">andy@manxcrowndiamonds.com</a> | +44 7624 368505</p>
+        <p style="margin-bottom: 20px;">
+            <a href="terms.html">Terms &amp; Conditions</a> | 
+            <a href="privacy-policy.html">Privacy Policy</a>
+        </p>
+        <p style="color: #666;">&copy; 2025 Manx Crown Diamonds. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Show the items that were just purchased, then clear the basket
+        var basket = JSON.parse(localStorage.getItem('mcdBasket') || '[]');
+        var container = document.getElementById('orderItems');
+
+        if (basket.length > 0) {
+            var html = '';
+            basket.forEach(function(item) {
+                var imgHtml = item.image
+                    ? '<img src="' + item.image + '" alt="' + item.name + '" class="order-item-img">'
+                    : '<div class="order-item-placeholder">&#128142;</div>';
+                var config = item.configText ? '<div class="order-item-config">' + item.configText + '</div>' : '';
+                html += '<div class="order-item">'
+                    + imgHtml
+                    + '<div><div class="order-item-name">' + item.name + '</div>' + config + '</div>'
+                    + '<div class="order-item-price">' + (item.priceText || '') + '</div>'
+                    + '</div>';
+            });
+            container.innerHTML = html;
+
+            // Send Andy a notification email via FormSubmit (fire-and-forget)
+            // This runs silently in the background after the payment is confirmed
+            (function sendOrderNotification() {
+                try {
+                    var total     = basket.reduce(function(sum, item) { return sum + (item.price || 0); }, 0);
+                    var itemsText = basket.map(function(item, i) {
+                        return (i + 1) + '. ' + item.name
+                            + (item.configText ? ' — ' + item.configText : '')
+                            + ' (' + (item.priceText || '') + ')';
+                    }).join('\n');
+
+                    var fd = new FormData();
+                    fd.append('_subject',  'PAYMENT CONFIRMED — Manx Crown Diamonds Order');
+                    fd.append('_captcha',  'false');
+                    fd.append('_template', 'table');
+                    fd.append('Status',    'PAYMENT CONFIRMED via Worldpay');
+                    fd.append('Items',     itemsText);
+                    fd.append('Total',     '\u00A3' + total.toLocaleString());
+
+                    fetch('https://formsubmit.co/ajax/andy@manxcrowndiamonds.com', {
+                        method: 'POST',
+                        body:   fd,
+                    }).catch(function() { /* silent fail — Worldpay merchant portal is primary record */ });
+                } catch (e) { /* silent fail */ }
+            })();
+        } else {
+            container.style.display = 'none';
+        }
+
+        // Clear the basket now that payment is complete
+        localStorage.removeItem('mcdBasket');
+    </script>
+</body>
+</html>

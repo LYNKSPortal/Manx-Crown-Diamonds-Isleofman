@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Not Completed - Manx Crown Diamonds</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        :root { --primary-gold: #C9A961; --dark-navy: #2B2D42; --deep-black: #0A0A0A; --cream: #F8F6F0; }
+        body { font-family: 'Montserrat', sans-serif; color: var(--dark-navy); background: var(--cream); min-height: 100vh; display: flex; flex-direction: column; }
+        h1, h2, h3 { font-family: 'Cormorant Garamond', serif; font-weight: 400; }
+
+        .top-bar { background: var(--deep-black); color: var(--cream); padding: 12px 40px; font-size: 13px; display: flex; justify-content: space-between; }
+        .top-bar a { white-space: nowrap; color: var(--cream); text-decoration: none; margin-right: 20px; }
+
+        header { background: #fff; box-shadow: 0 1px 0 rgba(0,0,0,0.08); }
+        .header-inner { max-width: 1400px; margin: 0 auto; padding: 0 40px; height: 80px; display: flex; align-items: center; justify-content: space-between; }
+        .logo-img { height: 52px; width: auto; display: block; }
+
+        .cancel-wrap { flex: 1; display: flex; align-items: center; justify-content: center; padding: 60px 20px; }
+
+        .cancel-card { background: white; max-width: 580px; width: 100%; padding: 70px 60px; text-align: center; box-shadow: 0 20px 60px rgba(0,0,0,0.08); border: 1px solid rgba(201,169,97,0.15); }
+
+        .icon-circle { width: 90px; height: 90px; border-radius: 50%; background: var(--cream); border: 2px solid rgba(201,169,97,0.3); display: flex; align-items: center; justify-content: center; margin: 0 auto 30px; }
+        .icon-circle svg { width: 42px; height: 42px; stroke: var(--primary-gold); fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+
+        .cancel-card h1 { font-size: 38px; margin-bottom: 12px; color: var(--dark-navy); }
+        .cancel-card .subtitle { font-size: 15px; color: #8D8D8D; line-height: 1.7; margin-bottom: 36px; }
+
+        .info-box { background: var(--cream); padding: 20px 24px; border-left: 3px solid var(--primary-gold); text-align: left; margin-bottom: 36px; }
+        .info-box p { font-size: 13px; color: #8D8D8D; line-height: 1.7; }
+        .info-box strong { color: var(--dark-navy); }
+
+        .btn-primary { display: inline-block; padding: 18px 44px; background: var(--primary-gold); color: white; text-decoration: none; text-transform: uppercase; font-size: 13px; letter-spacing: 2px; font-family: 'Montserrat', sans-serif; transition: background 0.3s; margin-right: 12px; margin-bottom: 12px; }
+        .btn-primary:hover { background: #B89852; }
+        .btn-secondary { display: inline-block; padding: 17px 44px; border: 2px solid var(--primary-gold); color: var(--primary-gold); text-decoration: none; text-transform: uppercase; font-size: 13px; letter-spacing: 2px; font-family: 'Montserrat', sans-serif; transition: all 0.3s; margin-bottom: 12px; }
+        .btn-secondary:hover { background: var(--primary-gold); color: white; }
+
+        footer { background: var(--deep-black); color: #666; padding: 30px 40px; text-align: center; font-size: 13px; }
+        footer a { color: var(--primary-gold); text-decoration: none; }
+
+        @media (max-width: 600px) {
+            .cancel-card { padding: 50px 30px; }
+            .cancel-card h1 { font-size: 30px; }
+            .top-bar { flex-direction: column; gap: 6px; }
+        }
+    </style>
+</head>
+<body>
+            <div class="top-bar">
+        <div>
+            <a href="mailto:andy@manxcrowndiamonds.com">andy@manxcrowndiamonds.com</a>
+            <a href="tel:+447624368505" style="white-space:nowrap;">+44 7624 368505</a>
+        </div>
+
+        <div>Isle of Man | IGI &amp; GIA Certified</div>
+    </div>
+
+    <header>
+        <div class="header-inner">
+            <a href="index.html">
+                <img src="images/logo-mcd.jpg" alt="Manx Crown Diamonds" class="logo-img">
+            </a>
+        </div>
+    </header>
+
+    <div class="cancel-wrap">
+        <div class="cancel-card">
+            <div class="icon-circle">
+                <!-- X icon -->
+                <svg viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+            </div>
+
+            <h1 id="pageTitle">Payment Not Completed</h1>
+            <p class="subtitle" id="pageSubtitle">Your payment was not processed and you have not been charged. Your basket has been kept so you can try again.</p>
+
+            <div class="info-box" id="infoBox">
+                <p>If you continue to have trouble, please <strong>contact us directly</strong> and we'll be happy to help arrange your order.</p>
+            </div>
+
+            <a href="basket.html" class="btn-primary">Return to Basket</a>
+            <a href="mailto:andy@manxcrowndiamonds.com" class="btn-secondary">Contact Us</a>
+        </div>
+    </div>
+
+        <footer>
+        <p style="color: var(--primary-gold); margin-bottom: 15px; font-size: 16px;">Manx Crown Diamonds</p>
+        <p style="color: #999; margin-bottom: 20px;"><a href="mailto:andy@manxcrowndiamonds.com">andy@manxcrowndiamonds.com</a> | +44 7624 368505</p>
+        <p style="margin-bottom: 20px;">
+            <a href="terms.html">Terms &amp; Conditions</a> | 
+            <a href="privacy-policy.html">Privacy Policy</a>
+        </p>
+        <p style="color: #666;">&copy; 2025 Manx Crown Diamonds. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Customise message based on the reason query parameter from Worldpay
+        var reason = new URLSearchParams(window.location.search).get('reason') || '';
+        var title    = document.getElementById('pageTitle');
+        var subtitle = document.getElementById('pageSubtitle');
+        var infoBox  = document.getElementById('infoBox');
+
+        if (reason === 'failure') {
+            title.textContent    = 'Payment Unsuccessful';
+            subtitle.textContent = 'Your card payment was declined. You have not been charged. Please check your card details and try again, or use a different card.';
+            infoBox.innerHTML    = '<p>Common reasons for a declined payment include: incorrect card details, insufficient funds, or a security block by your bank. <strong>You have not been charged.</strong></p>';
+        } else if (reason === 'error') {
+            title.textContent    = 'Something Went Wrong';
+            subtitle.textContent = 'An unexpected error occurred during payment. You have not been charged. Please try again or contact us for assistance.';
+        } else if (reason === 'expired') {
+            title.textContent    = 'Payment Session Expired';
+            subtitle.textContent = 'Your payment session timed out before payment was completed. You have not been charged. Please return to your basket and try again.';
+        } else if (reason === 'cancelled') {
+            title.textContent    = 'Payment Cancelled';
+            subtitle.textContent = 'You cancelled the payment. You have not been charged. Your basket is saved — return whenever you\'re ready to complete your order.';
+        }
+        // 'reason' not set or unknown: use defaults above
+    </script>
+</body>
+</html>

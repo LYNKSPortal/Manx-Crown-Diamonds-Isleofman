@@ -1,0 +1,183 @@
+🛒 MANX CROWN DIAMONDS - COMPLETE E-COMMERCE SHOP
+==================================================
+
+✅ DOWNLOAD THE ZIP FILE: manx-shop-complete.zip
+This contains ALL pages that work together!
+
+📦 WHAT'S INCLUDED:
+-------------------
+1. home-with-bespoke-section.html - Main homepage with carousel
+2. rings-shop.html - Ring products with "Add to Basket" buttons
+3. oval-solitaire-product-updated.html - Configurable ring page
+4. basket.html - Shopping cart
+5. checkout.html - Payment & checkout page
+6. bespoke-request.html - Custom design enquiry form
+
+🚀 HOW TO USE:
+--------------
+
+OPTION 1 - Test Locally:
+1. Download manx-shop-complete.zip
+2. Extract/unzip all files to ONE folder
+3. Open home-with-bespoke-section.html in your browser
+4. All links between pages will work!
+
+OPTION 2 - Deploy to Website:
+1. Extract all files from the ZIP
+2. Upload ALL HTML files to your web hosting (same folder)
+3. Your shop is live!
+
+⚠️ IMPORTANT:
+-------------
+ALL FILES MUST BE IN THE SAME FOLDER!
+
+Correct structure:
+your-folder/
+  ├── home-with-bespoke-section.html
+  ├── rings-shop.html
+  ├── basket.html
+  ├── checkout.html
+  ├── oval-solitaire-product-updated.html
+  └── bespoke-request.html
+
+🛍️ CUSTOMER SHOPPING FLOW:
+---------------------------
+
+1. START: home-with-bespoke-section.html
+   - Browse featured products in carousel
+   - Click menu to navigate
+
+2. BROWSE: rings-shop.html
+   - See all rings
+   - Click "Configure & Buy" on Oval Solitaire
+   - OR click "Add to Basket" on other rings
+
+3. CONFIGURE: oval-solitaire-product-updated.html
+   - Choose metal (18K/9K Gold, Platinum)
+   - Choose diamond size (1ct - 8ct)
+   - See price update live
+   - Click "Add to Basket"
+
+4. REVIEW: basket.html
+   - See all items
+   - Change quantities (+/-)
+   - Remove items
+   - See total price
+   - Click "Proceed to Checkout"
+
+5. PURCHASE: checkout.html
+   - Enter contact details
+   - Enter shipping address
+   - Choose payment method
+   - Enter card details
+   - Click "Complete Purchase"
+   - Order sent to andy@manxcrowndiamonds.com
+
+6. CONFIRMATION:
+   - Customer's email client opens
+   - Order details pre-filled
+   - Sent to your email
+   - Basket cleared
+   - Customer redirected to homepage
+
+✨ FEATURES:
+------------
+✅ Real product photos (not emojis!)
+✅ Working shopping cart with quantity management
+✅ Live price calculator on configurable products
+✅ Basket count badge on all pages
+✅ Free shipping over £5,000
+✅ Professional checkout form
+✅ Multiple payment methods (Card, PayPal, Apple Pay, Bank)
+✅ Mobile responsive - works on phones
+✅ Luxury design throughout
+✅ Bespoke request form
+
+🔧 CUSTOMIZATION:
+-----------------
+
+To add more products:
+1. Open rings-shop.html in text editor
+2. Copy a product card section
+3. Change: name, price, description
+4. Update the onclick function with new details
+
+To change prices:
+1. Edit the product cards in rings-shop.html
+2. Edit the configurator prices in oval-solitaire-product-updated.html
+3. Find: data-price="2500" and change amounts
+
+To add product photos:
+1. Convert your image to base64
+2. Replace the emoji icons with: <img src="data:image/jpeg;base64,YOUR_BASE64">
+
+💳 PAYMENT PROCESSING:
+----------------------
+
+CURRENT SETUP (Development):
+- Orders sent to andy@manxcrowndiamonds.com via email
+- Customer enters card details (not processed yet)
+- You manually process payment
+
+TO GO LIVE (Production):
+You'll need to integrate with a payment processor:
+- Stripe (stripe.com)
+- PayPal
+- Square
+- Or your bank's payment gateway
+
+This will require adding their JavaScript SDK and API keys.
+
+📧 ORDER NOTIFICATIONS:
+-----------------------
+
+When customer completes checkout:
+- Email opens automatically
+- Pre-filled with:
+  * Customer details
+  * Shipping address
+  * Order items
+  * Total price
+- Sent to: andy@manxcrowndiamonds.com
+
+You receive full order details to process manually.
+
+🌐 GOING LIVE:
+--------------
+
+1. Buy domain name (e.g., manxcrowndiamonds.com)
+2. Get web hosting (Hostinger, SiteGround, etc.)
+3. Upload all HTML files to public_html folder
+4. Set home-with-bespoke-section.html as index.html
+5. Your shop is live!
+
+For a custom domain email (andy@manxcrowndiamonds.com), 
+contact your hosting provider.
+
+📱 MOBILE READY:
+----------------
+All pages are fully responsive and work perfectly on:
+- Desktop computers
+- Tablets
+- Mobile phones
+
+Test by resizing your browser window!
+
+🎨 DESIGN:
+----------
+- Luxury gold & navy color scheme
+- Professional typography
+- High-quality layout
+- Smooth animations
+- Your actual product photos
+
+💎 READY TO LAUNCH!
+-------------------
+
+Everything you need is in the ZIP file.
+Extract, test locally, then upload to your hosting.
+
+Any questions? Contact support or email andy@manxcrowndiamonds.com
+
+---
+© 2025 Manx Crown Diamonds - Complete E-Commerce Solution
