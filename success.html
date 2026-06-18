@@ -48,7 +48,14 @@
 
         footer { background: var(--deep-black); color: #666; padding: 30px 40px; text-align: center; font-size: 13px; }
         footer a { color: var(--primary-gold); text-decoration: none; }
-    </style>
+    
+        @media (max-width: 768px) {
+            .top-bar { padding: 8px 16px; align-items: center; }
+            .top-bar > div:first-child { display: flex; flex-direction: column; gap: 2px; }
+            .top-bar a { margin-right: 0; }
+        }
+        /* mobile-top-bar-fix */
+</style>
 </head>
 <body>
             <div class="top-bar">

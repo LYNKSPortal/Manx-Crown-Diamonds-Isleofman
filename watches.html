@@ -83,7 +83,14 @@
         .mobile-nav a { display: block; font-size: 24px; font-family: 'Cormorant Garamond', serif; color: #2B2D42; padding: 14px 0; border-bottom: 1px solid rgba(0,0,0,0.06); text-decoration: none; transition: color 0.2s; }
         .mobile-nav a:hover { color: #C9A961; }
         @media (max-width: 1024px) { nav { display: none; } .mobile-menu-btn { display: block; } }
-    </style>
+    
+        @media (max-width: 768px) {
+            .top-bar { padding: 8px 16px; align-items: center; }
+            .top-bar > div:first-child { display: flex; flex-direction: column; gap: 2px; }
+            .top-bar a { margin-right: 0; }
+        }
+        /* mobile-top-bar-fix */
+</style>
 </head>
 <body>
             <div class="top-bar">

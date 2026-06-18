@@ -713,7 +713,9 @@
         }
 
         @media (max-width: 768px) {
-            .top-bar-inner { flex-direction: column; gap: 4px; text-align: center; }
+            .top-bar-inner { padding: 0 16px; align-items: center; }
+            .top-bar-inner > div:first-child { display: flex; flex-direction: column; gap: 2px; }
+            .top-bar a { margin-right: 0; }
             .hero { min-height: 70vh; padding: 60px 24px; }
             .section { padding: 70px 24px; }
             .carousel-slide { grid-template-columns: 1fr; min-height: auto; }
@@ -732,7 +734,14 @@
             .slide-img { height: 280px; }
             .footer-grid { grid-template-columns: 1fr; }
         }
-    </style>
+    
+        @media (max-width: 768px) {
+            .top-bar { padding: 8px 16px; }
+            .top-bar-inner > div:first-child { display: flex; flex-direction: column; gap: 2px; }
+            .top-bar a { margin-right: 0; }
+        }
+        /* mobile-top-bar-fix */
+</style>
 </head>
 <body>
 

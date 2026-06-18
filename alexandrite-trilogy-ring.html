@@ -105,7 +105,14 @@
         footer { background: #0A0A0A; color: white; padding: 60px 40px 30px; text-align: center; }
         footer a { color: #C9A961; text-decoration: none; }
         footer a:hover { text-decoration: underline; }
-    </style>
+    
+        @media (max-width: 768px) {
+            .top-bar { padding: 8px 16px; align-items: center; }
+            .top-bar > div:first-child { display: flex; flex-direction: column; gap: 2px; }
+            .top-bar a { margin-right: 0; }
+        }
+        /* mobile-top-bar-fix */
+</style>
 </head>
 <body>
     <div class="top-bar">

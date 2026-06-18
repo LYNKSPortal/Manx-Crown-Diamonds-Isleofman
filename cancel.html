@@ -45,7 +45,14 @@
             .cancel-card h1 { font-size: 30px; }
             .top-bar { flex-direction: column; gap: 6px; }
         }
-    </style>
+    
+        @media (max-width: 768px) {
+            .top-bar { padding: 8px 16px; align-items: center; }
+            .top-bar > div:first-child { display: flex; flex-direction: column; gap: 2px; }
+            .top-bar a { margin-right: 0; }
+        }
+        /* mobile-top-bar-fix */
+</style>
 </head>
 <body>
             <div class="top-bar">
