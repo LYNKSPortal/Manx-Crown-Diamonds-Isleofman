@@ -44,7 +44,9 @@
         footer a:hover { color: #C9A961; }
 
         @media (max-width: 1200px) { .product-grid { grid-template-columns: repeat(2, 1fr); } }
-        @media (max-width: 768px) { .product-grid { grid-template-columns: 1fr; } }
+        @media (max-width: 768px) {
+            .logo-img { height: 32px; }
+            .header-inner { padding: 0 16px; } .product-grid { grid-template-columns: 1fr; } }
 
         /* ── HEADER NAV ── */
         header { background: #fff; position: sticky; top: 0; z-index: 1000; box-shadow: 0 1px 0 rgba(0,0,0,0.08); }
@@ -74,6 +76,13 @@
         .mobile-nav a:hover { color: #C9A961; }
         @media (max-width: 1024px) { nav { display: none; } .mobile-menu-btn { display: block; } }
 </style>
+<style>
+@media (max-width: 768px) {
+    .logo-img { height: 32px !important; }
+    .header-inner { padding: 0 16px !important; }
+}
+</style>
+<!-- logo-mobile-fix -->
 </head>
 <body>
 
