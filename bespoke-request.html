@@ -1,634 +1,634 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="format-detection" content="telephone=no">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bespoke Request - Manx Crown Diamonds</title>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
-    <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        
-        :root {
-            --primary-gold: #C9A961;
-            --dark-navy: #2B2D42;
-            --deep-black: #0A0A0A;
-            --cream: #F8F6F0;
-        }
+ <meta charset="UTF-8">
+ <meta name="format-detection" content="telephone=no">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Bespoke Request - Manx Crown Diamonds</title>
+ <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+ <style>
+ * { margin: 0; padding: 0; box-sizing: border-box; }
+ 
+ :root {
+ --primary-gold: #C9A961;
+ --dark-navy: #2B2D42;
+ --deep-black: #0A0A0A;
+ --cream: #F8F6F0;
+ }
 
-        body {
-            font-family: 'Montserrat', sans-serif;
-            color: var(--dark-navy);
-            background: var(--cream);
-        }
+ body {
+ font-family: 'Montserrat', sans-serif;
+ color: var(--dark-navy);
+ background: var(--cream);
+ }
 
-        h1, h2, h3 { font-family: 'Cormorant Garamond', serif; font-weight: 400; }
+ h1, h2, h3 { font-family: 'Cormorant Garamond', serif; font-weight: 400; }
 
-        /* Header */
+ /* Header */
 header {
-            background: white;
-            box-shadow: 0 2px 20px rgba(0,0,0,0.05);
-        }
+ background: white;
+ box-shadow: 0 2px 20px rgba(0,0,0,0.05);
+ }
 
-            padding: 25px 40px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
+ padding: 25px 40px;
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ }
 
-        .logo-image {
-            height: 40px;
-            width: auto;
-        }
+ .logo-image {
+ height: 40px;
+ width: auto;
+ }
 
-            color: var(--primary-gold);
-            text-decoration: none;
-            font-size: 14px;
-            letter-spacing: 1px;
-            text-transform: uppercase;
-            transition: color 0.3s;
-        }
+ color: var(--primary-gold);
+ text-decoration: none;
+ font-size: 14px;
+ letter-spacing: 1px;
+ text-transform: uppercase;
+ transition: color 0.3s;
+ }
 
-        .back-link:hover {
-            color: var(--dark-navy);
-        }
+ .back-link:hover {
+ color: var(--dark-navy);
+ }
 
-        /* Hero Section */
-        .hero {
-            padding: 80px 40px;
-            background: linear-gradient(150deg, #0A0A0A 0%, #2B2D42 100%);
-            color: white;
-            text-align: center;
-            position: relative;
-            overflow: hidden;
-            min-height: 240px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-        }
-        .hero::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse at 60% 40%, rgba(201,169,97,0.12) 0%, transparent 60%); }
-        .hero-logo { position: absolute; top: 65%; left: 50%; transform: translate(-50%, -50%); width: 130%; max-width: 1400px; opacity: 0.07; pointer-events: none; z-index: 0; filter: grayscale(1) invert(1); mix-blend-mode: screen; }
-        .hero-inner { position: relative; z-index: 1; }
+ /* Hero Section */
+ .hero {
+ padding: 80px 40px;
+ background: linear-gradient(150deg, #0A0A0A 0%, #2B2D42 100%);
+ color: white;
+ text-align: center;
+ position: relative;
+ overflow: hidden;
+ min-height: 240px;
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ justify-content: center;
+ }
+ .hero::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse at 60% 40%, rgba(201,169,97,0.12) 0%, transparent 60%); }
+ .hero-logo { position: absolute; top: 65%; left: 50%; transform: translate(-50%, -50%); width: 130%; max-width: 1400px; opacity: 0.07; pointer-events: none; z-index: 0; filter: grayscale(1) invert(1); mix-blend-mode: screen; }
+ .hero-inner { position: relative; z-index: 1; }
 
-        .hero h1 {
-            font-size: clamp(40px, 7vw, 72px);
-            margin-bottom: 12px;
-            color: #fff;
-            letter-spacing: 2px;
-            font-family: 'Cormorant Garamond', serif;
-            font-weight: 400; text-shadow: 0 2px 24px rgba(0,0,0,0.7); }
+ .hero h1 {
+ font-size: clamp(40px, 7vw, 72px);
+ margin-bottom: 12px;
+ color: #fff;
+ letter-spacing: 2px;
+ font-family: 'Cormorant Garamond', serif;
+ font-weight: 400; text-shadow: 0 2px 24px rgba(0,0,0,0.7); }
 
-        .hero p {
-            font-size: 16px;
-            max-width: 700px;
-            margin: 0 auto 40px;
-            line-height: 1.8;
-            color: rgba(248,246,240,0.8);
-            font-weight: 300;
-        }
+ .hero p {
+ font-size: 16px;
+ max-width: 700px;
+ margin: 0 auto 40px;
+ line-height: 1.8;
+ color: rgba(248,246,240,0.8);
+ font-weight: 300;
+ }
 
-        /* Form Section */
-        .form-section {
-            max-width: 800px;
-            margin: -50px auto 0;
-            padding: 0 40px 100px;
-            position: relative;
-            z-index: 10;
-        }
+ /* Form Section */
+ .form-section {
+ max-width: 800px;
+ margin: -50px auto 0;
+ padding: 0 40px 100px;
+ position: relative;
+ z-index: 10;
+ }
 
-        .form-container {
-            background: white;
-            padding: 60px;
-            box-shadow: 0 20px 60px rgba(0,0,0,0.15);
-            border: 1px solid rgba(201, 169, 97, 0.1);
-        }
+ .form-container {
+ background: white;
+ padding: 60px;
+ box-shadow: 0 20px 60px rgba(0,0,0,0.15);
+ border: 1px solid rgba(201, 169, 97, 0.1);
+ }
 
-        .form-header {
-            text-align: center;
-            margin-bottom: 40px;
-        }
+ .form-header {
+ text-align: center;
+ margin-bottom: 40px;
+ }
 
-        .form-header h2 {
-            font-size: 36px;
-            margin-bottom: 15px;
-            color: var(--dark-navy);
-        }
+ .form-header h2 {
+ font-size: 36px;
+ margin-bottom: 15px;
+ color: var(--dark-navy);
+ }
 
-        .form-header p {
-            color: #8D8D8D;
-            font-size: 15px;
-            line-height: 1.6;
-        }
+ .form-header p {
+ color: #8D8D8D;
+ font-size: 15px;
+ line-height: 1.6;
+ }
 
-        .form-group {
-            margin-bottom: 30px;
-        }
+ .form-group {
+ margin-bottom: 30px;
+ }
 
-        label {
-            display: block;
-            margin-bottom: 10px;
-            font-size: 13px;
-            letter-spacing: 1px;
-            text-transform: uppercase;
-            color: var(--dark-navy);
-            font-weight: 500;
-        }
+ label {
+ display: block;
+ margin-bottom: 10px;
+ font-size: 13px;
+ letter-spacing: 1px;
+ text-transform: uppercase;
+ color: var(--dark-navy);
+ font-weight: 500;
+ }
 
-        .required {
-            color: var(--primary-gold);
-        }
+ .required {
+ color: var(--primary-gold);
+ }
 
-        input[type="text"],
-        input[type="email"],
-        textarea {
-            width: 100%;
-            padding: 15px 20px;
-            border: 2px solid #E0E0E0;
-            background: white;
-            font-family: 'Montserrat', sans-serif;
-            font-size: 15px;
-            transition: all 0.3s;
-            color: var(--dark-navy);
-        }
+ input[type="text"],
+ input[type="email"],
+ textarea {
+ width: 100%;
+ padding: 15px 20px;
+ border: 2px solid #E0E0E0;
+ background: white;
+ font-family: 'Montserrat', sans-serif;
+ font-size: 15px;
+ transition: all 0.3s;
+ color: var(--dark-navy);
+ }
 
-        input[type="text"]:focus,
-        input[type="email"]:focus,
-        textarea:focus {
-            outline: none;
-            border-color: var(--primary-gold);
-            background: var(--cream);
-        }
+ input[type="text"]:focus,
+ input[type="email"]:focus,
+ textarea:focus {
+ outline: none;
+ border-color: var(--primary-gold);
+ background: var(--cream);
+ }
 
-        textarea {
-            resize: vertical;
-            min-height: 180px;
-            line-height: 1.6;
-        }
+ textarea {
+ resize: vertical;
+ min-height: 180px;
+ line-height: 1.6;
+ }
 
-        .char-count {
-            text-align: right;
-            font-size: 12px;
-            color: #999;
-            margin-top: 5px;
-        }
+ .char-count {
+ text-align: right;
+ font-size: 12px;
+ color: #999;
+ margin-top: 5px;
+ }
 
-        .submit-btn {
-            width: 100%;
-            padding: 20px;
-            background: var(--primary-gold);
-            color: white;
-            border: none;
-            font-size: 14px;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-            cursor: pointer;
-            transition: all 0.3s;
-            font-family: 'Montserrat', sans-serif;
-            font-weight: 500;
-            margin-top: 20px;
-        }
+ .submit-btn {
+ width: 100%;
+ padding: 20px;
+ background: var(--primary-gold);
+ color: white;
+ border: none;
+ font-size: 14px;
+ letter-spacing: 2px;
+ text-transform: uppercase;
+ cursor: pointer;
+ transition: all 0.3s;
+ font-family: 'Montserrat', sans-serif;
+ font-weight: 500;
+ margin-top: 20px;
+ }
 
-        .submit-btn:hover {
-            background: #B89852;
-            transform: translateY(-2px);
-            box-shadow: 0 10px 30px rgba(201, 169, 97, 0.3);
-        }
+ .submit-btn:hover {
+ background: #B89852;
+ transform: translateY(-2px);
+ box-shadow: 0 10px 30px rgba(201, 169, 97, 0.3);
+ }
 
-        .submit-btn:active {
-            transform: translateY(0);
-        }
+ .submit-btn:active {
+ transform: translateY(0);
+ }
 
-        /* Info Section */
-        .info-section {
-            background: white;
-            padding: 80px 40px;
-        }
+ /* Info Section */
+ .info-section {
+ background: white;
+ padding: 80px 40px;
+ }
 
-        .info-grid {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 50px;
-        }
+ .info-grid {
+ max-width: 1200px;
+ margin: 0 auto;
+ display: grid;
+ grid-template-columns: repeat(3, 1fr);
+ gap: 50px;
+ }
 
-        .info-card {
-            text-align: center;
-            overflow: hidden;
-            border: 1px solid rgba(201,169,97,0.2);
-            background: #fff;
-            transition: all 0.3s;
-        }
-        .info-card:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 16px 48px rgba(0,0,0,0.08);
-            border-color: #C9A961;
-        }
-        .info-card-img {
-            width: 100%;
-            height: 240px;
-            overflow: hidden;
-        }
-        .info-card-img img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            display: block;
-            transition: transform 0.4s;
-        }
-        .info-card:hover .info-card-img img { transform: scale(1.06); }
-        .info-card-text {
-            padding: 24px 20px;
-        }
-        .info-card h3 {
-            font-size: 22px;
-            margin-bottom: 10px;
-            color: var(--dark-navy);
-            font-family: 'Cormorant Garamond', serif;
-            font-weight: 400;
-        }
-        .info-card p {
-            color: #8D8D8D;
-            line-height: 1.7;
-            font-size: 14px;
-        }
+ .info-card {
+ text-align: center;
+ overflow: hidden;
+ border: 1px solid rgba(201,169,97,0.2);
+ background: #fff;
+ transition: all 0.3s;
+ }
+ .info-card:hover {
+ transform: translateY(-4px);
+ box-shadow: 0 16px 48px rgba(0,0,0,0.08);
+ border-color: #C9A961;
+ }
+ .info-card-img {
+ width: 100%;
+ height: 240px;
+ overflow: hidden;
+ }
+ .info-card-img img {
+ width: 100%;
+ height: 100%;
+ object-fit: cover;
+ display: block;
+ transition: transform 0.4s;
+ }
+ .info-card:hover .info-card-img img { transform: scale(1.06); }
+ .info-card-text {
+ padding: 24px 20px;
+ }
+ .info-card h3 {
+ font-size: 22px;
+ margin-bottom: 10px;
+ color: var(--dark-navy);
+ font-family: 'Cormorant Garamond', serif;
+ font-weight: 400;
+ }
+ .info-card p {
+ color: #8D8D8D;
+ line-height: 1.7;
+ font-size: 14px;
+ }
 
-        /* Footer */
-        footer {
-            background: var(--deep-black);
-            color: white;
-            padding: 40px;
-            text-align: center;
-        }
-        footer a { color: #C9A961; text-decoration: none; }
-        footer a:hover { text-decoration: underline; }
+ /* Footer */
+ footer {
+ background: var(--deep-black);
+ color: white;
+ padding: 40px;
+ text-align: center;
+ }
+ footer a { color: #C9A961; text-decoration: none; }
+ footer a:hover { text-decoration: underline; }
 
-        footer p {
-            color: #666;
-            font-size: 13px;
-        }
+ footer p {
+ color: #666;
+ font-size: 13px;
+ }
 
-        /* Success Message */
-        .success-message {
-            display: none;
-            background: #4CAF50;
-            color: white;
-            padding: 15px;
-            margin-bottom: 20px;
-            text-align: center;
-            font-size: 14px;
-            letter-spacing: 1px;
-        }
+ /* Success Message */
+ .success-message {
+ display: none;
+ background: #4CAF50;
+ color: white;
+ padding: 15px;
+ margin-bottom: 20px;
+ text-align: center;
+ font-size: 14px;
+ letter-spacing: 1px;
+ }
 
-        .success-message.show {
-            display: block;
-        }
+ .success-message.show {
+ display: block;
+ }
 
-        @media (max-width: 768px) {
-            .logo-img { height: 32px; }
-            .header-inner { padding: 0 16px; }
-            .hero h1 { font-size: 36px; }
-            .form-container { padding: 40px 30px; }
-            .form-header h2 { font-size: 28px; }
-            .info-grid { grid-template-columns: 1fr; gap: 30px; }
+ @media (max-width: 768px) {
+ .logo-img { height: 32px; }
+ .header-inner { padding: 0 16px; }
+ .hero h1 { font-size: 36px; }
+ .form-container { padding: 40px 30px; }
+ .form-header h2 { font-size: 28px; }
+ .info-grid { grid-template-columns: 1fr; gap: 30px; }
 }
 
-        /* File upload */
-        .upload-area { border: 2px dashed #C9A961; padding: 35px 20px; text-align: center; cursor: pointer; transition: all 0.3s; background: #fdfcf8; position: relative; }
-        .upload-area:hover, .upload-area.drag-over { background: #f5f0e8; border-color: #b89852; }
-        .upload-icon { font-size: 36px; margin-bottom: 12px; }
-        .upload-area p { font-size: 14px; color: #8D8D8D; margin-bottom: 6px; }
-        .upload-area strong { color: #C9A961; }
-        .upload-area input[type="file"] { position: absolute; inset: 0; opacity: 0; cursor: pointer; width: 100%; height: 100%; }
-        .file-list { margin-top: 14px; }
-        .file-item { display: flex; align-items: center; gap: 10px; padding: 8px 12px; background: white; border: 1px solid rgba(201,169,97,0.3); margin-bottom: 6px; font-size: 13px; color: #2B2D42; }
-        .file-item span { color: #C9A961; font-size: 16px; }
-        .upload-note { font-size: 12px; color: #aaa; margin-top: 8px; }
+ /* File upload */
+ .upload-area { border: 2px dashed #C9A961; padding: 35px 20px; text-align: center; cursor: pointer; transition: all 0.3s; background: #fdfcf8; position: relative; }
+ .upload-area:hover, .upload-area.drag-over { background: #f5f0e8; border-color: #b89852; }
+ .upload-icon { font-size: 36px; margin-bottom: 12px; }
+ .upload-area p { font-size: 14px; color: #8D8D8D; margin-bottom: 6px; }
+ .upload-area strong { color: #C9A961; }
+ .upload-area input[type="file"] { position: absolute; inset: 0; opacity: 0; cursor: pointer; width: 100%; height: 100%; }
+ .file-list { margin-top: 14px; }
+ .file-item { display: flex; align-items: center; gap: 10px; padding: 8px 12px; background: white; border: 1px solid rgba(201,169,97,0.3); margin-bottom: 6px; font-size: 13px; color: #2B2D42; }
+ .file-item span { color: #C9A961; font-size: 16px; }
+ .upload-note { font-size: 12px; color: #aaa; margin-top: 8px; }
 
-            /* ── HEADER NAV ── */
-        header { background: #fff; position: sticky; top: 0; z-index: 1000; box-shadow: 0 1px 0 rgba(0,0,0,0.08); }
-        .header-inner { max-width: 1400px; margin: 0 auto; padding: 0 40px; height: 80px; display: flex; align-items: center; justify-content: space-between; gap: 40px; }
-        .logo-img { height: 52px; width: auto; display: block; opacity: 0.6; }
-        nav { flex: 1; display: flex; justify-content: center; }
-        nav ul { list-style: none; display: flex; align-items: center; gap: 0; }
-        nav ul li { position: relative; }
-        nav ul li a { display: block; padding: 28px 20px; font-size: 13px; letter-spacing: 1.5px; text-transform: uppercase; color: #2B2D42; text-decoration: none; transition: color 0.2s; }
-        nav ul li a:hover { color: #C9A961; }
-        .has-dropdown > a::after { content: ' ▾'; font-size: 10px; vertical-align: middle; }
-        .dropdown-panel { position: absolute; top: 100%; left: 50%; background: #fff; min-width: 200px; box-shadow: 0 12px 40px rgba(0,0,0,0.12); border-top: 2px solid #C9A961; opacity: 0; visibility: hidden; transform: translateX(-50%) translateY(-6px); transition: all 0.25s ease; }
-        .has-dropdown:hover .dropdown-panel { opacity: 1; visibility: visible; transform: translateX(-50%) translateY(0); }
-        .dropdown-panel a { display: block; padding: 14px 22px; font-size: 12px; letter-spacing: 1px; text-transform: uppercase; color: #2B2D42; border-bottom: 1px solid rgba(0,0,0,0.05); transition: all 0.2s; }
-        .dropdown-panel a:last-child { border-bottom: none; }
-        .dropdown-panel a:hover { color: #C9A961; background: #F8F6F0; padding-left: 28px; }
-        .header-actions { display: flex; align-items: center; gap: 16px; }
-        .cart-link { position: relative; font-size: 22px; color: #2B2D42; text-decoration: none; transition: color 0.2s; }
-        .cart-link:hover { color: #C9A961; }
-        .cart-badge { position: absolute; top: -6px; right: -8px; background: #2B2D42; color: white; border-radius: 50%; width: 18px; height: 18px; font-size: 11px; font-family: 'Montserrat', sans-serif; font-weight: 600; display: none; align-items: center; justify-content: center; }
-        .mobile-menu-btn { display: none; background: none; border: none; cursor: pointer; font-size: 24px; color: #2B2D42; }
-        .mobile-nav { display: none; position: fixed; inset: 0; background: #fff; z-index: 2000; flex-direction: column; padding: 30px; overflow-y: auto; }
-        .mobile-nav.open { display: flex; }
-        .mobile-nav-top { display: flex; justify-content: space-between; align-items: center; margin-bottom: 40px; }
-        .mobile-nav-close { background: none; border: none; font-size: 24px; cursor: pointer; color: #2B2D42; }
-        .mobile-nav a { display: block; font-size: 24px; font-family: 'Cormorant Garamond', serif; color: #2B2D42; padding: 14px 0; border-bottom: 1px solid rgba(0,0,0,0.06); text-decoration: none; transition: color 0.2s; }
-        .mobile-nav a:hover { color: #C9A961; }
-        @media (max-width: 1024px) { nav { display: none; } .mobile-menu-btn { display: block; } }
+ /* ── HEADER NAV ── */
+ header { background: #fff; position: sticky; top: 0; z-index: 1000; box-shadow: 0 1px 0 rgba(0,0,0,0.08); }
+ .header-inner { max-width: 1400px; margin: 0 auto; padding: 0 40px; height: 80px; display: flex; align-items: center; justify-content: space-between; gap: 40px; }
+ .logo-img { height: 52px; width: auto; display: block; opacity: 0.6; }
+ nav { flex: 1; display: flex; justify-content: center; }
+ nav ul { list-style: none; display: flex; align-items: center; gap: 0; }
+ nav ul li { position: relative; }
+ nav ul li a { display: block; padding: 28px 20px; font-size: 13px; letter-spacing: 1.5px; text-transform: uppercase; color: #2B2D42; text-decoration: none; transition: color 0.2s; }
+ nav ul li a:hover { color: #C9A961; }
+ .has-dropdown > a::after { content: ' ▾'; font-size: 10px; vertical-align: middle; }
+ .dropdown-panel { position: absolute; top: 100%; left: 50%; background: #fff; min-width: 200px; box-shadow: 0 12px 40px rgba(0,0,0,0.12); border-top: 2px solid #C9A961; opacity: 0; visibility: hidden; transform: translateX(-50%) translateY(-6px); transition: all 0.25s ease; }
+ .has-dropdown:hover .dropdown-panel { opacity: 1; visibility: visible; transform: translateX(-50%) translateY(0); }
+ .dropdown-panel a { display: block; padding: 14px 22px; font-size: 12px; letter-spacing: 1px; text-transform: uppercase; color: #2B2D42; border-bottom: 1px solid rgba(0,0,0,0.05); transition: all 0.2s; }
+ .dropdown-panel a:last-child { border-bottom: none; }
+ .dropdown-panel a:hover { color: #C9A961; background: #F8F6F0; padding-left: 28px; }
+ .header-actions { display: flex; align-items: center; gap: 16px; }
+ .cart-link { position: relative; font-size: 22px; color: #2B2D42; text-decoration: none; transition: color 0.2s; }
+ .cart-link:hover { color: #C9A961; }
+ .cart-badge { position: absolute; top: -6px; right: -8px; background: #2B2D42; color: white; border-radius: 50%; width: 18px; height: 18px; font-size: 11px; font-family: 'Montserrat', sans-serif; font-weight: 600; display: none; align-items: center; justify-content: center; }
+ .mobile-menu-btn { display: none; background: none; border: none; cursor: pointer; font-size: 24px; color: #2B2D42; }
+ .mobile-nav { display: none; position: fixed; inset: 0; background: #fff; z-index: 2000; flex-direction: column; padding: 30px; overflow-y: auto; }
+ .mobile-nav.open { display: flex; }
+ .mobile-nav-top { display: flex; justify-content: space-between; align-items: center; margin-bottom: 40px; }
+ .mobile-nav-close { background: none; border: none; font-size: 24px; cursor: pointer; color: #2B2D42; }
+ .mobile-nav a { display: block; font-size: 24px; font-family: 'Cormorant Garamond', serif; color: #2B2D42; padding: 14px 0; border-bottom: 1px solid rgba(0,0,0,0.06); text-decoration: none; transition: color 0.2s; }
+ .mobile-nav a:hover { color: #C9A961; }
+ @media (max-width: 1024px) { nav { display: none; } .mobile-menu-btn { display: block; } }
 </style>
 <style>
 @media (max-width: 768px) {
-    .logo-img { height: 32px !important; }
-    .header-inner { padding: 0 16px !important; }
+ .logo-img { height: 32px !important; }
+ .header-inner { padding: 0 16px !important; }
 }
 </style>
 <!-- logo-mobile-fix -->
 <style>
 @media (max-width: 768px) {
-    .hero-logo { width: 300%; max-width: none; }
+ .hero-logo { width: 300%; max-width: none; }
 }
 </style>
 <!-- page-header-logo-mobile-fix -->
 </head>
 <body>
 
-    <div class="mobile-nav" id="mobileNav">
-    <div class="mobile-nav-top">
-        <img src="images/logo-mcd.jpg" alt="Manx Crown Diamonds" class="logo-img">
-        <button class="mobile-nav-close" onclick="closeMobileNav()">&#x2715;</button>
-    </div>
-    <a href="index.html">Home</a>
-    <a href="diamond-rings.html">Rings</a>
-    <a href="website/earrings.html">Earrings</a>
-    <a href="website/bracelets.html">Bracelets</a>
-    <a href="website/necklaces.html">Necklaces</a>
-    <a href="watches.html">Watches</a>
-    <a href="bespoke-request.html">Bespoke</a>
-    <a href="website/about.html">About</a>
-    <a href="website/contact.html">Contact</a>
+ <div class="mobile-nav" id="mobileNav">
+ <div class="mobile-nav-top">
+ <img src="images/logo-mcd.jpg" alt="Manx Crown Diamonds" class="logo-img">
+ <button class="mobile-nav-close" onclick="closeMobileNav()">&#x2715;</button>
+ </div>
+ <a href="index.html">Home</a>
+ <a href="diamond-rings.html">Rings</a>
+ <a href="website/earrings.html">Earrings</a>
+ <a href="website/bracelets.html">Bracelets</a>
+ <a href="website/necklaces.html">Necklaces</a>
+ <a href="watches.html">Watches</a>
+ <a href="bespoke-request.html">Bespoke</a>
+ <a href="website/about.html">About</a>
+ <a href="website/contact.html">Contact</a>
 </div>
 
 <header>
-    <div class="header-inner">
-        <a href="index.html">
-            <img src="images/logo-mcd.jpg" alt="Manx Crown Diamonds" class="logo-img">
-        </a>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li class="has-dropdown">
-                    <a href="#">Jewellery</a>
-                    <div class="dropdown-panel">
-                        <a href="diamond-rings.html">Rings</a>
-                        <a href="website/earrings.html">Earrings</a>
-                        <a href="website/bracelets.html">Bracelets</a>
-                        <a href="website/necklaces.html">Necklaces</a>
-                    </div>
-                </li>
-                <li><a href="watches.html">Watches</a></li>
-                <li><a href="bespoke-request.html">Bespoke</a></li>
-                <li><a href="website/about.html">About</a></li>
-                <li><a href="website/contact.html">Contact</a></li>
-            </ul>
-        </nav>
-        <div class="header-actions">
-            <a href="basket.html" class="cart-link">&#128722;<span class="cart-badge" id="basketCount">0</span></a>
-            <button class="mobile-menu-btn" onclick="openMobileNav()">&#9776;</button>
-        </div>
-    </div>
+ <div class="header-inner">
+ <a href="index.html">
+ <img src="images/logo-mcd.jpg" alt="Manx Crown Diamonds" class="logo-img">
+ </a>
+ <nav>
+ <ul>
+ <li><a href="index.html">Home</a></li>
+ <li class="has-dropdown">
+ <a href="#">Jewellery</a>
+ <div class="dropdown-panel">
+ <a href="diamond-rings.html">Rings</a>
+ <a href="website/earrings.html">Earrings</a>
+ <a href="website/bracelets.html">Bracelets</a>
+ <a href="website/necklaces.html">Necklaces</a>
+ </div>
+ </li>
+ <li><a href="watches.html">Watches</a></li>
+ <li><a href="bespoke-request.html">Bespoke</a></li>
+ <li><a href="website/about.html">About</a></li>
+ <li><a href="website/contact.html">Contact</a></li>
+ </ul>
+ </nav>
+ <div class="header-actions">
+ <a href="basket.html" class="cart-link">&#128722;<span class="cart-badge" id="basketCount">0</span></a>
+ <button class="mobile-menu-btn" onclick="openMobileNav()">&#9776;</button>
+ </div>
+ </div>
 </header>
 <script>(function(){var b=JSON.parse(localStorage.getItem('mcdBasket')||'[]');var e=document.getElementById('basketCount');if(e){e.textContent=b.length;e.style.display=b.length>0?'flex':'none';}})();
 function openMobileNav(){document.getElementById('mobileNav').classList.add('open');}
 function closeMobileNav(){document.getElementById('mobileNav').classList.remove('open');}</script>
 
-    <section class="hero">
-        <img src="images/logo-mcd.jpg" alt="" class="hero-logo" aria-hidden="true">
-        <div class="hero-inner">
-            <h1>Begin Your Bespoke Journey</h1>
-            <p>Share your vision with us and let our master craftsmen bring your dream piece to life. Every detail will be meticulously considered, every stone carefully selected, and every setting precisely crafted to perfection.</p>
-        </div>
-    </section>
+ <section class="hero">
+ <img src="images/logo-mcd.jpg" alt="" class="hero-logo" aria-hidden="true">
+ <div class="hero-inner">
+ <h1>Begin Your Bespoke Journey</h1>
+ <p>Share your vision with us and let our master craftsmen bring your dream piece to life. Every detail will be meticulously considered, every stone carefully selected, and every setting precisely crafted to perfection.</p>
+ </div>
+ </section>
 
-    <section class="form-section">
-        <div class="form-container">
-            <div class="success-message" id="successMessage">
-                ✓ Thank you! Your enquiry has been received. We'll be in touch within 24 hours.
-            </div>
+ <section class="form-section">
+ <div class="form-container">
+ <div class="success-message" id="successMessage">
+ ✓ Thank you! Your enquiry has been received. We'll be in touch within 24 hours.
+ </div>
 
-            <div class="form-header">
-                <h2>Request a Bespoke Design</h2>
-                <p>Tell us about your vision, and we'll schedule a complimentary consultation to discuss bringing your unique piece to life.</p>
-            </div>
+ <div class="form-header">
+ <h2>Request a Bespoke Design</h2>
+ <p>Tell us about your vision, and we'll schedule a complimentary consultation to discuss bringing your unique piece to life.</p>
+ </div>
 
-            <form id="bespokeForm" action="https://formsubmit.co/andy@manxcrowndiamonds.com" method="POST" enctype="multipart/form-data">
-                <div class="form-group">
-                    <label for="name">Your Name <span class="required">*</span></label>
-                    <input type="text" id="name" name="name" required placeholder="Enter your full name">
-                </div>
+ <form id="bespokeForm" action="https://formsubmit.co/andy@manxcrowndiamonds.com" method="POST" enctype="multipart/form-data">
+ <div class="form-group">
+ <label for="name">Your Name <span class="required">*</span></label>
+ <input type="text" id="name" name="name" required placeholder="Enter your full name">
+ </div>
 
-                <div class="form-group">
-                    <label for="email">Email Address <span class="required">*</span></label>
-                    <input type="email" id="email" name="email" required placeholder="your.email@example.com">
-                </div>
+ <div class="form-group">
+ <label for="email">Email Address <span class="required">*</span></label>
+ <input type="email" id="email" name="email" required placeholder="your.email@example.com">
+ </div>
 
-                <div class="form-group">
-                    <label for="phone">Phone Number (Optional)</label>
-                    <input type="text" id="phone" name="phone" placeholder="+44 7624 123456">
-                </div>
+ <div class="form-group">
+ <label for="phone">Phone Number (Optional)</label>
+ <input type="text" id="phone" name="phone" placeholder="+44 7624 123456">
+ </div>
 
-                <div class="form-group">
-                    <label for="enquiry">Tell Us About Your Vision <span class="required">*</span></label>
-                    <textarea id="enquiry" name="enquiry" required placeholder="Describe your dream piece... What type of jewellery are you interested in? Do you have specific stones or metals in mind? Is this for a special occasion? Any inspiration or ideas you'd like to share?" maxlength="1000"></textarea>
-                    <div class="char-count"><span id="charCount">0</span>/1000 characters</div>
-                </div>
+ <div class="form-group">
+ <label for="enquiry">Tell Us About Your Vision <span class="required">*</span></label>
+ <textarea id="enquiry" name="enquiry" required placeholder="Describe your dream piece... What type of jewellery are you interested in? Do you have specific stones or metals in mind? Is this for a special occasion? Any inspiration or ideas you'd like to share?" maxlength="1000"></textarea>
+ <div class="char-count"><span id="charCount">0</span>/1000 characters</div>
+ </div>
 
-                <div class="form-group">
-                    <label for="budget">Approximate Budget (Optional)</label>
-                    <input type="text" id="budget" name="budget" placeholder="£5,000 - £10,000">
-                </div>
+ <div class="form-group">
+ <label for="budget">Approximate Budget (Optional)</label>
+ <input type="text" id="budget" name="budget" placeholder="£5,000 - £10,000">
+ </div>
 
-                <div class="form-group">
-                    <label for="links">Inspiration Links (Optional)</label>
-                    <input type="text" id="links" name="inspiration_links" placeholder="e.g. Pinterest board, Instagram post, website URL">
-                    <p style="font-size:12px; color:#aaa; margin-top:6px;">Paste any links to inspiration images, rings you like, or references</p>
-                </div>
+ <div class="form-group">
+ <label for="links">Inspiration Links (Optional)</label>
+ <input type="text" id="links" name="inspiration_links" placeholder="e.g. Pinterest board, Instagram post, website URL">
+ <p style="font-size:12px; color:#aaa; margin-top:6px;">Paste any links to inspiration images, rings you like, or references</p>
+ </div>
 
-                                <div class="form-group">
-                    <label>Photos or Inspiration Files (Optional)</label>
-                    <div class="upload-area" id="uploadArea">
-                        <div class="upload-icon">📎</div>
-                        <p><strong>Click to upload</strong> or drag and drop files here</p>
-                        <p>Images (JPG, PNG, WEBP) or PDFs — up to 5 files</p>
-                        <input type="file" id="fileInput" accept="image/*,.pdf" multiple style="position:absolute;left:-9999px;top:-9999px;width:1px;height:1px;opacity:0;">
-                    </div>
-                    <div class="file-list" id="fileList"></div>
-                    <p class="upload-note">Files will be sent to us directly with your enquiry</p>
-                </div>
+ <div class="form-group">
+ <label>Photos or Inspiration Files (Optional)</label>
+ <div class="upload-area" id="uploadArea">
+ <div class="upload-icon">📎</div>
+ <p><strong>Click to upload</strong> or drag and drop files here</p>
+ <p>Images (JPG, PNG, WEBP) or PDFs — up to 5 files</p>
+ <input type="file" id="fileInput" accept="image/*,.pdf" multiple style="position:absolute;left:-9999px;top:-9999px;width:1px;height:1px;opacity:0;">
+ </div>
+ <div class="file-list" id="fileList"></div>
+ <p class="upload-note">Files will be sent to us directly with your enquiry</p>
+ </div>
 
-                <button type="submit" class="submit-btn">Submit Enquiry</button>
-            </form>
-        </div>
-    </section>
+ <button type="submit" class="submit-btn">Submit Enquiry</button>
+ </form>
+ </div>
+ </section>
 
-    <section class="info-section">
-        <div class="info-grid">
-            <div class="info-card">
-                <div class="info-card-img"><img src="images/bespoke.JPG" alt="Expert Craftsmanship" loading="lazy"></div>
-                <div class="info-card-text">
-                    <h3>Expert Craftsmanship</h3>
-                    <p>Our master artisans bring decades of experience to every bespoke creation, ensuring exceptional quality and attention to detail.</p>
-                </div>
-            </div>
-            <div class="info-card">
-                <div class="info-card-img"><img src="images/bespoke1.JPG" alt="Certified Diamonds" loading="lazy"></div>
-                <div class="info-card-text">
-                    <h3>Certified Diamonds</h3>
-                    <p>We source only the finest IGI and GIA certified diamonds, ensuring authenticity and quality in every stone.</p>
-                </div>
-            </div>
-            <div class="info-card">
-                <div class="info-card-img"><img src="images/bespoke2.JPG" alt="Unlimited Possibilities" loading="lazy"></div>
-                <div class="info-card-text">
-                    <h3>Unlimited Possibilities</h3>
-                    <p>From initial consultation to final creation, we guide you through every step of designing your perfect piece.</p>
-                </div>
-            </div>
-        </div>
-    </section>
+ <section class="info-section">
+ <div class="info-grid">
+ <div class="info-card">
+ <div class="info-card-img"><img src="images/bespoke.JPG" alt="Expert Craftsmanship" loading="lazy"></div>
+ <div class="info-card-text">
+ <h3>Expert Craftsmanship</h3>
+ <p>Our master artisans bring decades of experience to every bespoke creation, ensuring exceptional quality and attention to detail.</p>
+ </div>
+ </div>
+ <div class="info-card">
+ <div class="info-card-img"><img src="images/bespoke1.JPG" alt="Certified Diamonds" loading="lazy"></div>
+ <div class="info-card-text">
+ <h3>Certified Diamonds</h3>
+ <p>We source only the finest IGI and GIA certified diamonds, ensuring authenticity and quality in every stone.</p>
+ </div>
+ </div>
+ <div class="info-card">
+ <div class="info-card-img"><img src="images/bespoke2.JPG" alt="Unlimited Possibilities" loading="lazy"></div>
+ <div class="info-card-text">
+ <h3>Unlimited Possibilities</h3>
+ <p>From initial consultation to final creation, we guide you through every step of designing your perfect piece.</p>
+ </div>
+ </div>
+ </div>
+ </section>
 
-        <footer>
-        <p style="color: var(--primary-gold); margin-bottom: 15px; font-size: 16px;">Manx Crown Diamonds</p>
-        <p style="color: #999; margin-bottom: 20px;"><a href="mailto:andy@manxcrowndiamonds.com">andy@manxcrowndiamonds.com</a> | +44 7624 368505</p>
-        <p style="margin-bottom: 20px;">
-            <a href="terms.html">Terms &amp; Conditions</a> | 
-            <a href="privacy-policy.html">Privacy Policy</a>
-        </p>
-        <p style="color: #666;">&copy; 2025 Manx Crown Diamonds. All rights reserved.</p>
-    </footer>
+ <footer>
+ <p style="color: var(--primary-gold); margin-bottom: 15px; font-size: 16px;">Manx Crown Diamonds</p>
+ <p style="color: #999; margin-bottom: 20px;"><a href="mailto:andy@manxcrowndiamonds.com">andy@manxcrowndiamonds.com</a> | +44 7624 368505</p>
+ <p style="margin-bottom: 20px;">
+ <a href="terms.html">Terms &amp; Conditions</a> | 
+ <a href="privacy-policy.html">Privacy Policy</a>
+ </p>
+ <p style="color: #666;">&copy; 2025 Manx Crown Diamonds. All rights reserved.</p>
+ </footer>
 
-    <script>
-        // ── File upload UI ──
-        var uploadArea = document.getElementById('uploadArea');
-        var fileInput  = document.getElementById('fileInput');
-        var fileList   = document.getElementById('fileList');
-        var selectedFiles = [];
+ <script>
+ // ── File upload UI ──
+ var uploadArea = document.getElementById('uploadArea');
+ var fileInput = document.getElementById('fileInput');
+ var fileList = document.getElementById('fileList');
+ var selectedFiles = [];
 
-        uploadArea.addEventListener('click', function() { fileInput.click(); });
+ uploadArea.addEventListener('click', function() { fileInput.click(); });
 
-        uploadArea.addEventListener('dragover', function(e) { e.preventDefault(); uploadArea.classList.add('drag-over'); });
-        uploadArea.addEventListener('dragleave', function() { uploadArea.classList.remove('drag-over'); });
-        uploadArea.addEventListener('drop', function(e) {
-            e.preventDefault();
-            uploadArea.classList.remove('drag-over');
-            handleFiles(Array.from(e.dataTransfer.files));
-        });
+ uploadArea.addEventListener('dragover', function(e) { e.preventDefault(); uploadArea.classList.add('drag-over'); });
+ uploadArea.addEventListener('dragleave', function() { uploadArea.classList.remove('drag-over'); });
+ uploadArea.addEventListener('drop', function(e) {
+ e.preventDefault();
+ uploadArea.classList.remove('drag-over');
+ handleFiles(Array.from(e.dataTransfer.files));
+ });
 
-        fileInput.addEventListener('change', function() {
-            handleFiles(Array.from(fileInput.files));
-            fileInput.value = '';
-        });
+ fileInput.addEventListener('change', function() {
+ handleFiles(Array.from(fileInput.files));
+ fileInput.value = '';
+ });
 
-        function handleFiles(newFiles) {
-            var allowed = ['image/jpeg','image/png','image/webp','image/gif','application/pdf'];
-            newFiles.forEach(function(f) {
-                if (selectedFiles.length >= 5) return;
-                if (!allowed.includes(f.type)) return;
-                selectedFiles.push(f);
-            });
-            renderFileList();
-        }
+ function handleFiles(newFiles) {
+ var allowed = ['image/jpeg','image/png','image/webp','image/gif','application/pdf'];
+ newFiles.forEach(function(f) {
+ if (selectedFiles.length >= 5) return;
+ if (!allowed.includes(f.type)) return;
+ selectedFiles.push(f);
+ });
+ renderFileList();
+ }
 
-        function renderFileList() {
-            fileList.innerHTML = '';
-            selectedFiles.forEach(function(f, i) {
-                var item = document.createElement('div');
-                item.className = 'file-item';
-                var icon = f.type.startsWith('image/') ? '&#128444;' : '&#128196;';
-                var sizeKb = (f.size / 1024).toFixed(0);
-                item.innerHTML = '<span style="font-size:18px;">' + icon + '</span>'
-                    + '<span style="flex:1;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;margin-left:6px;">' + f.name + '</span>'
-                    + '<span style="color:#aaa;font-size:11px;margin-left:8px;">' + sizeKb + ' KB</span>'
-                    + '<button type="button" onclick="removeFile(' + i + ')" style="margin-left:10px;background:none;border:none;color:#C9A961;cursor:pointer;font-size:20px;line-height:1;" title="Remove">&times;</button>';
-                fileList.appendChild(item);
-                if (f.type.startsWith('image/')) {
-                    var reader = new FileReader();
-                    reader.onload = (function(el) { return function(ev) {
-                        var thumb = document.createElement('img');
-                        thumb.src = ev.target.result;
-                        thumb.style.cssText = 'width:48px;height:48px;object-fit:cover;margin-right:8px;border:1px solid rgba(201,169,97,0.3);flex-shrink:0;';
-                        el.insertBefore(thumb, el.firstChild);
-                    };})(item);
-                    reader.readAsDataURL(f);
-                }
-            });
-        }
+ function renderFileList() {
+ fileList.innerHTML = '';
+ selectedFiles.forEach(function(f, i) {
+ var item = document.createElement('div');
+ item.className = 'file-item';
+ var icon = f.type.startsWith('image/') ? '&#128444;' : '&#128196;';
+ var sizeKb = (f.size / 1024).toFixed(0);
+ item.innerHTML = '<span style="font-size:18px;">' + icon + '</span>'
+ + '<span style="flex:1;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;margin-left:6px;">' + f.name + '</span>'
+ + '<span style="color:#aaa;font-size:11px;margin-left:8px;">' + sizeKb + ' KB</span>'
+ + '<button type="button" onclick="removeFile(' + i + ')" style="margin-left:10px;background:none;border:none;color:#C9A961;cursor:pointer;font-size:20px;line-height:1;" title="Remove">&times;</button>';
+ fileList.appendChild(item);
+ if (f.type.startsWith('image/')) {
+ var reader = new FileReader();
+ reader.onload = (function(el) { return function(ev) {
+ var thumb = document.createElement('img');
+ thumb.src = ev.target.result;
+ thumb.style.cssText = 'width:48px;height:48px;object-fit:cover;margin-right:8px;border:1px solid rgba(201,169,97,0.3);flex-shrink:0;';
+ el.insertBefore(thumb, el.firstChild);
+ };})(item);
+ reader.readAsDataURL(f);
+ }
+ });
+ }
 
-        function removeFile(index) {
-            selectedFiles.splice(index, 1);
-            renderFileList();
-        }
+ function removeFile(index) {
+ selectedFiles.splice(index, 1);
+ renderFileList();
+ }
 
-        // ── Character counter ──
-        var enquiryField = document.getElementById('enquiry');
-        var charCount    = document.getElementById('charCount');
-        enquiryField.addEventListener('input', function() { charCount.textContent = this.value.length; });
+ // ── Character counter ──
+ var enquiryField = document.getElementById('enquiry');
+ var charCount = document.getElementById('charCount');
+ enquiryField.addEventListener('input', function() { charCount.textContent = this.value.length; });
 
-        // ── Form submission via FormSubmit.co ──
-        var form           = document.getElementById('bespokeForm');
-        var successMessage = document.getElementById('successMessage');
-        var submitBtn      = form.querySelector('.submit-btn');
+ // ── Form submission via FormSubmit.co ──
+ var form = document.getElementById('bespokeForm');
+ var successMessage = document.getElementById('successMessage');
+ var submitBtn = form.querySelector('.submit-btn');
 
-        form.addEventListener('submit', async function(e) {
-            e.preventDefault();
+ form.addEventListener('submit', async function(e) {
+ e.preventDefault();
 
-            submitBtn.textContent = 'Sending...';
-            submitBtn.disabled = true;
+ submitBtn.textContent = 'Sending...';
+ submitBtn.disabled = true;
 
-            var nameVal = document.getElementById('name').value;
-            var emailVal = document.getElementById('email').value;
+ var nameVal = document.getElementById('name').value;
+ var emailVal = document.getElementById('email').value;
 
-            var formData = new FormData(form);
+ var formData = new FormData(form);
 
-            // Attach selected files
-            formData.delete('attachment');
-            selectedFiles.forEach(function(f, i) {
-                formData.append('attachment_' + (i + 1), f, f.name);
-            });
+ // Attach selected files
+ formData.delete('attachment');
+ selectedFiles.forEach(function(f, i) {
+ formData.append('attachment_' + (i + 1), f, f.name);
+ });
 
-            formData.set('_subject', 'Bespoke Enquiry from ' + nameVal);
-            formData.set('_replyto', emailVal);
-            formData.set('_captcha', 'false');
-            formData.set('_template', 'table');
+ formData.set('_subject', 'Bespoke Enquiry from ' + nameVal);
+ formData.set('_replyto', emailVal);
+ formData.set('_captcha', 'false');
+ formData.set('_template', 'table');
 
-            try {
-                var resp = await fetch('https://formsubmit.co/ajax/andy@manxcrowndiamonds.com', {
-                    method: 'POST',
-                    body: formData
-                });
-                var result = await resp.json();
+ try {
+ var resp = await fetch('https://formsubmit.co/ajax/andy@manxcrowndiamonds.com', {
+ method: 'POST',
+ body: formData
+ });
+ var result = await resp.json();
 
-                if (result.success === 'true' || result.success === true
-                    || (result.message && result.message.toLowerCase().includes('activation'))) {
-                    form.style.display = 'none';
-                    successMessage.classList.add('show');
-                    successMessage.textContent = '\u2714 Thank you! Your enquiry has been received. We\u2019ll be in touch within 24 hours.';
-                    window.scrollTo({ top: successMessage.offsetTop - 40, behavior: 'smooth' });
-                } else {
-                    throw new Error(result.message || 'Submission failed');
-                }
-            } catch (err) {
-                submitBtn.textContent = 'Submit Enquiry';
-                submitBtn.disabled = false;
-                alert('Form submission requires the live website. Please email us directly at andy@manxcrowndiamonds.com');
-            }
-        });
+ if (result.success === 'true' || result.success === true
+ || (result.message && result.message.toLowerCase().includes('activation'))) {
+ form.style.display = 'none';
+ successMessage.classList.add('show');
+ successMessage.textContent = '\u2714 Thank you! Your enquiry has been received. We\u2019ll be in touch within 24 hours.';
+ window.scrollTo({ top: successMessage.offsetTop - 40, behavior: 'smooth' });
+ } else {
+ throw new Error(result.message || 'Submission failed');
+ }
+ } catch (err) {
+ submitBtn.textContent = 'Submit Enquiry';
+ submitBtn.disabled = false;
+ alert('Form submission requires the live website. Please email us directly at andy@manxcrowndiamonds.com');
+ }
+ });
 
-        // ── Basket count ──
-        (function(){
-            var b = JSON.parse(localStorage.getItem('mcdBasket') || '[]');
-            var el = document.getElementById('basketCount');
-            if (el) { el.textContent = b.length; el.style.display = b.length > 0 ? 'flex' : 'none'; }
-        })();
-        function openMobileNav()  { document.getElementById('mobileNav').classList.add('open');    }
-        function closeMobileNav() { document.getElementById('mobileNav').classList.remove('open'); }
-    </script>
+ // ── Basket count ──
+ (function(){
+ var b = JSON.parse(localStorage.getItem('mcdBasket') || '[]');
+ var el = document.getElementById('basketCount');
+ if (el) { el.textContent = b.length; el.style.display = b.length > 0 ? 'flex' : 'none'; }
+ })();
+ function openMobileNav() { document.getElementById('mobileNav').classList.add('open'); }
+ function closeMobileNav() { document.getElementById('mobileNav').classList.remove('open'); }
+ </script>
 </body>
 </html>

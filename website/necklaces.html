@@ -1,265 +1,265 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="format-detection" content="telephone=no">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Necklaces - Manx Crown Diamonds</title>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
-    <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: "Montserrat", sans-serif; color: #2B2D42; }
-        h1, h2, h3 { font-family: "Cormorant Garamond", serif; font-weight: 400; }
+ <meta charset="UTF-8">
+ <meta name="format-detection" content="telephone=no">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Necklaces - Manx Crown Diamonds</title>
+ <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+ <style>
+ * { margin: 0; padding: 0; box-sizing: border-box; }
+ body { font-family: "Montserrat", sans-serif; color: #2B2D42; }
+ h1, h2, h3 { font-family: "Cormorant Garamond", serif; font-weight: 400; }
 .page-header { padding: 80px 40px; background: linear-gradient(150deg, #0A0A0A 0%, #2B2D42 100%); color: white; text-align: center; position: relative; overflow: hidden;; min-height: 240px; display: flex; flex-direction: column; align-items: center; justify-content: center; }
-        .page-header::before {
-            content: '';
-            position: absolute;
-            inset: 0;
-            background: radial-gradient(ellipse at 60% 40%, rgba(201,169,97,0.12) 0%, transparent 60%);
-        }
-        .page-header h1 { font-size: clamp(40px, 7vw, 72px); color: #fff; letter-spacing: 2px; font-family: 'Cormorant Garamond', serif; font-weight: 400; margin-bottom: 12px; }
-        .page-header p { font-size: 16px; color: rgba(248,246,240,0.8); font-weight: 300; letter-spacing: 0.5px; }
-        .page-header-logo { position: absolute; top: 65%; left: 50%; transform: translate(-50%, -50%); width: 130%; max-width: 1400px; opacity: 0.07; pointer-events: none; z-index: 0; filter: grayscale(1) invert(1); mix-blend-mode: screen; }
-        .page-header-inner { position: relative; z-index: 1; }
-        .product-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px; max-width: 1400px; margin: 60px auto; padding: 0 40px; }
-        .product-card { background: white; border: 1px solid rgba(201, 169, 97, 0.1); transition: transform 0.4s, box-shadow 0.4s; text-decoration: none; color: inherit; display: flex; flex-direction: column; will-change: transform; }
-        .product-card:hover { transform: translateY(-10px); box-shadow: 0 25px 70px rgba(0,0,0,0.12); }
-        .product-image { height: 400px; overflow: hidden; }
-        .product-image img { width: 100%; height: 100%; object-fit: cover; }
-        .product-info { padding: 35px; display: flex; flex-direction: column; flex: 1; }
-        .product-category { font-size: 11px; text-transform: uppercase; color: #C9A961; margin-bottom: 10px; letter-spacing: 2px; }
-        .product-info h3 { font-size: 26px; margin-bottom: 12px; }
-        .product-description { color: #8D8D8D; font-size: 13px; margin-bottom: 20px; line-height: 1.6; flex: 1; }
-        .product-price { font-size: 28px; margin-bottom: 20px; font-family: "Cormorant Garamond", serif; color: #2B2D42; }
-        .price-from { font-size: 16px; color: #8D8D8D; }
-        .btn { display: block; padding: 15px 40px; background: #C9A961; color: white; border: none; cursor: pointer; text-transform: uppercase; font-size: 13px; letter-spacing: 2px; width: 100%; text-align: center; text-decoration: none; transition: background 0.3s; }
-        .btn:hover { background: #B89852; }
-        footer { background: #0A0A0A; color: white; padding: 40px; text-align: center; font-size: 13px; }
-        @media (max-width: 1200px) { .product-grid { grid-template-columns: repeat(2, 1fr); } }
-        @media (max-width: 768px) {
-            .logo-img { height: 32px; }
-            .header-inner { padding: 0 16px; } .product-grid { grid-template-columns: 1fr; }        .page-header h1 { font-size: clamp(40px, 7vw, 72px); color: #fff; letter-spacing: 2px; font-family: 'Cormorant Garamond', serif; font-weight: 400; margin-bottom: 12px; } }
+ .page-header::before {
+ content: '';
+ position: absolute;
+ inset: 0;
+ background: radial-gradient(ellipse at 60% 40%, rgba(201,169,97,0.12) 0%, transparent 60%);
+ }
+ .page-header h1 { font-size: clamp(40px, 7vw, 72px); color: #fff; letter-spacing: 2px; font-family: 'Cormorant Garamond', serif; font-weight: 400; margin-bottom: 12px; }
+ .page-header p { font-size: 16px; color: rgba(248,246,240,0.8); font-weight: 300; letter-spacing: 0.5px; }
+ .page-header-logo { position: absolute; top: 65%; left: 50%; transform: translate(-50%, -50%); width: 130%; max-width: 1400px; opacity: 0.07; pointer-events: none; z-index: 0; filter: grayscale(1) invert(1); mix-blend-mode: screen; }
+ .page-header-inner { position: relative; z-index: 1; }
+ .product-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px; max-width: 1400px; margin: 60px auto; padding: 0 40px; }
+ .product-card { background: white; border: 1px solid rgba(201, 169, 97, 0.1); transition: transform 0.4s, box-shadow 0.4s; text-decoration: none; color: inherit; display: flex; flex-direction: column; will-change: transform; }
+ .product-card:hover { transform: translateY(-10px); box-shadow: 0 25px 70px rgba(0,0,0,0.12); }
+ .product-image { height: 400px; overflow: hidden; }
+ .product-image img { width: 100%; height: 100%; object-fit: cover; }
+ .product-info { padding: 35px; display: flex; flex-direction: column; flex: 1; }
+ .product-category { font-size: 11px; text-transform: uppercase; color: #C9A961; margin-bottom: 10px; letter-spacing: 2px; }
+ .product-info h3 { font-size: 26px; margin-bottom: 12px; }
+ .product-description { color: #8D8D8D; font-size: 13px; margin-bottom: 20px; line-height: 1.6; flex: 1; }
+ .product-price { font-size: 28px; margin-bottom: 20px; font-family: "Cormorant Garamond", serif; color: #2B2D42; }
+ .price-from { font-size: 16px; color: #8D8D8D; }
+ .btn { display: block; padding: 15px 40px; background: #C9A961; color: white; border: none; cursor: pointer; text-transform: uppercase; font-size: 13px; letter-spacing: 2px; width: 100%; text-align: center; text-decoration: none; transition: background 0.3s; }
+ .btn:hover { background: #B89852; }
+ footer { background: #0A0A0A; color: white; padding: 40px; text-align: center; font-size: 13px; }
+ @media (max-width: 1200px) { .product-grid { grid-template-columns: repeat(2, 1fr); } }
+ @media (max-width: 768px) {
+ .logo-img { height: 32px; }
+ .header-inner { padding: 0 16px; } .product-grid { grid-template-columns: 1fr; } .page-header h1 { font-size: clamp(40px, 7vw, 72px); color: #fff; letter-spacing: 2px; font-family: 'Cormorant Garamond', serif; font-weight: 400; margin-bottom: 12px; } }
 
-            /* ── HEADER NAV ── */
-        header { background: #fff; position: sticky; top: 0; z-index: 1000; box-shadow: 0 1px 0 rgba(0,0,0,0.08); }
-        .header-inner { max-width: 1400px; margin: 0 auto; padding: 0 40px; height: 80px; display: flex; align-items: center; justify-content: space-between; gap: 40px; }
-        .logo-img { height: 52px; width: auto; display: block; opacity: 0.6; }
-        nav { flex: 1; display: flex; justify-content: center; }
-        nav ul { list-style: none; display: flex; align-items: center; gap: 0; }
-        nav ul li { position: relative; }
-        nav ul li a { display: block; padding: 28px 20px; font-size: 13px; letter-spacing: 1.5px; text-transform: uppercase; color: #2B2D42; text-decoration: none; transition: color 0.2s; }
-        nav ul li a:hover { color: #C9A961; }
-        .has-dropdown > a::after { content: ' ▾'; font-size: 10px; vertical-align: middle; }
-        .dropdown-panel { position: absolute; top: 100%; left: 50%; background: #fff; min-width: 200px; box-shadow: 0 12px 40px rgba(0,0,0,0.12); border-top: 2px solid #C9A961; opacity: 0; visibility: hidden; transform: translateX(-50%) translateY(-6px); transition: all 0.25s ease; }
-        .has-dropdown:hover .dropdown-panel { opacity: 1; visibility: visible; transform: translateX(-50%) translateY(0); }
-        .dropdown-panel a { display: block; padding: 14px 22px; font-size: 12px; letter-spacing: 1px; text-transform: uppercase; color: #2B2D42; border-bottom: 1px solid rgba(0,0,0,0.05); transition: all 0.2s; }
-        .dropdown-panel a:last-child { border-bottom: none; }
-        .dropdown-panel a:hover { color: #C9A961; background: #F8F6F0; padding-left: 28px; }
-        .header-actions { display: flex; align-items: center; gap: 16px; }
-        .cart-link { position: relative; font-size: 22px; color: #2B2D42; text-decoration: none; transition: color 0.2s; }
-        .cart-link:hover { color: #C9A961; }
-        .cart-badge { position: absolute; top: -6px; right: -8px; background: #2B2D42; color: white; border-radius: 50%; width: 18px; height: 18px; font-size: 11px; font-family: 'Montserrat', sans-serif; font-weight: 600; display: none; align-items: center; justify-content: center; }
-        .mobile-menu-btn { display: none; background: none; border: none; cursor: pointer; font-size: 24px; color: #2B2D42; }
-        .mobile-nav { display: none; position: fixed; inset: 0; background: #fff; z-index: 2000; flex-direction: column; padding: 30px; overflow-y: auto; }
-        .mobile-nav.open { display: flex; }
-        .mobile-nav-top { display: flex; justify-content: space-between; align-items: center; margin-bottom: 40px; }
-        .mobile-nav-close { background: none; border: none; font-size: 24px; cursor: pointer; color: #2B2D42; }
-        .mobile-nav a { display: block; font-size: 24px; font-family: 'Cormorant Garamond', serif; color: #2B2D42; padding: 14px 0; border-bottom: 1px solid rgba(0,0,0,0.06); text-decoration: none; transition: color 0.2s; }
-        .mobile-nav a:hover { color: #C9A961; }
-        @media (max-width: 1024px) { nav { display: none; } .mobile-menu-btn { display: block; } }
+ /* ── HEADER NAV ── */
+ header { background: #fff; position: sticky; top: 0; z-index: 1000; box-shadow: 0 1px 0 rgba(0,0,0,0.08); }
+ .header-inner { max-width: 1400px; margin: 0 auto; padding: 0 40px; height: 80px; display: flex; align-items: center; justify-content: space-between; gap: 40px; }
+ .logo-img { height: 52px; width: auto; display: block; opacity: 0.6; }
+ nav { flex: 1; display: flex; justify-content: center; }
+ nav ul { list-style: none; display: flex; align-items: center; gap: 0; }
+ nav ul li { position: relative; }
+ nav ul li a { display: block; padding: 28px 20px; font-size: 13px; letter-spacing: 1.5px; text-transform: uppercase; color: #2B2D42; text-decoration: none; transition: color 0.2s; }
+ nav ul li a:hover { color: #C9A961; }
+ .has-dropdown > a::after { content: ' ▾'; font-size: 10px; vertical-align: middle; }
+ .dropdown-panel { position: absolute; top: 100%; left: 50%; background: #fff; min-width: 200px; box-shadow: 0 12px 40px rgba(0,0,0,0.12); border-top: 2px solid #C9A961; opacity: 0; visibility: hidden; transform: translateX(-50%) translateY(-6px); transition: all 0.25s ease; }
+ .has-dropdown:hover .dropdown-panel { opacity: 1; visibility: visible; transform: translateX(-50%) translateY(0); }
+ .dropdown-panel a { display: block; padding: 14px 22px; font-size: 12px; letter-spacing: 1px; text-transform: uppercase; color: #2B2D42; border-bottom: 1px solid rgba(0,0,0,0.05); transition: all 0.2s; }
+ .dropdown-panel a:last-child { border-bottom: none; }
+ .dropdown-panel a:hover { color: #C9A961; background: #F8F6F0; padding-left: 28px; }
+ .header-actions { display: flex; align-items: center; gap: 16px; }
+ .cart-link { position: relative; font-size: 22px; color: #2B2D42; text-decoration: none; transition: color 0.2s; }
+ .cart-link:hover { color: #C9A961; }
+ .cart-badge { position: absolute; top: -6px; right: -8px; background: #2B2D42; color: white; border-radius: 50%; width: 18px; height: 18px; font-size: 11px; font-family: 'Montserrat', sans-serif; font-weight: 600; display: none; align-items: center; justify-content: center; }
+ .mobile-menu-btn { display: none; background: none; border: none; cursor: pointer; font-size: 24px; color: #2B2D42; }
+ .mobile-nav { display: none; position: fixed; inset: 0; background: #fff; z-index: 2000; flex-direction: column; padding: 30px; overflow-y: auto; }
+ .mobile-nav.open { display: flex; }
+ .mobile-nav-top { display: flex; justify-content: space-between; align-items: center; margin-bottom: 40px; }
+ .mobile-nav-close { background: none; border: none; font-size: 24px; cursor: pointer; color: #2B2D42; }
+ .mobile-nav a { display: block; font-size: 24px; font-family: 'Cormorant Garamond', serif; color: #2B2D42; padding: 14px 0; border-bottom: 1px solid rgba(0,0,0,0.06); text-decoration: none; transition: color 0.2s; }
+ .mobile-nav a:hover { color: #C9A961; }
+ @media (max-width: 1024px) { nav { display: none; } .mobile-menu-btn { display: block; } }
 </style>
 <style>
 @media (max-width: 768px) {
-    .logo-img { height: 32px !important; }
-    .header-inner { padding: 0 16px !important; }
+ .logo-img { height: 32px !important; }
+ .header-inner { padding: 0 16px !important; }
 }
 </style>
 <!-- logo-mobile-fix -->
 <style>
 @media (max-width: 768px) {
-    .page-header-logo { width: 300%; max-width: none; }
+ .page-header-logo { width: 300%; max-width: none; }
 }
 </style>
 <!-- page-header-logo-mobile-fix -->
 </head>
 <body>
-    <div class="mobile-nav" id="mobileNav">
-    <div class="mobile-nav-top">
-        <img src="../images/logo-mcd.jpg" alt="Manx Crown Diamonds" class="logo-img">
-        <button class="mobile-nav-close" onclick="closeMobileNav()">&#x2715;</button>
-    </div>
-    <a href="../index.html">Home</a>
-    <a href="../diamond-rings.html">Rings</a>
-    <a href="earrings.html">Earrings</a>
-    <a href="bracelets.html">Bracelets</a>
-    <a href="necklaces.html">Necklaces</a>
-    <a href="../watches.html">Watches</a>
-    <a href="../bespoke-request.html">Bespoke</a>
-    <a href="about.html">About</a>
-    <a href="contact.html">Contact</a>
+ <div class="mobile-nav" id="mobileNav">
+ <div class="mobile-nav-top">
+ <img src="../images/logo-mcd.jpg" alt="Manx Crown Diamonds" class="logo-img">
+ <button class="mobile-nav-close" onclick="closeMobileNav()">&#x2715;</button>
+ </div>
+ <a href="../index.html">Home</a>
+ <a href="../diamond-rings.html">Rings</a>
+ <a href="earrings.html">Earrings</a>
+ <a href="bracelets.html">Bracelets</a>
+ <a href="necklaces.html">Necklaces</a>
+ <a href="../watches.html">Watches</a>
+ <a href="../bespoke-request.html">Bespoke</a>
+ <a href="about.html">About</a>
+ <a href="contact.html">Contact</a>
 </div>
 
 <header>
-    <div class="header-inner">
-        <a href="../index.html">
-            <img src="../images/logo-mcd.jpg" alt="Manx Crown Diamonds" class="logo-img">
-        </a>
-        <nav>
-            <ul>
-                <li><a href="../index.html">Home</a></li>
-                <li class="has-dropdown">
-                    <a href="#">Jewellery</a>
-                    <div class="dropdown-panel">
-                        <a href="../diamond-rings.html">Rings</a>
-                        <a href="earrings.html">Earrings</a>
-                        <a href="bracelets.html">Bracelets</a>
-                        <a href="necklaces.html">Necklaces</a>
-                    </div>
-                </li>
-                <li><a href="../watches.html">Watches</a></li>
-                <li><a href="../bespoke-request.html">Bespoke</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
-        <div class="header-actions">
-            <a href="../basket.html" class="cart-link">&#128722;<span class="cart-badge" id="basketCount">0</span></a>
-            <button class="mobile-menu-btn" onclick="openMobileNav()">&#9776;</button>
-        </div>
-    </div>
+ <div class="header-inner">
+ <a href="../index.html">
+ <img src="../images/logo-mcd.jpg" alt="Manx Crown Diamonds" class="logo-img">
+ </a>
+ <nav>
+ <ul>
+ <li><a href="../index.html">Home</a></li>
+ <li class="has-dropdown">
+ <a href="#">Jewellery</a>
+ <div class="dropdown-panel">
+ <a href="../diamond-rings.html">Rings</a>
+ <a href="earrings.html">Earrings</a>
+ <a href="bracelets.html">Bracelets</a>
+ <a href="necklaces.html">Necklaces</a>
+ </div>
+ </li>
+ <li><a href="../watches.html">Watches</a></li>
+ <li><a href="../bespoke-request.html">Bespoke</a></li>
+ <li><a href="about.html">About</a></li>
+ <li><a href="contact.html">Contact</a></li>
+ </ul>
+ </nav>
+ <div class="header-actions">
+ <a href="../basket.html" class="cart-link">&#128722;<span class="cart-badge" id="basketCount">0</span></a>
+ <button class="mobile-menu-btn" onclick="openMobileNav()">&#9776;</button>
+ </div>
+ </div>
 </header>
 <script>(function(){var b=JSON.parse(localStorage.getItem('mcdBasket')||'[]');var e=document.getElementById('basketCount');if(e){e.textContent=b.length;e.style.display=b.length>0?'flex':'none';}})();
 function openMobileNav(){document.getElementById('mobileNav').classList.add('open');}
 function closeMobileNav(){document.getElementById('mobileNav').classList.remove('open');}</script>
 
-    <div class="page-header">
-        <img src="../images/logo-mcd.jpg" alt="" class="page-header-logo" aria-hidden="true">
-    <div class="page-header-inner">
-        <h1>Necklaces</h1>
-        <p>Elegant diamond necklaces &amp; personalised pieces</p>
-    </div>
+ <div class="page-header">
+ <img src="../images/logo-mcd.jpg" alt="" class="page-header-logo" aria-hidden="true">
+ <div class="page-header-inner">
+ <h1>Necklaces</h1>
+ <p>Elegant diamond necklaces &amp; personalised pieces</p>
+ </div>
 </div>
 
-    <div class="product-grid">
-        <a href="../initial-necklace.html" class="product-card">
-            <div class="product-image">
-                <img loading="lazy" src="../images/Initial-necklace.JPG" alt="Diamond Initial Necklace">
-            </div>
-            <div class="product-info">
-                <div class="product-category">Necklace</div>
-                <h3>Diamond Initial Necklace</h3>
-                <p class="product-description">A personalised diamond-set initial necklace in your choice of precious metal. Choose any letter A&ndash;Z, the perfect thoughtful gift.</p>
-                <div class="product-price"><span class="price-from">From</span> &pound;275</div>
-                <span class="btn">Configure Necklace</span>
-            </div>
-        </a>
-        <a href="../three-legs-necklace.html" class="product-card">
-            <div class="product-image">
-                <img loading="lazy" src="../images/Three-legs.JPG" alt="Three Legs Necklace">
-            </div>
-            <div class="product-info">
-                <div class="product-category">Necklace</div>
-                <h3>Three Legs Necklace</h3>
-                <p class="product-description">A beautiful Isle of Man Three Legs of Mann pendant, available in your choice of precious metal and chain length.</p>
-                <div class="product-price"><span class="price-from">From</span> &pound;230</div>
-                <span class="btn">Configure Necklace</span>
-            </div>
-        </a>
-        <a href="../love-necklace.html" class="product-card">
-            <div class="product-image">
-                <img loading="lazy" src="../images/Love-necklace.JPG" alt="Love Necklace">
-            </div>
-            <div class="product-info">
-                <div class="product-category">Necklace</div>
-                <h3>Love Necklace</h3>
-                <p class="product-description">A romantic love necklace, based on the Isle of Man. Personalise with an engraved letter A–Z, available in your choice of precious metal and chain length.</p>
-                <div class="product-price"><span class="price-from">From</span> &pound;275</div>
-                <span class="btn">Configure Necklace</span>
-            </div>
-        </a>
-        <a href="../gold-rope-necklace.html" class="product-card">
-            <div class="product-image">
-                <img loading="lazy" src="../images/gold-rope.JPG" alt="Gold Rope Necklace">
-            </div>
-            <div class="product-info">
-                <div class="product-category">Necklace</div>
-                <h3>Gold Rope Necklace</h3>
-                <p class="product-description">A classic gold rope chain necklace, based on the Isle of Man. Available in your choice of gold metal, length and width.</p>
-                <div class="product-price"><span class="price-from">From</span> &pound;700</div>
-                <span class="btn">Configure Necklace</span>
-            </div>
-        </a>
-        <a href="../pear-necklace.html" class="product-card">
-            <div class="product-image">
-                <img loading="lazy" src="../images/pear-necklace.PNG" alt="Pear Diamond Necklace">
-            </div>
-            <div class="product-info">
-                <div class="product-category">Necklace</div>
-                <h3>Pear Diamond Necklace</h3>
-                <p class="product-description">An elegant pear-cut lab-grown diamond pendant, based on the Isle of Man. Choose your metal, chain length, diamond size and clarity.</p>
-                <div class="product-price"><span class="price-from">From</span> &pound;950</div>
-                <span class="btn">Configure Necklace</span>
-            </div>
-        </a>
-        <a href="../cuban-chain.html" class="product-card">
-            <div class="product-image">
-                <img loading="lazy" src="../images/Cuban-chain.JPG" alt="Cuban Chain Necklace">
-            </div>
-            <div class="product-info">
-                <div class="product-category">Necklace</div>
-                <h3>Cuban Chain Necklace</h3>
-                <p class="product-description">A bold and luxurious Cuban-link chain necklace, based on the Isle of Man. Available in your choice of precious metal, length and width.</p>
-                <div class="product-price"><span class="price-from">From</span> &pound;120</div>
-                <span class="btn">Configure Chain</span>
-            </div>
-        </a>
+ <div class="product-grid">
+ <a href="../initial-necklace.html" class="product-card">
+ <div class="product-image">
+ <img loading="lazy" src="../images/Initial-necklace.JPG" alt="Diamond Initial Necklace">
+ </div>
+ <div class="product-info">
+ <div class="product-category">Necklace</div>
+ <h3>Diamond Initial Necklace</h3>
+ <p class="product-description">A personalised diamond-set initial necklace in your choice of precious metal. Choose any letter A&ndash;Z, the perfect thoughtful gift.</p>
+ <div class="product-price"><span class="price-from">From</span> &pound;275</div>
+ <span class="btn">Configure Necklace</span>
+ </div>
+ </a>
+ <a href="../three-legs-necklace.html" class="product-card">
+ <div class="product-image">
+ <img loading="lazy" src="../images/Three-legs.JPG" alt="Three Legs Necklace">
+ </div>
+ <div class="product-info">
+ <div class="product-category">Necklace</div>
+ <h3>Three Legs Necklace</h3>
+ <p class="product-description">A beautiful Isle of Man Three Legs of Mann pendant, available in your choice of precious metal and chain length.</p>
+ <div class="product-price"><span class="price-from">From</span> &pound;230</div>
+ <span class="btn">Configure Necklace</span>
+ </div>
+ </a>
+ <a href="../love-necklace.html" class="product-card">
+ <div class="product-image">
+ <img loading="lazy" src="../images/Love-necklace.JPG" alt="Love Necklace">
+ </div>
+ <div class="product-info">
+ <div class="product-category">Necklace</div>
+ <h3>Love Necklace</h3>
+ <p class="product-description">A romantic love necklace Personalise with an engraved letter A–Z, available in your choice of precious metal and chain length.</p>
+ <div class="product-price"><span class="price-from">From</span> &pound;275</div>
+ <span class="btn">Configure Necklace</span>
+ </div>
+ </a>
+ <a href="../gold-rope-necklace.html" class="product-card">
+ <div class="product-image">
+ <img loading="lazy" src="../images/gold-rope.JPG" alt="Gold Rope Necklace">
+ </div>
+ <div class="product-info">
+ <div class="product-category">Necklace</div>
+ <h3>Gold Rope Necklace</h3>
+ <p class="product-description">A classic gold rope chain necklace Available in your choice of gold metal, length and width.</p>
+ <div class="product-price"><span class="price-from">From</span> &pound;700</div>
+ <span class="btn">Configure Necklace</span>
+ </div>
+ </a>
+ <a href="../pear-necklace.html" class="product-card">
+ <div class="product-image">
+ <img loading="lazy" src="../images/pear-necklace.PNG" alt="Pear Diamond Necklace">
+ </div>
+ <div class="product-info">
+ <div class="product-category">Necklace</div>
+ <h3>Pear Diamond Necklace</h3>
+ <p class="product-description">An elegant pear-cut lab-grown diamond pendant Choose your metal, chain length, diamond size and clarity.</p>
+ <div class="product-price"><span class="price-from">From</span> &pound;950</div>
+ <span class="btn">Configure Necklace</span>
+ </div>
+ </a>
+ <a href="../cuban-chain.html" class="product-card">
+ <div class="product-image">
+ <img loading="lazy" src="../images/Cuban-chain.JPG" alt="Cuban Chain Necklace">
+ </div>
+ <div class="product-info">
+ <div class="product-category">Necklace</div>
+ <h3>Cuban Chain Necklace</h3>
+ <p class="product-description">A bold and luxurious Cuban-link chain necklace Available in your choice of precious metal, length and width.</p>
+ <div class="product-price"><span class="price-from">From</span> &pound;120</div>
+ <span class="btn">Configure Chain</span>
+ </div>
+ </a>
 
-        <a href="../clover-necklace.html" class="product-card">
-            <div class="product-image">
-                <img loading="lazy" src="../images/Clover-necklace.JPG" alt="Silver Clover Necklace with Moissanite">
-            </div>
-            <div class="product-info">
-                <div class="product-category">Silver &amp; Moissanite</div>
-                <h3>Silver Clover Necklace</h3>
-                <p class="product-description">A beautifully crafted four-leaf clover pendant set with moissanite stones in sterling silver, based on the Isle of Man. Exceptional brilliance at an accessible price point.</p>
-                <div class="product-price"><span class="price-from">From</span> &pound;230</div>
-                <span class="btn">Configure Necklace</span>
-            </div>
-        </a>
-        <a href="../eternity-necklace.html" class="product-card">
-            <div class="product-image">
-                <img loading="lazy" src="../images/eternity-necklace.JPG" alt="Silver Eternity Necklace with Moissanite">
-            </div>
-            <div class="product-info">
-                <div class="product-category">Silver &amp; Moissanite</div>
-                <h3>Silver Eternity Necklace</h3>
-                <p class="product-description">A beautifully crafted eternity pendant set with moissanite stones in sterling silver, based on the Isle of Man. A timeless symbol of everlasting love.</p>
-                <div class="product-price"><span class="price-from">From</span> &pound;230</div>
-                <span class="btn">Configure Necklace</span>
-            </div>
-        </a>
+ <a href="../clover-necklace.html" class="product-card">
+ <div class="product-image">
+ <img loading="lazy" src="../images/Clover-necklace.JPG" alt="Silver Clover Necklace with Moissanite">
+ </div>
+ <div class="product-info">
+ <div class="product-category">Silver &amp; Moissanite</div>
+ <h3>Silver Clover Necklace</h3>
+ <p class="product-description">A beautifully crafted four-leaf clover pendant set with moissanite stones in sterling silver Exceptional brilliance at an accessible price point.</p>
+ <div class="product-price"><span class="price-from">From</span> &pound;230</div>
+ <span class="btn">Configure Necklace</span>
+ </div>
+ </a>
+ <a href="../eternity-necklace.html" class="product-card">
+ <div class="product-image">
+ <img loading="lazy" src="../images/eternity-necklace.JPG" alt="Silver Eternity Necklace with Moissanite">
+ </div>
+ <div class="product-info">
+ <div class="product-category">Silver &amp; Moissanite</div>
+ <h3>Silver Eternity Necklace</h3>
+ <p class="product-description">A beautifully crafted eternity pendant set with moissanite stones in sterling silver A timeless symbol of everlasting love.</p>
+ <div class="product-price"><span class="price-from">From</span> &pound;230</div>
+ <span class="btn">Configure Necklace</span>
+ </div>
+ </a>
 
-        <a href="../heart-necklace.html" class="product-card">
-            <div class="product-image">
-                <img loading="lazy" src="../images/Heart-necklace.JPG" alt="Silver Heart Necklace with Moissanite">
-            </div>
-            <div class="product-info">
-                <div class="product-category">Silver &amp; Moissanite</div>
-                <h3>Silver Heart Necklace</h3>
-                <p class="product-description">A beautifully crafted heart pendant set with moissanite stones in sterling silver, based on the Isle of Man. A romantic and timeless piece, perfect as a gift.</p>
-                <div class="product-price"><span class="price-from">From</span> &pound;230</div>
-                <span class="btn">Configure Necklace</span>
-            </div>
-        </a>
-    </div>
-    <footer style="background:#0A0A0A;color:white;padding:60px 40px 30px;text-align:center;">
-        <p style="color: #C9A961; margin-bottom: 15px; font-size: 16px; text-align:center;">Manx Crown Diamonds</p>
-        <p style="color: #999; margin-bottom: 20px; text-align:center;"><a href="mailto:andy@manxcrowndiamonds.com" style="color:#C9A961;text-decoration:none;">andy@manxcrowndiamonds.com</a> | +44 7624 368505</p>
-        <p style="margin-bottom: 20px; text-align:center;">
-            <a href="../terms.html" style="color:#C9A961;text-decoration:none;">Terms &amp; Conditions</a> | 
-            <a href="../privacy-policy.html" style="color:#C9A961;text-decoration:none;">Privacy Policy</a>
-        </p>
-        <p style="color: #666; text-align:center;">&copy; 2025 Manx Crown Diamonds. All rights reserved.</p>
-    </footer>
+ <a href="../heart-necklace.html" class="product-card">
+ <div class="product-image">
+ <img loading="lazy" src="../images/Heart-necklace.JPG" alt="Silver Heart Necklace with Moissanite">
+ </div>
+ <div class="product-info">
+ <div class="product-category">Silver &amp; Moissanite</div>
+ <h3>Silver Heart Necklace</h3>
+ <p class="product-description">A beautifully crafted heart pendant set with moissanite stones in sterling silver A romantic and timeless piece, perfect as a gift.</p>
+ <div class="product-price"><span class="price-from">From</span> &pound;230</div>
+ <span class="btn">Configure Necklace</span>
+ </div>
+ </a>
+ </div>
+ <footer style="background:#0A0A0A;color:white;padding:60px 40px 30px;text-align:center;">
+ <p style="color: #C9A961; margin-bottom: 15px; font-size: 16px; text-align:center;">Manx Crown Diamonds</p>
+ <p style="color: #999; margin-bottom: 20px; text-align:center;"><a href="mailto:andy@manxcrowndiamonds.com" style="color:#C9A961;text-decoration:none;">andy@manxcrowndiamonds.com</a> | +44 7624 368505</p>
+ <p style="margin-bottom: 20px; text-align:center;">
+ <a href="../terms.html" style="color:#C9A961;text-decoration:none;">Terms &amp; Conditions</a> | 
+ <a href="../privacy-policy.html" style="color:#C9A961;text-decoration:none;">Privacy Policy</a>
+ </p>
+ <p style="color: #666; text-align:center;">&copy; 2025 Manx Crown Diamonds. All rights reserved.</p>
+ </footer>
 </body>
 </html>

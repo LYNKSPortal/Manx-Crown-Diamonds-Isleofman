@@ -1,388 +1,388 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="format-detection" content="telephone=no">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Diamond Rings - Manx Crown Diamonds</title>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
-    <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Montserrat', sans-serif; color: #2B2D42; }
-        h1, h2, h3 { font-family: 'Cormorant Garamond', serif; font-weight: 400; }
+ <meta charset="UTF-8">
+ <meta name="format-detection" content="telephone=no">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Diamond Rings - Manx Crown Diamonds</title>
+ <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+ <style>
+ * { margin: 0; padding: 0; box-sizing: border-box; }
+ body { font-family: 'Montserrat', sans-serif; color: #2B2D42; }
+ h1, h2, h3 { font-family: 'Cormorant Garamond', serif; font-weight: 400; }
 .page-header { padding: 80px 40px; background: linear-gradient(150deg, #0A0A0A 0%, #2B2D42 100%); color: white; text-align: center; position: relative; overflow: hidden;; min-height: 240px; display: flex; flex-direction: column; align-items: center; justify-content: center; }
-        .page-header::before {
-            content: '';
-            position: absolute;
-            inset: 0;
-            background: radial-gradient(ellipse at 60% 40%, rgba(201,169,97,0.12) 0%, transparent 60%);
-        }
-        .page-header h1 { font-size: clamp(40px, 7vw, 72px); color: #fff; letter-spacing: 2px; font-family: 'Cormorant Garamond', serif; font-weight: 400; margin-bottom: 12px; }
-        .page-header p { font-size: 16px; color: rgba(248,246,240,0.8); font-weight: 300; letter-spacing: 0.5px; }
-        .page-header-logo { position: absolute; top: 65%; left: 50%; transform: translate(-50%, -50%); width: 130%; max-width: 1400px; opacity: 0.07; pointer-events: none; z-index: 0; filter: grayscale(1) invert(1); mix-blend-mode: screen; }
-        .page-header-inner { position: relative; z-index: 1; }
+ .page-header::before {
+ content: '';
+ position: absolute;
+ inset: 0;
+ background: radial-gradient(ellipse at 60% 40%, rgba(201,169,97,0.12) 0%, transparent 60%);
+ }
+ .page-header h1 { font-size: clamp(40px, 7vw, 72px); color: #fff; letter-spacing: 2px; font-family: 'Cormorant Garamond', serif; font-weight: 400; margin-bottom: 12px; }
+ .page-header p { font-size: 16px; color: rgba(248,246,240,0.8); font-weight: 300; letter-spacing: 0.5px; }
+ .page-header-logo { position: absolute; top: 65%; left: 50%; transform: translate(-50%, -50%); width: 130%; max-width: 1400px; opacity: 0.07; pointer-events: none; z-index: 0; filter: grayscale(1) invert(1); mix-blend-mode: screen; }
+ .page-header-inner { position: relative; z-index: 1; }
 
-        .product-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px; max-width: 1400px; margin: 60px auto; padding: 0 40px; }
-        .product-card { background: white; border: 1px solid rgba(201, 169, 97, 0.1); transition: transform 0.4s, box-shadow 0.4s; text-decoration: none; color: inherit; display: flex; flex-direction: column; will-change: transform; }
-        .product-card:hover { transform: translateY(-10px); box-shadow: 0 25px 70px rgba(0,0,0,0.12); }
+ .product-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px; max-width: 1400px; margin: 60px auto; padding: 0 40px; }
+ .product-card { background: white; border: 1px solid rgba(201, 169, 97, 0.1); transition: transform 0.4s, box-shadow 0.4s; text-decoration: none; color: inherit; display: flex; flex-direction: column; will-change: transform; }
+ .product-card:hover { transform: translateY(-10px); box-shadow: 0 25px 70px rgba(0,0,0,0.12); }
 
-        .product-image { height: 400px; background: linear-gradient(135deg, #f5f5f5, #e0e0e0); display: flex; align-items: center; justify-content: center; font-size: 140px; position: relative; overflow: hidden; }
-        .product-image img { width: 100%; height: 100%; object-fit: cover; }
-        .product-badge { position: absolute; top: 20px; right: 20px; background: #C9A961; color: white; padding: 8px 16px; font-size: 11px; letter-spacing: 1px; text-transform: uppercase; }
+ .product-image { height: 400px; background: linear-gradient(135deg, #f5f5f5, #e0e0e0); display: flex; align-items: center; justify-content: center; font-size: 140px; position: relative; overflow: hidden; }
+ .product-image img { width: 100%; height: 100%; object-fit: cover; }
+ .product-badge { position: absolute; top: 20px; right: 20px; background: #C9A961; color: white; padding: 8px 16px; font-size: 11px; letter-spacing: 1px; text-transform: uppercase; }
 
-        .product-info { padding: 35px; display: flex; flex-direction: column; flex: 1; }
-        .product-category { font-size: 11px; text-transform: uppercase; color: #C9A961; margin-bottom: 10px; letter-spacing: 2px; }
-        .product-info h3 { font-size: 26px; margin-bottom: 12px; }
-        .product-description { color: #8D8D8D; font-size: 13px; margin-bottom: 20px; line-height: 1.6; flex: 1; }
-        .product-price { font-size: 28px; margin-bottom: 20px; font-family: 'Cormorant Garamond', serif; color: #2B2D42; }
-        .price-from { font-size: 16px; color: #8D8D8D; }
-        
-        .btn { padding: 15px 40px; background: #C9A961; color: white; border: none; cursor: pointer; text-transform: uppercase; font-size: 13px; letter-spacing: 2px; width: 100%; transition: all 0.3s; display: block; text-align: center; text-decoration: none; }
-        .btn:hover { background: #B89852; transform: translateY(-3px); }
-        
-        footer { background: #0A0A0A; color: white; padding: 60px 40px 30px; text-align: center; }
-        footer a { color: #C9A961; text-decoration: none; }
-        footer a:hover { text-decoration: underline; }
-        
-        @media (max-width: 1200px) { .product-grid { grid-template-columns: repeat(2, 1fr); } }
-        @media (max-width: 768px) {
-            .logo-img { height: 32px; }
-            .header-inner { padding: 0 16px; } 
-            .product-grid { grid-template-columns: 1fr; }
-        .page-header h1 { font-size: clamp(40px, 7vw, 72px); color: #fff; letter-spacing: 2px; font-family: 'Cormorant Garamond', serif; font-weight: 400; margin-bottom: 12px; }
-        }
+ .product-info { padding: 35px; display: flex; flex-direction: column; flex: 1; }
+ .product-category { font-size: 11px; text-transform: uppercase; color: #C9A961; margin-bottom: 10px; letter-spacing: 2px; }
+ .product-info h3 { font-size: 26px; margin-bottom: 12px; }
+ .product-description { color: #8D8D8D; font-size: 13px; margin-bottom: 20px; line-height: 1.6; flex: 1; }
+ .product-price { font-size: 28px; margin-bottom: 20px; font-family: 'Cormorant Garamond', serif; color: #2B2D42; }
+ .price-from { font-size: 16px; color: #8D8D8D; }
+ 
+ .btn { padding: 15px 40px; background: #C9A961; color: white; border: none; cursor: pointer; text-transform: uppercase; font-size: 13px; letter-spacing: 2px; width: 100%; transition: all 0.3s; display: block; text-align: center; text-decoration: none; }
+ .btn:hover { background: #B89852; transform: translateY(-3px); }
+ 
+ footer { background: #0A0A0A; color: white; padding: 60px 40px 30px; text-align: center; }
+ footer a { color: #C9A961; text-decoration: none; }
+ footer a:hover { text-decoration: underline; }
+ 
+ @media (max-width: 1200px) { .product-grid { grid-template-columns: repeat(2, 1fr); } }
+ @media (max-width: 768px) {
+ .logo-img { height: 32px; }
+ .header-inner { padding: 0 16px; } 
+ .product-grid { grid-template-columns: 1fr; }
+ .page-header h1 { font-size: clamp(40px, 7vw, 72px); color: #fff; letter-spacing: 2px; font-family: 'Cormorant Garamond', serif; font-weight: 400; margin-bottom: 12px; }
+ }
 
-            /* ── HEADER NAV ── */
-        header { background: #fff; position: sticky; top: 0; z-index: 1000; box-shadow: 0 1px 0 rgba(0,0,0,0.08); }
-        .header-inner { max-width: 1400px; margin: 0 auto; padding: 0 40px; height: 80px; display: flex; align-items: center; justify-content: space-between; gap: 40px; }
-        .logo-img { height: 52px; width: auto; display: block; opacity: 0.6; }
-        nav { flex: 1; display: flex; justify-content: center; }
-        nav ul { list-style: none; display: flex; align-items: center; gap: 0; }
-        nav ul li { position: relative; }
-        nav ul li a { display: block; padding: 28px 20px; font-size: 13px; letter-spacing: 1.5px; text-transform: uppercase; color: #2B2D42; text-decoration: none; transition: color 0.2s; }
-        nav ul li a:hover { color: #C9A961; }
-        .has-dropdown > a::after { content: ' ▾'; font-size: 10px; vertical-align: middle; }
-        .dropdown-panel { position: absolute; top: 100%; left: 50%; background: #fff; min-width: 200px; box-shadow: 0 12px 40px rgba(0,0,0,0.12); border-top: 2px solid #C9A961; opacity: 0; visibility: hidden; transform: translateX(-50%) translateY(-6px); transition: all 0.25s ease; }
-        .has-dropdown:hover .dropdown-panel { opacity: 1; visibility: visible; transform: translateX(-50%) translateY(0); }
-        .dropdown-panel a { display: block; padding: 14px 22px; font-size: 12px; letter-spacing: 1px; text-transform: uppercase; color: #2B2D42; border-bottom: 1px solid rgba(0,0,0,0.05); transition: all 0.2s; }
-        .dropdown-panel a:last-child { border-bottom: none; }
-        .dropdown-panel a:hover { color: #C9A961; background: #F8F6F0; padding-left: 28px; }
-        .header-actions { display: flex; align-items: center; gap: 16px; }
-        .cart-link { position: relative; font-size: 22px; color: #2B2D42; text-decoration: none; transition: color 0.2s; }
-        .cart-link:hover { color: #C9A961; }
-        .cart-badge { position: absolute; top: -6px; right: -8px; background: #2B2D42; color: white; border-radius: 50%; width: 18px; height: 18px; font-size: 11px; font-family: 'Montserrat', sans-serif; font-weight: 600; display: none; align-items: center; justify-content: center; }
-        .mobile-menu-btn { display: none; background: none; border: none; cursor: pointer; font-size: 24px; color: #2B2D42; }
-        .mobile-nav { display: none; position: fixed; inset: 0; background: #fff; z-index: 2000; flex-direction: column; padding: 30px; overflow-y: auto; }
-        .mobile-nav.open { display: flex; }
-        .mobile-nav-top { display: flex; justify-content: space-between; align-items: center; margin-bottom: 40px; }
-        .mobile-nav-close { background: none; border: none; font-size: 24px; cursor: pointer; color: #2B2D42; }
-        .mobile-nav a { display: block; font-size: 24px; font-family: 'Cormorant Garamond', serif; color: #2B2D42; padding: 14px 0; border-bottom: 1px solid rgba(0,0,0,0.06); text-decoration: none; transition: color 0.2s; }
-        .mobile-nav a:hover { color: #C9A961; }
-        @media (max-width: 1024px) { nav { display: none; } .mobile-menu-btn { display: block; } }
+ /* ── HEADER NAV ── */
+ header { background: #fff; position: sticky; top: 0; z-index: 1000; box-shadow: 0 1px 0 rgba(0,0,0,0.08); }
+ .header-inner { max-width: 1400px; margin: 0 auto; padding: 0 40px; height: 80px; display: flex; align-items: center; justify-content: space-between; gap: 40px; }
+ .logo-img { height: 52px; width: auto; display: block; opacity: 0.6; }
+ nav { flex: 1; display: flex; justify-content: center; }
+ nav ul { list-style: none; display: flex; align-items: center; gap: 0; }
+ nav ul li { position: relative; }
+ nav ul li a { display: block; padding: 28px 20px; font-size: 13px; letter-spacing: 1.5px; text-transform: uppercase; color: #2B2D42; text-decoration: none; transition: color 0.2s; }
+ nav ul li a:hover { color: #C9A961; }
+ .has-dropdown > a::after { content: ' ▾'; font-size: 10px; vertical-align: middle; }
+ .dropdown-panel { position: absolute; top: 100%; left: 50%; background: #fff; min-width: 200px; box-shadow: 0 12px 40px rgba(0,0,0,0.12); border-top: 2px solid #C9A961; opacity: 0; visibility: hidden; transform: translateX(-50%) translateY(-6px); transition: all 0.25s ease; }
+ .has-dropdown:hover .dropdown-panel { opacity: 1; visibility: visible; transform: translateX(-50%) translateY(0); }
+ .dropdown-panel a { display: block; padding: 14px 22px; font-size: 12px; letter-spacing: 1px; text-transform: uppercase; color: #2B2D42; border-bottom: 1px solid rgba(0,0,0,0.05); transition: all 0.2s; }
+ .dropdown-panel a:last-child { border-bottom: none; }
+ .dropdown-panel a:hover { color: #C9A961; background: #F8F6F0; padding-left: 28px; }
+ .header-actions { display: flex; align-items: center; gap: 16px; }
+ .cart-link { position: relative; font-size: 22px; color: #2B2D42; text-decoration: none; transition: color 0.2s; }
+ .cart-link:hover { color: #C9A961; }
+ .cart-badge { position: absolute; top: -6px; right: -8px; background: #2B2D42; color: white; border-radius: 50%; width: 18px; height: 18px; font-size: 11px; font-family: 'Montserrat', sans-serif; font-weight: 600; display: none; align-items: center; justify-content: center; }
+ .mobile-menu-btn { display: none; background: none; border: none; cursor: pointer; font-size: 24px; color: #2B2D42; }
+ .mobile-nav { display: none; position: fixed; inset: 0; background: #fff; z-index: 2000; flex-direction: column; padding: 30px; overflow-y: auto; }
+ .mobile-nav.open { display: flex; }
+ .mobile-nav-top { display: flex; justify-content: space-between; align-items: center; margin-bottom: 40px; }
+ .mobile-nav-close { background: none; border: none; font-size: 24px; cursor: pointer; color: #2B2D42; }
+ .mobile-nav a { display: block; font-size: 24px; font-family: 'Cormorant Garamond', serif; color: #2B2D42; padding: 14px 0; border-bottom: 1px solid rgba(0,0,0,0.06); text-decoration: none; transition: color 0.2s; }
+ .mobile-nav a:hover { color: #C9A961; }
+ @media (max-width: 1024px) { nav { display: none; } .mobile-menu-btn { display: block; } }
 </style>
 <style>
 @media (max-width: 768px) {
-    .logo-img { height: 32px !important; }
-    .header-inner { padding: 0 16px !important; }
+ .logo-img { height: 32px !important; }
+ .header-inner { padding: 0 16px !important; }
 }
 </style>
 <!-- logo-mobile-fix -->
 <style>
 @media (max-width: 768px) {
-    .page-header-logo { width: 300%; max-width: none; }
+ .page-header-logo { width: 300%; max-width: none; }
 }
 </style>
 <!-- page-header-logo-mobile-fix -->
 </head>
 <body>
-    
-    <div class="mobile-nav" id="mobileNav">
-    <div class="mobile-nav-top">
-        <img src="images/logo-mcd.jpg" alt="Manx Crown Diamonds" class="logo-img">
-        <button class="mobile-nav-close" onclick="closeMobileNav()">&#x2715;</button>
-    </div>
-    <a href="index.html">Home</a>
-    <a href="diamond-rings.html">Rings</a>
-    <a href="website/earrings.html">Earrings</a>
-    <a href="website/bracelets.html">Bracelets</a>
-    <a href="website/necklaces.html">Necklaces</a>
-    <a href="watches.html">Watches</a>
-    <a href="bespoke-request.html">Bespoke</a>
-    <a href="website/about.html">About</a>
-    <a href="website/contact.html">Contact</a>
+ 
+ <div class="mobile-nav" id="mobileNav">
+ <div class="mobile-nav-top">
+ <img src="images/logo-mcd.jpg" alt="Manx Crown Diamonds" class="logo-img">
+ <button class="mobile-nav-close" onclick="closeMobileNav()">&#x2715;</button>
+ </div>
+ <a href="index.html">Home</a>
+ <a href="diamond-rings.html">Rings</a>
+ <a href="website/earrings.html">Earrings</a>
+ <a href="website/bracelets.html">Bracelets</a>
+ <a href="website/necklaces.html">Necklaces</a>
+ <a href="watches.html">Watches</a>
+ <a href="bespoke-request.html">Bespoke</a>
+ <a href="website/about.html">About</a>
+ <a href="website/contact.html">Contact</a>
 </div>
 
 <header>
-    <div class="header-inner">
-        <a href="index.html">
-            <img src="images/logo-mcd.jpg" alt="Manx Crown Diamonds" class="logo-img">
-        </a>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li class="has-dropdown">
-                    <a href="#">Jewellery</a>
-                    <div class="dropdown-panel">
-                        <a href="diamond-rings.html">Rings</a>
-                        <a href="website/earrings.html">Earrings</a>
-                        <a href="website/bracelets.html">Bracelets</a>
-                        <a href="website/necklaces.html">Necklaces</a>
-                    </div>
-                </li>
-                <li><a href="watches.html">Watches</a></li>
-                <li><a href="bespoke-request.html">Bespoke</a></li>
-                <li><a href="website/about.html">About</a></li>
-                <li><a href="website/contact.html">Contact</a></li>
-            </ul>
-        </nav>
-        <div class="header-actions">
-            <a href="basket.html" class="cart-link">&#128722;<span class="cart-badge" id="basketCount">0</span></a>
-            <button class="mobile-menu-btn" onclick="openMobileNav()">&#9776;</button>
-        </div>
-    </div>
+ <div class="header-inner">
+ <a href="index.html">
+ <img src="images/logo-mcd.jpg" alt="Manx Crown Diamonds" class="logo-img">
+ </a>
+ <nav>
+ <ul>
+ <li><a href="index.html">Home</a></li>
+ <li class="has-dropdown">
+ <a href="#">Jewellery</a>
+ <div class="dropdown-panel">
+ <a href="diamond-rings.html">Rings</a>
+ <a href="website/earrings.html">Earrings</a>
+ <a href="website/bracelets.html">Bracelets</a>
+ <a href="website/necklaces.html">Necklaces</a>
+ </div>
+ </li>
+ <li><a href="watches.html">Watches</a></li>
+ <li><a href="bespoke-request.html">Bespoke</a></li>
+ <li><a href="website/about.html">About</a></li>
+ <li><a href="website/contact.html">Contact</a></li>
+ </ul>
+ </nav>
+ <div class="header-actions">
+ <a href="basket.html" class="cart-link">&#128722;<span class="cart-badge" id="basketCount">0</span></a>
+ <button class="mobile-menu-btn" onclick="openMobileNav()">&#9776;</button>
+ </div>
+ </div>
 </header>
 <script>(function(){var b=JSON.parse(localStorage.getItem('mcdBasket')||'[]');var e=document.getElementById('basketCount');if(e){e.textContent=b.length;e.style.display=b.length>0?'flex':'none';}})();
 function openMobileNav(){document.getElementById('mobileNav').classList.add('open');}
 function closeMobileNav(){document.getElementById('mobileNav').classList.remove('open');}</script>
-    
-    <div class="page-header">
-        <img src="images/logo-mcd.jpg" alt="" class="page-header-logo" aria-hidden="true">
-    <div class="page-header-inner">
-        <h1>Diamond Rings</h1>
-        <p>Timeless symbols of love and commitment</p>
-    </div>
+ 
+ <div class="page-header">
+ <img src="images/logo-mcd.jpg" alt="" class="page-header-logo" aria-hidden="true">
+ <div class="page-header-inner">
+ <h1>Diamond Rings</h1>
+ <p>Timeless symbols of love and commitment</p>
+ </div>
 </div>
-    
-    <div class="product-grid">
-        <!-- Oval Solitaire Diamond Ring -->
-        <a href="oval-ring-with-size.html" class="product-card">
-            <div class="product-image">
-                <img loading="lazy" src="images/oval-solitaire.JPG" alt="Oval Solitaire Diamond Ring" style="width:100%;height:100%;object-fit:cover;">
-            </div>
-            <div class="product-info">
-                <div class="product-category">Diamond Ring</div>
-                <h3>Oval Solitaire Diamond Ring</h3>
-                <p class="product-description">Classic oval-cut lab-grown diamond. Choose your metal and diamond size.</p>
-                <div class="product-price">
-                    <span class="price-from">From</span> £1,350
-                </div>
-                <span class="btn">Configure Your Ring</span>
-            </div>
-        </a>
+ 
+ <div class="product-grid">
+ <!-- Oval Solitaire Diamond Ring -->
+ <a href="oval-ring-with-size.html" class="product-card">
+ <div class="product-image">
+ <img loading="lazy" src="images/oval-solitaire.JPG" alt="Oval Solitaire Diamond Ring" style="width:100%;height:100%;object-fit:cover;">
+ </div>
+ <div class="product-info">
+ <div class="product-category">Diamond Ring</div>
+ <h3>Oval Solitaire Diamond Ring</h3>
+ <p class="product-description">Classic oval-cut lab-grown diamond. Choose your metal and diamond size.</p>
+ <div class="product-price">
+ <span class="price-from">From</span> £1,350
+ </div>
+ <span class="btn">Configure Your Ring</span>
+ </div>
+ </a>
 
-        <!-- Radiant Gold Diamond Ring -->
-        <a href="radiant-gold-ring.html" class="product-card">
-            <div class="product-image">
-                <img loading="lazy" src="images/Radiant-gold1.JPG" alt="Radiant Gold Diamond Ring">
-            </div>
-            <div class="product-info">
-                <div class="product-category">Diamond Ring</div>
-                <h3>Radiant Gold Diamond Ring</h3>
-                <p class="product-description">Stunning radiant-cut diamond set in 18k gold, crafted to perfection on the Isle of Man.</p>
-                <div class="product-price"><span class="price-from">From</span> £1,350</div>
-                <span class="btn">Configure Your Ring</span>
-            </div>
-        </a>
-
-
-        <!-- Elongated Cushion Diamond Ring -->
-        <a href="elongated-cushion-ring.html" class="product-card">
-            <div class="product-image">
-                <img loading="lazy" src="images/Elongated-cushion.JPG" alt="Elongated Cushion Diamond Ring">
-            </div>
-            <div class="product-info">
-                <div class="product-category">Diamond Ring</div>
-                <h3>Elongated Cushion Diamond Ring</h3>
-                <p class="product-description">An elongated cushion-cut lab-grown diamond ring combining classic warmth with modern proportions. Based on the Isle of Man.</p>
-                <div class="product-price"><span class="price-from">From</span> £1,350</div>
-                <span class="btn">Configure Your Ring</span>
-            </div>
-        </a>
-
-        <!-- Gold Melee Diamond Ring -->
-        <a href="gold-melee-ring.html" class="product-card">
-            <div class="product-image">
-                <img loading="lazy" src="images/Gold-melee.JPG" alt="Gold Melee Diamond Ring">
-            </div>
-            <div class="product-info">
-                <div class="product-category">Diamond Ring</div>
-                <h3>Gold Melee Diamond Ring</h3>
-                <p class="product-description">A gold ring set with a pavé of lab-grown melee diamonds, creating exceptional all-round sparkle. Based on the Isle of Man.</p>
-                <div class="product-price"><span class="price-from">From</span> £1,450</div>
-                <span class="btn">Configure Your Ring</span>
-            </div>
-        </a>
-
-        <!-- Princess Gold Diamond Ring -->
-        <a href="princess-gold-ring.html" class="product-card">
-            <div class="product-image">
-                <img loading="lazy" src="images/Princess-gold1.JPG" alt="Princess Gold Diamond Ring">
-            </div>
-            <div class="product-info">
-                <div class="product-category">Diamond Ring</div>
-                <h3>Princess Gold Diamond Ring</h3>
-                <p class="product-description">Elegant princess-cut diamond set in 18k gold, based on the Isle of Man.</p>
-                <div class="product-price"><span class="price-from">From</span> £1,350</div>
-                <span class="btn">Configure Your Ring</span>
-            </div>
-        </a>
-
-        <!-- Princess Trilogy Diamond Ring -->
-        <a href="princess-trilogy-ring.html" class="product-card">
-            <div class="product-image">
-                <img loading="lazy" src="images/Princess-trilogy1.JPG" alt="Princess Trilogy Diamond Ring">
-            </div>
-            <div class="product-info">
-                <div class="product-category">Diamond Ring</div>
-                <h3>Princess Trilogy Diamond Ring</h3>
-                <p class="product-description">Breathtaking trilogy of princess-cut diamonds set in 18k gold, based on the Isle of Man.</p>
-                <div class="product-price"><span class="price-from">From</span> £1,450</div>
-                <span class="btn">Configure Your Ring</span>
-            </div>
-        </a>
+ <!-- Radiant Gold Diamond Ring -->
+ <a href="radiant-gold-ring.html" class="product-card">
+ <div class="product-image">
+ <img loading="lazy" src="images/Radiant-gold1.JPG" alt="Radiant Gold Diamond Ring">
+ </div>
+ <div class="product-info">
+ <div class="product-category">Diamond Ring</div>
+ <h3>Radiant Gold Diamond Ring</h3>
+ <p class="product-description">Stunning radiant-cut diamond set in 18k gold, crafted to perfection on the Isle of Man.</p>
+ <div class="product-price"><span class="price-from">From</span> £1,350</div>
+ <span class="btn">Configure Your Ring</span>
+ </div>
+ </a>
 
 
-        <!-- Oval Diamond Melee Ring -->
-        <a href="oval-diamond-melee-ring.html" class="product-card">
-            <div class="product-image">
-                <img loading="lazy" src="images/Oval-diamondmelee.JPG" alt="Oval Diamond Melee Ring">
-            </div>
-            <div class="product-info">
-                <div class="product-category">Diamond Ring</div>
-                <h3>Oval Diamond Melee Ring</h3>
-                <p class="product-description">A stunning oval diamond surrounded by a delicate melee setting, available in a range of precious metals and diamond sizes.</p>
-                <div class="product-price"><span class="price-from">From</span> £1,450</div>
-                <span class="btn">Configure Your Ring</span>
-            </div>
-        </a>
+ <!-- Elongated Cushion Diamond Ring -->
+ <a href="elongated-cushion-ring.html" class="product-card">
+ <div class="product-image">
+ <img loading="lazy" src="images/Elongated-cushion.JPG" alt="Elongated Cushion Diamond Ring">
+ </div>
+ <div class="product-info">
+ <div class="product-category">Diamond Ring</div>
+ <h3>Elongated Cushion Diamond Ring</h3>
+ <p class="product-description">An elongated cushion-cut lab-grown diamond ring combining classic warmth with modern proportions.</p>
+ <div class="product-price"><span class="price-from">From</span> £1,350</div>
+ <span class="btn">Configure Your Ring</span>
+ </div>
+ </a>
+
+ <!-- Gold Melee Diamond Ring -->
+ <a href="gold-melee-ring.html" class="product-card">
+ <div class="product-image">
+ <img loading="lazy" src="images/Gold-melee.JPG" alt="Gold Melee Diamond Ring">
+ </div>
+ <div class="product-info">
+ <div class="product-category">Diamond Ring</div>
+ <h3>Gold Melee Diamond Ring</h3>
+ <p class="product-description">A gold ring set with a pavé of lab-grown melee diamonds, creating exceptional all-round sparkle.</p>
+ <div class="product-price"><span class="price-from">From</span> £1,450</div>
+ <span class="btn">Configure Your Ring</span>
+ </div>
+ </a>
+
+ <!-- Princess Gold Diamond Ring -->
+ <a href="princess-gold-ring.html" class="product-card">
+ <div class="product-image">
+ <img loading="lazy" src="images/Princess-gold1.JPG" alt="Princess Gold Diamond Ring">
+ </div>
+ <div class="product-info">
+ <div class="product-category">Diamond Ring</div>
+ <h3>Princess Gold Diamond Ring</h3>
+ <p class="product-description">Elegant princess-cut diamond set in 18k gold</p>
+ <div class="product-price"><span class="price-from">From</span> £1,350</div>
+ <span class="btn">Configure Your Ring</span>
+ </div>
+ </a>
+
+ <!-- Princess Trilogy Diamond Ring -->
+ <a href="princess-trilogy-ring.html" class="product-card">
+ <div class="product-image">
+ <img loading="lazy" src="images/Princess-trilogy1.JPG" alt="Princess Trilogy Diamond Ring">
+ </div>
+ <div class="product-info">
+ <div class="product-category">Diamond Ring</div>
+ <h3>Princess Trilogy Diamond Ring</h3>
+ <p class="product-description">Breathtaking trilogy of princess-cut diamonds set in 18k gold</p>
+ <div class="product-price"><span class="price-from">From</span> £1,450</div>
+ <span class="btn">Configure Your Ring</span>
+ </div>
+ </a>
 
 
-        <!-- Baguette and Round Diamond Eternity Band -->
-        <a href="baguette-eternity-band.html" class="product-card">
-            <div class="product-image">
-                <img loading="lazy" src="images/Bagguette-band.jpg" alt="Baguette and Round Diamond Eternity Band">
-            </div>
-            <div class="product-info">
-                <div class="product-category">Diamond Ring</div>
-                <h3>Baguette &amp; Round Diamond Eternity Band</h3>
-                <p class="product-description">An elegant eternity band alternating baguette and round brilliant-cut lab-grown diamonds, available in your choice of precious metal.</p>
-                <div class="product-price"><span class="price-from">From</span> £800</div>
-                <span class="btn">Configure Your Ring</span>
-            </div>
-        </a>
+ <!-- Oval Diamond Melee Ring -->
+ <a href="oval-diamond-melee-ring.html" class="product-card">
+ <div class="product-image">
+ <img loading="lazy" src="images/Oval-diamondmelee.JPG" alt="Oval Diamond Melee Ring">
+ </div>
+ <div class="product-info">
+ <div class="product-category">Diamond Ring</div>
+ <h3>Oval Diamond Melee Ring</h3>
+ <p class="product-description">A stunning oval diamond surrounded by a delicate melee setting, available in a range of precious metals and diamond sizes.</p>
+ <div class="product-price"><span class="price-from">From</span> £1,450</div>
+ <span class="btn">Configure Your Ring</span>
+ </div>
+ </a>
 
 
-        <!-- Pink Diamond Ring -->
-        <a href="pink-diamond-ring.html" class="product-card">
-            <div class="product-image">
-                <img loading="lazy" src="images/Pink-diamond.JPG" alt="Pink Diamond Ring">
-            </div>
-            <div class="product-info">
-                <div class="product-category">Diamond Ring</div>
-                <h3>Pink Diamond Ring</h3>
-                <p class="product-description">A striking pink lab-grown diamond set in your choice of precious metal. A truly unique and romantic piece, available in a range of sizes.</p>
-                <div class="product-price"><span class="price-from">From</span> £1,350</div>
-                <span class="btn">Configure Your Ring</span>
-            </div>
-        </a>
+ <!-- Baguette and Round Diamond Eternity Band -->
+ <a href="baguette-eternity-band.html" class="product-card">
+ <div class="product-image">
+ <img loading="lazy" src="images/Bagguette-band.jpg" alt="Baguette and Round Diamond Eternity Band">
+ </div>
+ <div class="product-info">
+ <div class="product-category">Diamond Ring</div>
+ <h3>Baguette &amp; Round Diamond Eternity Band</h3>
+ <p class="product-description">An elegant eternity band alternating baguette and round brilliant-cut lab-grown diamonds, available in your choice of precious metal.</p>
+ <div class="product-price"><span class="price-from">From</span> £800</div>
+ <span class="btn">Configure Your Ring</span>
+ </div>
+ </a>
 
-        <a href="emerald-ring.html" class="product-card">
-            <div class="product-image">
-                <img loading="lazy" src="images/Emerald-ring.JPG" alt="Emerald Cut Diamond Ring">
-            </div>
-            <div class="product-info">
-                <div class="product-category">Diamond Ring</div>
-                <h3>Emerald Cut Diamond Ring</h3>
-                <p class="product-description">A sophisticated emerald-cut lab-grown diamond ring, showcasing clean lines and exceptional clarity. IGI certified diamonds as standard.</p>
-                <div class="product-price"><span class="price-from">From</span> £1,450</div>
-                <span class="btn">Configure Your Ring</span>
-            </div>
-        </a>
 
-        <a href="princess-band.html" class="product-card">
-            <div class="product-image">
-                <img loading="lazy" src="images/Princess-band.JPG" alt="Princess Band">
-            </div>
-            <div class="product-info">
-                <div class="product-category">Diamond Ring</div>
-                <h3>Princess Band</h3>
-                <p class="product-description">An elegant princess-cut diamond band, based on the Isle of Man. Set with brilliant-cut lab-grown diamonds in your choice of precious metal. IGI certified diamonds as standard.</p>
-                <div class="product-price"><span class="price-from">From</span> £1,250</div>
-                <span class="btn">Configure Your Ring</span>
-            </div>
-        </a>
+ <!-- Pink Diamond Ring -->
+ <a href="pink-diamond-ring.html" class="product-card">
+ <div class="product-image">
+ <img loading="lazy" src="images/Pink-diamond.JPG" alt="Pink Diamond Ring">
+ </div>
+ <div class="product-info">
+ <div class="product-category">Diamond Ring</div>
+ <h3>Pink Diamond Ring</h3>
+ <p class="product-description">A striking pink lab-grown diamond set in your choice of precious metal. A truly unique and romantic piece, available in a range of sizes.</p>
+ <div class="product-price"><span class="price-from">From</span> £1,350</div>
+ <span class="btn">Configure Your Ring</span>
+ </div>
+ </a>
 
-        <a href="diamond-band.html" class="product-card">
-            <div class="product-image">
-                <img loading="lazy" src="images/Diamond-band.JPG" alt="Diamond Band">
-            </div>
-            <div class="product-info">
-                <div class="product-category">Diamond Ring</div>
-                <h3>Diamond Band</h3>
-                <p class="product-description">A beautifully crafted diamond band set with brilliant-cut lab-grown diamonds, based on the Isle of Man. Available in your choice of precious metal. IGI certified diamonds as standard.</p>
-                <div class="product-price"><span class="price-from">From</span> £1,350</div>
-                <span class="btn">Configure Your Ring</span>
-            </div>
-        </a>
+ <a href="emerald-ring.html" class="product-card">
+ <div class="product-image">
+ <img loading="lazy" src="images/Emerald-ring.JPG" alt="Emerald Cut Diamond Ring">
+ </div>
+ <div class="product-info">
+ <div class="product-category">Diamond Ring</div>
+ <h3>Emerald Cut Diamond Ring</h3>
+ <p class="product-description">A sophisticated emerald-cut lab-grown diamond ring, showcasing clean lines and exceptional clarity. IGI certified diamonds as standard.</p>
+ <div class="product-price"><span class="price-from">From</span> £1,450</div>
+ <span class="btn">Configure Your Ring</span>
+ </div>
+ </a>
 
-        <a href="trilogy-round-ring.html" class="product-card">
-            <div class="product-image">
-                <img loading="lazy" src="images/Trilogy-round.JPG" alt="Trilogy Round Diamond Ring">
-            </div>
-            <div class="product-info">
-                <div class="product-category">Diamond Ring</div>
-                <h3>Trilogy Round Diamond Ring</h3>
-                <p class="product-description">A stunning trilogy ring featuring three brilliant-cut round lab-grown diamonds, based on the Isle of Man. IGI certified diamonds as standard.</p>
-                <div class="product-price"><span class="price-from">From</span> £1,450</div>
-                <span class="btn">Configure Your Ring</span>
-            </div>
-        </a>
+ <a href="princess-band.html" class="product-card">
+ <div class="product-image">
+ <img loading="lazy" src="images/Princess-band.JPG" alt="Princess Band">
+ </div>
+ <div class="product-info">
+ <div class="product-category">Diamond Ring</div>
+ <h3>Princess Band</h3>
+ <p class="product-description">An elegant princess-cut diamond band Set with brilliant-cut lab-grown diamonds in your choice of precious metal. IGI certified diamonds as standard.</p>
+ <div class="product-price"><span class="price-from">From</span> £1,250</div>
+ <span class="btn">Configure Your Ring</span>
+ </div>
+ </a>
 
-        <a href="radiant-baguette-ring.html" class="product-card">
-            <div class="product-image">
-                <img loading="lazy" src="images/Radiant-bagguette.JPG" alt="Radiant Baguette Ring">
-            </div>
-            <div class="product-info">
-                <div class="product-category">Diamond Ring</div>
-                <h3>Radiant Baguette Ring</h3>
-                <p class="product-description">A striking radiant-cut diamond flanked by elegant baguette side stones, based on the Isle of Man. IGI certified diamonds as standard.</p>
-                <div class="product-price"><span class="price-from">From</span> £1,350</div>
-                <span class="btn">Configure Your Ring</span>
-            </div>
-        </a>
+ <a href="diamond-band.html" class="product-card">
+ <div class="product-image">
+ <img loading="lazy" src="images/Diamond-band.JPG" alt="Diamond Band">
+ </div>
+ <div class="product-info">
+ <div class="product-category">Diamond Ring</div>
+ <h3>Diamond Band</h3>
+ <p class="product-description">A beautifully crafted diamond band set with brilliant-cut lab-grown diamonds Available in your choice of precious metal. IGI certified diamonds as standard.</p>
+ <div class="product-price"><span class="price-from">From</span> £1,350</div>
+ <span class="btn">Configure Your Ring</span>
+ </div>
+ </a>
 
-        <!-- Gold Cluster Diamond Ring -->
-        <!-- Gold Trilogy Ring -->
-        <a href="gold-trilogy-ring.html" class="product-card">
-            <div class="product-image">
-                <img loading="lazy" src="images/Gold-Trilogy.JPG" alt="Gold Trilogy Ring">
-            </div>
-            <div class="product-info">
-                <div class="product-category">Diamond Ring</div>
-                <h3>Gold Trilogy Ring</h3>
-                <p class="product-description">A breathtaking trilogy of three brilliant-cut lab-grown diamonds set in gold — symbolising past, present and future. Based on the Isle of Man.</p>
-                <div class="product-price"><span class="price-from">From</span> £1,450</div>
-                <span class="btn">Configure Your Ring</span>
-            </div>
-        </a>
+ <a href="trilogy-round-ring.html" class="product-card">
+ <div class="product-image">
+ <img loading="lazy" src="images/Trilogy-round.JPG" alt="Trilogy Round Diamond Ring">
+ </div>
+ <div class="product-info">
+ <div class="product-category">Diamond Ring</div>
+ <h3>Trilogy Round Diamond Ring</h3>
+ <p class="product-description">A stunning trilogy ring featuring three brilliant-cut round lab-grown diamonds IGI certified diamonds as standard.</p>
+ <div class="product-price"><span class="price-from">From</span> £1,450</div>
+ <span class="btn">Configure Your Ring</span>
+ </div>
+ </a>
 
-    </div>
-    
-    <!-- Pagination -->
-    <div style="display:flex; justify-content:center; align-items:center; gap:12px; padding:60px 40px 40px; font-family:'Montserrat',sans-serif;">
-        <span style="display:inline-flex; align-items:center; justify-content:center; width:44px; height:44px; background:#C9A961; color:white; font-size:14px; font-weight:600; letter-spacing:1px;">1</span>
-        <a href="diamond-rings-2.html" style="display:inline-flex; align-items:center; justify-content:center; width:44px; height:44px; border:2px solid #E0E0E0; color:#2B2D42; font-size:14px; font-weight:600; letter-spacing:1px; text-decoration:none; transition:all 0.2s;" onmouseover="this.style.borderColor='#C9A961';this.style.color='#C9A961'" onmouseout="this.style.borderColor='#E0E0E0';this.style.color='#2B2D42'">2</a>
-        <a href="diamond-rings-2.html" style="display:inline-flex; align-items:center; gap:6px; padding:0 18px; height:44px; border:2px solid #E0E0E0; color:#2B2D42; font-size:12px; font-weight:500; letter-spacing:1.5px; text-transform:uppercase; text-decoration:none; transition:all 0.2s;" onmouseover="this.style.borderColor='#C9A961';this.style.color='#C9A961'" onmouseout="this.style.borderColor='#E0E0E0';this.style.color='#2B2D42'">Next ›</a>
-    </div>
+ <a href="radiant-baguette-ring.html" class="product-card">
+ <div class="product-image">
+ <img loading="lazy" src="images/Radiant-bagguette.JPG" alt="Radiant Baguette Ring">
+ </div>
+ <div class="product-info">
+ <div class="product-category">Diamond Ring</div>
+ <h3>Radiant Baguette Ring</h3>
+ <p class="product-description">A striking radiant-cut diamond flanked by elegant baguette side stones IGI certified diamonds as standard.</p>
+ <div class="product-price"><span class="price-from">From</span> £1,350</div>
+ <span class="btn">Configure Your Ring</span>
+ </div>
+ </a>
 
-        <footer>
-        <p style="color: var(--primary-gold); margin-bottom: 15px; font-size: 16px;">Manx Crown Diamonds</p>
-        <p style="color: #999; margin-bottom: 20px;"><a href="mailto:andy@manxcrowndiamonds.com">andy@manxcrowndiamonds.com</a> | +44 7624 368505</p>
-        <p style="margin-bottom: 20px;">
-            <a href="terms.html">Terms &amp; Conditions</a> | 
-            <a href="privacy-policy.html">Privacy Policy</a>
-        </p>
-        <p style="color: #666;">&copy; 2025 Manx Crown Diamonds. All rights reserved.</p>
-    </footer>
+ <!-- Gold Cluster Diamond Ring -->
+ <!-- Gold Trilogy Ring -->
+ <a href="gold-trilogy-ring.html" class="product-card">
+ <div class="product-image">
+ <img loading="lazy" src="images/Gold-Trilogy.JPG" alt="Gold Trilogy Ring">
+ </div>
+ <div class="product-info">
+ <div class="product-category">Diamond Ring</div>
+ <h3>Gold Trilogy Ring</h3>
+ <p class="product-description">A breathtaking trilogy of three brilliant-cut lab-grown diamonds set in gold — symbolising past, present and future.</p>
+ <div class="product-price"><span class="price-from">From</span> £1,450</div>
+ <span class="btn">Configure Your Ring</span>
+ </div>
+ </a>
+
+ </div>
+ 
+ <!-- Pagination -->
+ <div style="display:flex; justify-content:center; align-items:center; gap:12px; padding:60px 40px 40px; font-family:'Montserrat',sans-serif;">
+ <span style="display:inline-flex; align-items:center; justify-content:center; width:44px; height:44px; background:#C9A961; color:white; font-size:14px; font-weight:600; letter-spacing:1px;">1</span>
+ <a href="diamond-rings-2.html" style="display:inline-flex; align-items:center; justify-content:center; width:44px; height:44px; border:2px solid #E0E0E0; color:#2B2D42; font-size:14px; font-weight:600; letter-spacing:1px; text-decoration:none; transition:all 0.2s;" onmouseover="this.style.borderColor='#C9A961';this.style.color='#C9A961'" onmouseout="this.style.borderColor='#E0E0E0';this.style.color='#2B2D42'">2</a>
+ <a href="diamond-rings-2.html" style="display:inline-flex; align-items:center; gap:6px; padding:0 18px; height:44px; border:2px solid #E0E0E0; color:#2B2D42; font-size:12px; font-weight:500; letter-spacing:1.5px; text-transform:uppercase; text-decoration:none; transition:all 0.2s;" onmouseover="this.style.borderColor='#C9A961';this.style.color='#C9A961'" onmouseout="this.style.borderColor='#E0E0E0';this.style.color='#2B2D42'">Next ›</a>
+ </div>
+
+ <footer>
+ <p style="color: var(--primary-gold); margin-bottom: 15px; font-size: 16px;">Manx Crown Diamonds</p>
+ <p style="color: #999; margin-bottom: 20px;"><a href="mailto:andy@manxcrowndiamonds.com">andy@manxcrowndiamonds.com</a> | +44 7624 368505</p>
+ <p style="margin-bottom: 20px;">
+ <a href="terms.html">Terms &amp; Conditions</a> | 
+ <a href="privacy-policy.html">Privacy Policy</a>
+ </p>
+ <p style="color: #666;">&copy; 2025 Manx Crown Diamonds. All rights reserved.</p>
+ </footer>
 </body>
 </html>

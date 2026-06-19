@@ -1,288 +1,288 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="format-detection" content="telephone=no">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Basket - Manx Crown Diamonds</title>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
-    <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        :root {
-            --primary-gold: #C9A961;
-            --dark-navy: #2B2D42;
-            --deep-black: #0A0A0A;
-            --cream: #F8F6F0;
-        }
-        body { font-family: 'Montserrat', sans-serif; color: var(--dark-navy); background: #fff; }
-        h1, h2, h3 { font-family: 'Cormorant Garamond', serif; font-weight: 400; }
+ <meta charset="UTF-8">
+ <meta name="format-detection" content="telephone=no">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Your Basket - Manx Crown Diamonds</title>
+ <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+ <style>
+ * { margin: 0; padding: 0; box-sizing: border-box; }
+ :root {
+ --primary-gold: #C9A961;
+ --dark-navy: #2B2D42;
+ --deep-black: #0A0A0A;
+ --cream: #F8F6F0;
+ }
+ body { font-family: 'Montserrat', sans-serif; color: var(--dark-navy); background: #fff; }
+ h1, h2, h3 { font-family: 'Cormorant Garamond', serif; font-weight: 400; }
 .page-header { padding: 80px 40px; background: linear-gradient(150deg, #0A0A0A 0%, #2B2D42 100%); color: white; text-align: center; position: relative; overflow: hidden;; min-height: 240px; display: flex; flex-direction: column; align-items: center; justify-content: center; }
-        .page-header::before {
-            content: '';
-            position: absolute;
-            inset: 0;
-            background: radial-gradient(ellipse at 60% 40%, rgba(201,169,97,0.12) 0%, transparent 60%);
-        }
-        .page-header h1 { font-size: clamp(40px, 7vw, 72px); color: #fff; letter-spacing: 2px; font-family: 'Cormorant Garamond', serif; font-weight: 400; margin-bottom: 12px; }
-        .page-header p { font-size: 16px; color: rgba(248,246,240,0.8); font-weight: 300; letter-spacing: 0.5px; }
-        .page-header-logo { position: absolute; top: 65%; left: 50%; transform: translate(-50%, -50%); width: 130%; max-width: 1400px; opacity: 0.07; pointer-events: none; z-index: 0; filter: grayscale(1) invert(1); mix-blend-mode: screen; }
-        .page-header-inner { position: relative; z-index: 1; }
+ .page-header::before {
+ content: '';
+ position: absolute;
+ inset: 0;
+ background: radial-gradient(ellipse at 60% 40%, rgba(201,169,97,0.12) 0%, transparent 60%);
+ }
+ .page-header h1 { font-size: clamp(40px, 7vw, 72px); color: #fff; letter-spacing: 2px; font-family: 'Cormorant Garamond', serif; font-weight: 400; margin-bottom: 12px; }
+ .page-header p { font-size: 16px; color: rgba(248,246,240,0.8); font-weight: 300; letter-spacing: 0.5px; }
+ .page-header-logo { position: absolute; top: 65%; left: 50%; transform: translate(-50%, -50%); width: 130%; max-width: 1400px; opacity: 0.07; pointer-events: none; z-index: 0; filter: grayscale(1) invert(1); mix-blend-mode: screen; }
+ .page-header-inner { position: relative; z-index: 1; }
 
-        .basket-container { max-width: 1100px; margin: 50px auto; padding: 0 40px; }
+ .basket-container { max-width: 1100px; margin: 50px auto; padding: 0 40px; }
 
-        /* Empty state */
-        .empty-basket { text-align: center; padding: 80px 40px; background: white; }
-        .empty-basket h2 { font-size: 36px; margin-bottom: 15px; color: var(--dark-navy); }
-        .empty-basket p { color: #999; margin-bottom: 30px; font-size: 15px; }
-        .empty-basket a { display: inline-block; padding: 16px 40px; background: var(--primary-gold); color: white; text-decoration: none; text-transform: uppercase; font-size: 13px; letter-spacing: 2px; }
+ /* Empty state */
+ .empty-basket { text-align: center; padding: 80px 40px; background: white; }
+ .empty-basket h2 { font-size: 36px; margin-bottom: 15px; color: var(--dark-navy); }
+ .empty-basket p { color: #999; margin-bottom: 30px; font-size: 15px; }
+ .empty-basket a { display: inline-block; padding: 16px 40px; background: var(--primary-gold); color: white; text-decoration: none; text-transform: uppercase; font-size: 13px; letter-spacing: 2px; }
 
-        /* Items */
-        .basket-item { background: white; display: grid; grid-template-columns: 110px 1fr auto; gap: 25px; padding: 25px; margin-bottom: 15px; border: 1px solid rgba(201,169,97,0.1); align-items: center; }
-        .item-image { width: 110px; height: 110px; object-fit: cover; background: var(--cream); display: block; }
-        .item-image-placeholder { width: 110px; height: 110px; background: var(--cream); display: flex; align-items: center; justify-content: center; font-size: 40px; }
-        .item-name { font-family: 'Cormorant Garamond', serif; font-size: 22px; margin-bottom: 6px; }
-        .item-config { color: #999; font-size: 13px; line-height: 1.7; margin-bottom: 10px; }
-        .item-price { font-family: 'Cormorant Garamond', serif; font-size: 24px; color: var(--primary-gold); }
-        .remove-btn { background: none; border: none; color: #bbb; font-size: 12px; cursor: pointer; text-decoration: underline; letter-spacing: 1px; text-transform: uppercase; white-space: nowrap; padding: 5px; }
-        .remove-btn:hover { color: var(--dark-navy); }
+ /* Items */
+ .basket-item { background: white; display: grid; grid-template-columns: 110px 1fr auto; gap: 25px; padding: 25px; margin-bottom: 15px; border: 1px solid rgba(201,169,97,0.1); align-items: center; }
+ .item-image { width: 110px; height: 110px; object-fit: cover; background: var(--cream); display: block; }
+ .item-image-placeholder { width: 110px; height: 110px; background: var(--cream); display: flex; align-items: center; justify-content: center; font-size: 40px; }
+ .item-name { font-family: 'Cormorant Garamond', serif; font-size: 22px; margin-bottom: 6px; }
+ .item-config { color: #999; font-size: 13px; line-height: 1.7; margin-bottom: 10px; }
+ .item-price { font-family: 'Cormorant Garamond', serif; font-size: 24px; color: var(--primary-gold); }
+ .remove-btn { background: none; border: none; color: #bbb; font-size: 12px; cursor: pointer; text-decoration: underline; letter-spacing: 1px; text-transform: uppercase; white-space: nowrap; padding: 5px; }
+ .remove-btn:hover { color: var(--dark-navy); }
 
-        /* Summary */
-        .basket-summary { background: white; padding: 35px; margin-top: 20px; border: 1px solid rgba(201,169,97,0.1); }
-        .summary-row { display: flex; justify-content: space-between; padding: 12px 0; border-bottom: 1px solid rgba(201,169,97,0.1); font-size: 15px; }
-        .summary-row:last-of-type { border-bottom: none; }
-        .summary-total { display: flex; justify-content: space-between; padding: 20px 0 0; font-size: 22px; font-family: 'Cormorant Garamond', serif; }
-        .summary-note { font-size: 12px; color: #999; margin: 15px 0 25px; line-height: 1.6; }
-        .btn-enquire { display: block; width: 100%; padding: 18px; background: var(--primary-gold); color: white; border: none; cursor: pointer; text-transform: uppercase; font-size: 14px; letter-spacing: 2px; font-family: 'Montserrat', sans-serif; transition: background 0.3s; text-align: center; }
-        .btn-enquire:hover { background: #B89852; }
-        .btn-clear { display: block; width: 100%; padding: 14px; background: none; border: 2px solid #ddd; color: #999; cursor: pointer; text-transform: uppercase; font-size: 12px; letter-spacing: 2px; font-family: 'Montserrat', sans-serif; margin-top: 12px; transition: all 0.3s; }
-        .btn-clear:hover { border-color: var(--dark-navy); color: var(--dark-navy); }
+ /* Summary */
+ .basket-summary { background: white; padding: 35px; margin-top: 20px; border: 1px solid rgba(201,169,97,0.1); }
+ .summary-row { display: flex; justify-content: space-between; padding: 12px 0; border-bottom: 1px solid rgba(201,169,97,0.1); font-size: 15px; }
+ .summary-row:last-of-type { border-bottom: none; }
+ .summary-total { display: flex; justify-content: space-between; padding: 20px 0 0; font-size: 22px; font-family: 'Cormorant Garamond', serif; }
+ .summary-note { font-size: 12px; color: #999; margin: 15px 0 25px; line-height: 1.6; }
+ .btn-enquire { display: block; width: 100%; padding: 18px; background: var(--primary-gold); color: white; border: none; cursor: pointer; text-transform: uppercase; font-size: 14px; letter-spacing: 2px; font-family: 'Montserrat', sans-serif; transition: background 0.3s; text-align: center; }
+ .btn-enquire:hover { background: #B89852; }
+ .btn-clear { display: block; width: 100%; padding: 14px; background: none; border: 2px solid #ddd; color: #999; cursor: pointer; text-transform: uppercase; font-size: 12px; letter-spacing: 2px; font-family: 'Montserrat', sans-serif; margin-top: 12px; transition: all 0.3s; }
+ .btn-clear:hover { border-color: var(--dark-navy); color: var(--dark-navy); }
 
-        footer { background: var(--deep-black); color: white; padding: 40px; text-align: center; font-size: 13px; margin-top: 60px; }
-        footer a { color: #C9A961; text-decoration: none; }
-        footer a:hover { text-decoration: underline; }
+ footer { background: var(--deep-black); color: white; padding: 40px; text-align: center; font-size: 13px; margin-top: 60px; }
+ footer a { color: #C9A961; text-decoration: none; }
+ footer a:hover { text-decoration: underline; }
 
-        @media (max-width: 768px) {
-            .logo-img { height: 32px; }
-            .header-inner { padding: 0 16px; }
-            .basket-item { grid-template-columns: 100px 1fr; gap: 14px; padding: 16px; align-items: start; }
-            .item-image, .item-image-placeholder { width: 100px; height: 100px; }
-            .item-name { font-size: 15px; margin-bottom: 4px; }
-            .item-config { font-size: 12px; margin-bottom: 8px; }
-            .item-price { font-size: 17px; }
-            .remove-btn { font-size: 11px; }
-            .remove-btn { grid-column: 2; }
-            .header-content, .page-header, .basket-container { padding-left: 20px; padding-right: 20px; }
-        }
-            /* ── HEADER NAV ── */
-        header { background: #fff; position: sticky; top: 0; z-index: 1000; box-shadow: 0 1px 0 rgba(0,0,0,0.08); }
-        .header-inner { max-width: 1400px; margin: 0 auto; padding: 0 40px; height: 80px; display: flex; align-items: center; justify-content: space-between; gap: 40px; }
-        .logo-img { height: 52px; width: auto; display: block; opacity: 0.6; }
-        nav { flex: 1; display: flex; justify-content: center; }
-        nav ul { list-style: none; display: flex; align-items: center; gap: 0; }
-        nav ul li { position: relative; }
-        nav ul li a { display: block; padding: 28px 20px; font-size: 13px; letter-spacing: 1.5px; text-transform: uppercase; color: #2B2D42; text-decoration: none; transition: color 0.2s; }
-        nav ul li a:hover { color: #C9A961; }
-        .has-dropdown > a::after { content: ' ▾'; font-size: 10px; vertical-align: middle; }
-        .dropdown-panel { position: absolute; top: 100%; left: 50%; background: #fff; min-width: 200px; box-shadow: 0 12px 40px rgba(0,0,0,0.12); border-top: 2px solid #C9A961; opacity: 0; visibility: hidden; transform: translateX(-50%) translateY(-6px); transition: all 0.25s ease; }
-        .has-dropdown:hover .dropdown-panel { opacity: 1; visibility: visible; transform: translateX(-50%) translateY(0); }
-        .dropdown-panel a { display: block; padding: 14px 22px; font-size: 12px; letter-spacing: 1px; text-transform: uppercase; color: #2B2D42; border-bottom: 1px solid rgba(0,0,0,0.05); transition: all 0.2s; }
-        .dropdown-panel a:last-child { border-bottom: none; }
-        .dropdown-panel a:hover { color: #C9A961; background: #F8F6F0; padding-left: 28px; }
-        .header-actions { display: flex; align-items: center; gap: 16px; }
-        .cart-link { position: relative; font-size: 22px; color: #2B2D42; text-decoration: none; transition: color 0.2s; }
-        .cart-link:hover { color: #C9A961; }
-        .cart-badge { position: absolute; top: -6px; right: -8px; background: #2B2D42; color: white; border-radius: 50%; width: 18px; height: 18px; font-size: 11px; font-family: 'Montserrat', sans-serif; font-weight: 600; display: none; align-items: center; justify-content: center; }
-        .mobile-menu-btn { display: none; background: none; border: none; cursor: pointer; font-size: 24px; color: #2B2D42; }
-        .mobile-nav { display: none; position: fixed; inset: 0; background: #fff; z-index: 2000; flex-direction: column; padding: 30px; overflow-y: auto; }
-        .mobile-nav.open { display: flex; }
-        .mobile-nav-top { display: flex; justify-content: space-between; align-items: center; margin-bottom: 40px; }
-        .mobile-nav-close { background: none; border: none; font-size: 24px; cursor: pointer; color: #2B2D42; }
-        .mobile-nav a { display: block; font-size: 24px; font-family: 'Cormorant Garamond', serif; color: #2B2D42; padding: 14px 0; border-bottom: 1px solid rgba(0,0,0,0.06); text-decoration: none; transition: color 0.2s; }
-        .mobile-nav a:hover { color: #C9A961; }
-        @media (max-width: 1024px) { nav { display: none; } .mobile-menu-btn { display: block; } }
+ @media (max-width: 768px) {
+ .logo-img { height: 32px; }
+ .header-inner { padding: 0 16px; }
+ .basket-item { grid-template-columns: 100px 1fr; gap: 14px; padding: 16px; align-items: start; }
+ .item-image, .item-image-placeholder { width: 100px; height: 100px; }
+ .item-name { font-size: 15px; margin-bottom: 4px; }
+ .item-config { font-size: 12px; margin-bottom: 8px; }
+ .item-price { font-size: 17px; }
+ .remove-btn { font-size: 11px; }
+ .remove-btn { grid-column: 2; }
+ .header-content, .page-header, .basket-container { padding-left: 20px; padding-right: 20px; }
+ }
+ /* ── HEADER NAV ── */
+ header { background: #fff; position: sticky; top: 0; z-index: 1000; box-shadow: 0 1px 0 rgba(0,0,0,0.08); }
+ .header-inner { max-width: 1400px; margin: 0 auto; padding: 0 40px; height: 80px; display: flex; align-items: center; justify-content: space-between; gap: 40px; }
+ .logo-img { height: 52px; width: auto; display: block; opacity: 0.6; }
+ nav { flex: 1; display: flex; justify-content: center; }
+ nav ul { list-style: none; display: flex; align-items: center; gap: 0; }
+ nav ul li { position: relative; }
+ nav ul li a { display: block; padding: 28px 20px; font-size: 13px; letter-spacing: 1.5px; text-transform: uppercase; color: #2B2D42; text-decoration: none; transition: color 0.2s; }
+ nav ul li a:hover { color: #C9A961; }
+ .has-dropdown > a::after { content: ' ▾'; font-size: 10px; vertical-align: middle; }
+ .dropdown-panel { position: absolute; top: 100%; left: 50%; background: #fff; min-width: 200px; box-shadow: 0 12px 40px rgba(0,0,0,0.12); border-top: 2px solid #C9A961; opacity: 0; visibility: hidden; transform: translateX(-50%) translateY(-6px); transition: all 0.25s ease; }
+ .has-dropdown:hover .dropdown-panel { opacity: 1; visibility: visible; transform: translateX(-50%) translateY(0); }
+ .dropdown-panel a { display: block; padding: 14px 22px; font-size: 12px; letter-spacing: 1px; text-transform: uppercase; color: #2B2D42; border-bottom: 1px solid rgba(0,0,0,0.05); transition: all 0.2s; }
+ .dropdown-panel a:last-child { border-bottom: none; }
+ .dropdown-panel a:hover { color: #C9A961; background: #F8F6F0; padding-left: 28px; }
+ .header-actions { display: flex; align-items: center; gap: 16px; }
+ .cart-link { position: relative; font-size: 22px; color: #2B2D42; text-decoration: none; transition: color 0.2s; }
+ .cart-link:hover { color: #C9A961; }
+ .cart-badge { position: absolute; top: -6px; right: -8px; background: #2B2D42; color: white; border-radius: 50%; width: 18px; height: 18px; font-size: 11px; font-family: 'Montserrat', sans-serif; font-weight: 600; display: none; align-items: center; justify-content: center; }
+ .mobile-menu-btn { display: none; background: none; border: none; cursor: pointer; font-size: 24px; color: #2B2D42; }
+ .mobile-nav { display: none; position: fixed; inset: 0; background: #fff; z-index: 2000; flex-direction: column; padding: 30px; overflow-y: auto; }
+ .mobile-nav.open { display: flex; }
+ .mobile-nav-top { display: flex; justify-content: space-between; align-items: center; margin-bottom: 40px; }
+ .mobile-nav-close { background: none; border: none; font-size: 24px; cursor: pointer; color: #2B2D42; }
+ .mobile-nav a { display: block; font-size: 24px; font-family: 'Cormorant Garamond', serif; color: #2B2D42; padding: 14px 0; border-bottom: 1px solid rgba(0,0,0,0.06); text-decoration: none; transition: color 0.2s; }
+ .mobile-nav a:hover { color: #C9A961; }
+ @media (max-width: 1024px) { nav { display: none; } .mobile-menu-btn { display: block; } }
 </style>
 <style>
 @media (max-width: 768px) {
-    .logo-img { height: 32px !important; }
-    .header-inner { padding: 0 16px !important; }
+ .logo-img { height: 32px !important; }
+ .header-inner { padding: 0 16px !important; }
 }
 </style>
 <!-- logo-mobile-fix -->
 <style>
 @media (max-width: 768px) {
-    .page-header-logo { width: 300%; max-width: none; }
+ .page-header-logo { width: 300%; max-width: none; }
 }
 </style>
 <!-- page-header-logo-mobile-fix -->
 </head>
 <body>
-    <div class="mobile-nav" id="mobileNav">
-    <div class="mobile-nav-top">
-        <img src="images/logo-mcd.jpg" alt="Manx Crown Diamonds" class="logo-img">
-        <button class="mobile-nav-close" onclick="closeMobileNav()">&#x2715;</button>
-    </div>
-    <a href="index.html">Home</a>
-    <a href="diamond-rings.html">Rings</a>
-    <a href="website/earrings.html">Earrings</a>
-    <a href="website/bracelets.html">Bracelets</a>
-    <a href="website/necklaces.html">Necklaces</a>
-    <a href="watches.html">Watches</a>
-    <a href="bespoke-request.html">Bespoke</a>
-    <a href="website/about.html">About</a>
-    <a href="website/contact.html">Contact</a>
+ <div class="mobile-nav" id="mobileNav">
+ <div class="mobile-nav-top">
+ <img src="images/logo-mcd.jpg" alt="Manx Crown Diamonds" class="logo-img">
+ <button class="mobile-nav-close" onclick="closeMobileNav()">&#x2715;</button>
+ </div>
+ <a href="index.html">Home</a>
+ <a href="diamond-rings.html">Rings</a>
+ <a href="website/earrings.html">Earrings</a>
+ <a href="website/bracelets.html">Bracelets</a>
+ <a href="website/necklaces.html">Necklaces</a>
+ <a href="watches.html">Watches</a>
+ <a href="bespoke-request.html">Bespoke</a>
+ <a href="website/about.html">About</a>
+ <a href="website/contact.html">Contact</a>
 </div>
 
 <header>
-    <div class="header-inner">
-        <a href="index.html">
-            <img src="images/logo-mcd.jpg" alt="Manx Crown Diamonds" class="logo-img">
-        </a>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li class="has-dropdown">
-                    <a href="#">Jewellery</a>
-                    <div class="dropdown-panel">
-                        <a href="diamond-rings.html">Rings</a>
-                        <a href="website/earrings.html">Earrings</a>
-                        <a href="website/bracelets.html">Bracelets</a>
-                        <a href="website/necklaces.html">Necklaces</a>
-                    </div>
-                </li>
-                <li><a href="watches.html">Watches</a></li>
-                <li><a href="bespoke-request.html">Bespoke</a></li>
-                <li><a href="website/about.html">About</a></li>
-                <li><a href="website/contact.html">Contact</a></li>
-            </ul>
-        </nav>
-        <div class="header-actions">
-            <a href="basket.html" class="cart-link">&#128722;<span class="cart-badge" id="basketCount">0</span></a>
-            <button class="mobile-menu-btn" onclick="openMobileNav()">&#9776;</button>
-        </div>
-    </div>
+ <div class="header-inner">
+ <a href="index.html">
+ <img src="images/logo-mcd.jpg" alt="Manx Crown Diamonds" class="logo-img">
+ </a>
+ <nav>
+ <ul>
+ <li><a href="index.html">Home</a></li>
+ <li class="has-dropdown">
+ <a href="#">Jewellery</a>
+ <div class="dropdown-panel">
+ <a href="diamond-rings.html">Rings</a>
+ <a href="website/earrings.html">Earrings</a>
+ <a href="website/bracelets.html">Bracelets</a>
+ <a href="website/necklaces.html">Necklaces</a>
+ </div>
+ </li>
+ <li><a href="watches.html">Watches</a></li>
+ <li><a href="bespoke-request.html">Bespoke</a></li>
+ <li><a href="website/about.html">About</a></li>
+ <li><a href="website/contact.html">Contact</a></li>
+ </ul>
+ </nav>
+ <div class="header-actions">
+ <a href="basket.html" class="cart-link">&#128722;<span class="cart-badge" id="basketCount">0</span></a>
+ <button class="mobile-menu-btn" onclick="openMobileNav()">&#9776;</button>
+ </div>
+ </div>
 </header>
 <script>(function(){var b=JSON.parse(localStorage.getItem('mcdBasket')||'[]');var e=document.getElementById('basketCount');if(e){e.textContent=b.length;e.style.display=b.length>0?'flex':'none';}})();
 function openMobileNav(){document.getElementById('mobileNav').classList.add('open');}
 function closeMobileNav(){document.getElementById('mobileNav').classList.remove('open');}</script>
 
-    <div class="page-header">
-        <img src="images/logo-mcd.jpg" alt="" class="page-header-logo" aria-hidden="true">
-        <div class="page-header-inner">
-            <h1>Your Basket</h1>
-            <p id="itemCountText">Loading your items...</p>
-        </div>
-    </div>
+ <div class="page-header">
+ <img src="images/logo-mcd.jpg" alt="" class="page-header-logo" aria-hidden="true">
+ <div class="page-header-inner">
+ <h1>Your Basket</h1>
+ <p id="itemCountText">Loading your items...</p>
+ </div>
+ </div>
 
-    <div class="basket-container">
-        <div id="basketContent"></div>
-    </div>
+ <div class="basket-container">
+ <div id="basketContent"></div>
+ </div>
 
-        <footer>
-        <p style="color: var(--primary-gold); margin-bottom: 15px; font-size: 16px;">Manx Crown Diamonds</p>
-        <p style="color: #999; margin-bottom: 20px;"><a href="mailto:andy@manxcrowndiamonds.com">andy@manxcrowndiamonds.com</a> | +44 7624 368505</p>
-        <p style="margin-bottom: 20px;">
-            <a href="terms.html">Terms &amp; Conditions</a> | 
-            <a href="privacy-policy.html">Privacy Policy</a>
-        </p>
-        <p style="color: #666;">&copy; 2025 Manx Crown Diamonds. All rights reserved.</p>
-    </footer>
+ <footer>
+ <p style="color: var(--primary-gold); margin-bottom: 15px; font-size: 16px;">Manx Crown Diamonds</p>
+ <p style="color: #999; margin-bottom: 20px;"><a href="mailto:andy@manxcrowndiamonds.com">andy@manxcrowndiamonds.com</a> | +44 7624 368505</p>
+ <p style="margin-bottom: 20px;">
+ <a href="terms.html">Terms &amp; Conditions</a> | 
+ <a href="privacy-policy.html">Privacy Policy</a>
+ </p>
+ <p style="color: #666;">&copy; 2025 Manx Crown Diamonds. All rights reserved.</p>
+ </footer>
 
-    <script>
-        function loadBasket() {
-            const basket = JSON.parse(localStorage.getItem('mcdBasket') || '[]');
-            const container = document.getElementById('basketContent');
-            const countText = document.getElementById('itemCountText');
+ <script>
+ function loadBasket() {
+ const basket = JSON.parse(localStorage.getItem('mcdBasket') || '[]');
+ const container = document.getElementById('basketContent');
+ const countText = document.getElementById('itemCountText');
 
-            if (basket.length === 0) {
-                countText.textContent = '0 items';
-                container.innerHTML = `
-                    <div class="empty-basket">
-                        <h2>Your basket is empty</h2>
-                        <p>Browse our collections and configure your perfect piece.</p>
-                        <a href="index.html">Browse Collections</a>
-                    </div>`;
-                return;
-            }
+ if (basket.length === 0) {
+ countText.textContent = '0 items';
+ container.innerHTML = `
+ <div class="empty-basket">
+ <h2>Your basket is empty</h2>
+ <p>Browse our collections and configure your perfect piece.</p>
+ <a href="index.html">Browse Collections</a>
+ </div>`;
+ return;
+ }
 
-            countText.textContent = basket.length + ' item' + (basket.length !== 1 ? 's' : '');
+ countText.textContent = basket.length + ' item' + (basket.length !== 1 ? 's' : '');
 
-            let itemsHTML = '';
-            let total = 0;
-            let summaryRows = '';
+ let itemsHTML = '';
+ let total = 0;
+ let summaryRows = '';
 
-            basket.forEach((item, index) => {
-                total += item.price || 0;
-                const imgHTML = item.image
-                    ? `<img src="${item.image}" alt="${item.name}" class="item-image">`
-                    : `<div class="item-image-placeholder">💎</div>`;
-                const configHTML = item.configText
-                    ? item.configText.split(', ').map(l => `<div>${l}</div>`).join('')
-                    : '';
-                itemsHTML += `
-                    <div class="basket-item" id="item-${index}">
-                        ${imgHTML}
-                        <div>
-                            <div class="item-name">${item.name}</div>
-                            <div class="item-config">${configHTML}</div>
-                            <div class="item-price">${item.priceText}</div>
-                        </div>
-                        <button class="remove-btn" onclick="removeItem(${index})">Remove</button>
-                    </div>`;
-                summaryRows += `<div class="summary-row"><span>${item.name}</span><span>${item.priceText}</span></div>`;
-            });
+ basket.forEach((item, index) => {
+ total += item.price || 0;
+ const imgHTML = item.image
+ ? `<img src="${item.image}" alt="${item.name}" class="item-image">`
+ : `<div class="item-image-placeholder">💎</div>`;
+ const configHTML = item.configText
+ ? item.configText.split(', ').map(l => `<div>${l}</div>`).join('')
+ : '';
+ itemsHTML += `
+ <div class="basket-item" id="item-${index}">
+ ${imgHTML}
+ <div>
+ <div class="item-name">${item.name}</div>
+ <div class="item-config">${configHTML}</div>
+ <div class="item-price">${item.priceText}</div>
+ </div>
+ <button class="remove-btn" onclick="removeItem(${index})">Remove</button>
+ </div>`;
+ summaryRows += `<div class="summary-row"><span>${item.name}</span><span>${item.priceText}</span></div>`;
+ });
 
-            const totalFormatted = '£' + total.toLocaleString();
+ const totalFormatted = '£' + total.toLocaleString();
 
-            container.innerHTML = itemsHTML + `
-                <div class="basket-summary">
-                    ${summaryRows}
-                    <div class="summary-total">
-                        <span>Estimated Total</span>
-                        <span style="color:var(--primary-gold)">${totalFormatted}</span>
-                    </div>
-                    <p class="summary-note">All pieces are handcrafted to order. Prices are estimates — the final price will be confirmed at checkout.</p>
-                    <div style="margin-top: 16px; padding-top: 16px; border-top: 1px solid rgba(201,169,97,0.15); display: flex; align-items: flex-start; gap: 10px;">
-                        <span style="color: #C9A961; font-size: 14px; flex-shrink: 0; margin-top: 2px;">&#9670;</span>
-                        <div>
-                            <p style="font-size: 11px; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; color: #2B2D42; margin-bottom: 4px; font-family: 'Montserrat', sans-serif;">3–5 Week Delivery</p>
-                            <p style="font-size: 12px; color: #8D8D8D; line-height: 1.6; font-family: 'Montserrat', sans-serif;">Every piece is made to order. We always aim to be as quick as we possibly can — but we ask for 3–5 weeks to make sure we meet your expectations.</p>
-                        </div>
-                    </div>
-                    <a href="checkout.html" class="btn-enquire" style="display:block; text-align:center; text-decoration:none; margin-top:24px;">Place Order</a>
-                    <button class="btn-clear" onclick="clearBasket()">Clear Basket</button>
-                </div>`;
-        }
+ container.innerHTML = itemsHTML + `
+ <div class="basket-summary">
+ ${summaryRows}
+ <div class="summary-total">
+ <span>Estimated Total</span>
+ <span style="color:var(--primary-gold)">${totalFormatted}</span>
+ </div>
+ <p class="summary-note">All pieces are handcrafted to order. Prices are estimates — the final price will be confirmed at checkout.</p>
+ <div style="margin-top: 16px; padding-top: 16px; border-top: 1px solid rgba(201,169,97,0.15); display: flex; align-items: flex-start; gap: 10px;">
+ <span style="color: #C9A961; font-size: 14px; flex-shrink: 0; margin-top: 2px;">&#9670;</span>
+ <div>
+ <p style="font-size: 11px; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; color: #2B2D42; margin-bottom: 4px; font-family: 'Montserrat', sans-serif;">3–5 Week Delivery</p>
+ <p style="font-size: 12px; color: #8D8D8D; line-height: 1.6; font-family: 'Montserrat', sans-serif;">Every piece is made to order. We always aim to be as quick as we possibly can — but we ask for 3–5 weeks to make sure we meet your expectations.</p>
+ </div>
+ </div>
+ <a href="checkout.html" class="btn-enquire" style="display:block; text-align:center; text-decoration:none; margin-top:24px;">Place Order</a>
+ <button class="btn-clear" onclick="clearBasket()">Clear Basket</button>
+ </div>`;
+ }
 
-        function removeItem(index) {
-            const basket = JSON.parse(localStorage.getItem('mcdBasket') || '[]');
-            basket.splice(index, 1);
-            localStorage.setItem('mcdBasket', JSON.stringify(basket));
-            loadBasket();
-        }
+ function removeItem(index) {
+ const basket = JSON.parse(localStorage.getItem('mcdBasket') || '[]');
+ basket.splice(index, 1);
+ localStorage.setItem('mcdBasket', JSON.stringify(basket));
+ loadBasket();
+ }
 
-        function clearBasket() {
-            if (confirm('Are you sure you want to clear your basket?')) {
-                localStorage.removeItem('mcdBasket');
-                loadBasket();
-            }
-        }
+ function clearBasket() {
+ if (confirm('Are you sure you want to clear your basket?')) {
+ localStorage.removeItem('mcdBasket');
+ loadBasket();
+ }
+ }
 
-        function submitEnquiry() {
-            const basket = JSON.parse(localStorage.getItem('mcdBasket') || '[]');
-            if (basket.length === 0) return;
+ function submitEnquiry() {
+ const basket = JSON.parse(localStorage.getItem('mcdBasket') || '[]');
+ if (basket.length === 0) return;
 
-            let body = "Hi, I'd like to request a quote for the following items:\n\n";
-            basket.forEach((item, i) => {
-                body += `${i + 1}. ${item.name}\n`;
-                if (item.configText) body += `   ${item.configText.split(', ').join('\n   ')}\n`;
-                body += `   Price: ${item.priceText}\n\n`;
-            });
-            body += "Please could you confirm availability and final pricing? Thank you.";
+ let body = "Hi, I'd like to request a quote for the following items:\n\n";
+ basket.forEach((item, i) => {
+ body += `${i + 1}. ${item.name}\n`;
+ if (item.configText) body += ` ${item.configText.split(', ').join('\n ')}\n`;
+ body += ` Price: ${item.priceText}\n\n`;
+ });
+ body += "Please could you confirm availability and final pricing? Thank you.";
 
-            window.location.href = `mailto:andy@manxcrowndiamonds.com?subject=Basket Enquiry - Manx Crown Diamonds&body=${encodeURIComponent(body)}`;
-        }
+ window.location.href = `mailto:andy@manxcrowndiamonds.com?subject=Basket Enquiry - Manx Crown Diamonds&body=${encodeURIComponent(body)}`;
+ }
 
-        loadBasket();
-    </script>
+ loadBasket();
+ </script>
 </body>
 </html>

@@ -1,261 +1,261 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="format-detection" content="telephone=no">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Terms & Conditions - Manx Crown Diamonds</title>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
-    <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Montserrat', sans-serif; color: #2B2D42; line-height: 1.8; }
-        h1, h2, h3 { font-family: 'Cormorant Garamond', serif; font-weight: 400; }
+ <meta charset="UTF-8">
+ <meta name="format-detection" content="telephone=no">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Terms & Conditions - Manx Crown Diamonds</title>
+ <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+ <style>
+ * { margin: 0; padding: 0; box-sizing: border-box; }
+ body { font-family: 'Montserrat', sans-serif; color: #2B2D42; line-height: 1.8; }
+ h1, h2, h3 { font-family: 'Cormorant Garamond', serif; font-weight: 400; }
 .container { max-width: 900px; margin: 60px auto; padding: 0 40px; }
-        
-        h1 { font-size: 48px; color: #C9A961; margin-bottom: 20px; }
-        .updated { color: #8D8D8D; font-size: 14px; margin-bottom: 40px; }
-        
-        h2 { font-size: 32px; margin-top: 40px; margin-bottom: 20px; color: #2B2D42; }
-        h3 { font-size: 24px; margin-top: 30px; margin-bottom: 15px; color: #2B2D42; }
-        
-        p { margin-bottom: 20px; font-size: 15px; }
-        
-        ul, ol { margin: 20px 0 20px 40px; }
-        li { margin-bottom: 10px; font-size: 15px; }
-        
-        .highlight { background: #FFF3CD; border-left: 4px solid #C9A961; padding: 20px; margin: 30px 0; }
-        
-        footer { background: #0A0A0A; color: white; padding: 40px; text-align: center; }
-        footer a { color: #C9A961; text-decoration: none; }
-        footer a:hover { text-decoration: underline; }
-        footer p { color: #666; font-size: 13px; }
-        
-        @media (max-width: 768px) {
-            .logo-img { height: 32px; }
-            .header-inner { padding: 0 16px; }
-            h1 { font-size: 36px; }
-            .container { padding: 0 20px; }
-        }
-            /* ── HEADER NAV ── */
-        header { background: #fff; position: sticky; top: 0; z-index: 1000; box-shadow: 0 1px 0 rgba(0,0,0,0.08); }
-        .header-inner { max-width: 1400px; margin: 0 auto; padding: 0 40px; height: 80px; display: flex; align-items: center; justify-content: space-between; gap: 40px; }
-        .logo-img { height: 52px; width: auto; display: block; opacity: 0.6; }
-        nav { flex: 1; display: flex; justify-content: center; }
-        nav ul { list-style: none; display: flex; align-items: center; gap: 0; }
-        nav ul li { position: relative; }
-        nav ul li a { display: block; padding: 28px 20px; font-size: 13px; letter-spacing: 1.5px; text-transform: uppercase; color: #2B2D42; text-decoration: none; transition: color 0.2s; }
-        nav ul li a:hover { color: #C9A961; }
-        .has-dropdown > a::after { content: ' ▾'; font-size: 10px; vertical-align: middle; }
-        .dropdown-panel { position: absolute; top: 100%; left: 50%; background: #fff; min-width: 200px; box-shadow: 0 12px 40px rgba(0,0,0,0.12); border-top: 2px solid #C9A961; opacity: 0; visibility: hidden; transform: translateX(-50%) translateY(-6px); transition: all 0.25s ease; }
-        .has-dropdown:hover .dropdown-panel { opacity: 1; visibility: visible; transform: translateX(-50%) translateY(0); }
-        .dropdown-panel a { display: block; padding: 14px 22px; font-size: 12px; letter-spacing: 1px; text-transform: uppercase; color: #2B2D42; border-bottom: 1px solid rgba(0,0,0,0.05); transition: all 0.2s; }
-        .dropdown-panel a:last-child { border-bottom: none; }
-        .dropdown-panel a:hover { color: #C9A961; background: #F8F6F0; padding-left: 28px; }
-        .header-actions { display: flex; align-items: center; gap: 16px; }
-        .cart-link { position: relative; font-size: 22px; color: #2B2D42; text-decoration: none; transition: color 0.2s; }
-        .cart-link:hover { color: #C9A961; }
-        .cart-badge { position: absolute; top: -6px; right: -8px; background: #2B2D42; color: white; border-radius: 50%; width: 18px; height: 18px; font-size: 11px; font-family: 'Montserrat', sans-serif; font-weight: 600; display: none; align-items: center; justify-content: center; }
-        .mobile-menu-btn { display: none; background: none; border: none; cursor: pointer; font-size: 24px; color: #2B2D42; }
-        .mobile-nav { display: none; position: fixed; inset: 0; background: #fff; z-index: 2000; flex-direction: column; padding: 30px; overflow-y: auto; }
-        .mobile-nav.open { display: flex; }
-        .mobile-nav-top { display: flex; justify-content: space-between; align-items: center; margin-bottom: 40px; }
-        .mobile-nav-close { background: none; border: none; font-size: 24px; cursor: pointer; color: #2B2D42; }
-        .mobile-nav a { display: block; font-size: 24px; font-family: 'Cormorant Garamond', serif; color: #2B2D42; padding: 14px 0; border-bottom: 1px solid rgba(0,0,0,0.06); text-decoration: none; transition: color 0.2s; }
-        .mobile-nav a:hover { color: #C9A961; }
-        @media (max-width: 1024px) { nav { display: none; } .mobile-menu-btn { display: block; } }
+ 
+ h1 { font-size: 48px; color: #C9A961; margin-bottom: 20px; }
+ .updated { color: #8D8D8D; font-size: 14px; margin-bottom: 40px; }
+ 
+ h2 { font-size: 32px; margin-top: 40px; margin-bottom: 20px; color: #2B2D42; }
+ h3 { font-size: 24px; margin-top: 30px; margin-bottom: 15px; color: #2B2D42; }
+ 
+ p { margin-bottom: 20px; font-size: 15px; }
+ 
+ ul, ol { margin: 20px 0 20px 40px; }
+ li { margin-bottom: 10px; font-size: 15px; }
+ 
+ .highlight { background: #FFF3CD; border-left: 4px solid #C9A961; padding: 20px; margin: 30px 0; }
+ 
+ footer { background: #0A0A0A; color: white; padding: 40px; text-align: center; }
+ footer a { color: #C9A961; text-decoration: none; }
+ footer a:hover { text-decoration: underline; }
+ footer p { color: #666; font-size: 13px; }
+ 
+ @media (max-width: 768px) {
+ .logo-img { height: 32px; }
+ .header-inner { padding: 0 16px; }
+ h1 { font-size: 36px; }
+ .container { padding: 0 20px; }
+ }
+ /* ── HEADER NAV ── */
+ header { background: #fff; position: sticky; top: 0; z-index: 1000; box-shadow: 0 1px 0 rgba(0,0,0,0.08); }
+ .header-inner { max-width: 1400px; margin: 0 auto; padding: 0 40px; height: 80px; display: flex; align-items: center; justify-content: space-between; gap: 40px; }
+ .logo-img { height: 52px; width: auto; display: block; opacity: 0.6; }
+ nav { flex: 1; display: flex; justify-content: center; }
+ nav ul { list-style: none; display: flex; align-items: center; gap: 0; }
+ nav ul li { position: relative; }
+ nav ul li a { display: block; padding: 28px 20px; font-size: 13px; letter-spacing: 1.5px; text-transform: uppercase; color: #2B2D42; text-decoration: none; transition: color 0.2s; }
+ nav ul li a:hover { color: #C9A961; }
+ .has-dropdown > a::after { content: ' ▾'; font-size: 10px; vertical-align: middle; }
+ .dropdown-panel { position: absolute; top: 100%; left: 50%; background: #fff; min-width: 200px; box-shadow: 0 12px 40px rgba(0,0,0,0.12); border-top: 2px solid #C9A961; opacity: 0; visibility: hidden; transform: translateX(-50%) translateY(-6px); transition: all 0.25s ease; }
+ .has-dropdown:hover .dropdown-panel { opacity: 1; visibility: visible; transform: translateX(-50%) translateY(0); }
+ .dropdown-panel a { display: block; padding: 14px 22px; font-size: 12px; letter-spacing: 1px; text-transform: uppercase; color: #2B2D42; border-bottom: 1px solid rgba(0,0,0,0.05); transition: all 0.2s; }
+ .dropdown-panel a:last-child { border-bottom: none; }
+ .dropdown-panel a:hover { color: #C9A961; background: #F8F6F0; padding-left: 28px; }
+ .header-actions { display: flex; align-items: center; gap: 16px; }
+ .cart-link { position: relative; font-size: 22px; color: #2B2D42; text-decoration: none; transition: color 0.2s; }
+ .cart-link:hover { color: #C9A961; }
+ .cart-badge { position: absolute; top: -6px; right: -8px; background: #2B2D42; color: white; border-radius: 50%; width: 18px; height: 18px; font-size: 11px; font-family: 'Montserrat', sans-serif; font-weight: 600; display: none; align-items: center; justify-content: center; }
+ .mobile-menu-btn { display: none; background: none; border: none; cursor: pointer; font-size: 24px; color: #2B2D42; }
+ .mobile-nav { display: none; position: fixed; inset: 0; background: #fff; z-index: 2000; flex-direction: column; padding: 30px; overflow-y: auto; }
+ .mobile-nav.open { display: flex; }
+ .mobile-nav-top { display: flex; justify-content: space-between; align-items: center; margin-bottom: 40px; }
+ .mobile-nav-close { background: none; border: none; font-size: 24px; cursor: pointer; color: #2B2D42; }
+ .mobile-nav a { display: block; font-size: 24px; font-family: 'Cormorant Garamond', serif; color: #2B2D42; padding: 14px 0; border-bottom: 1px solid rgba(0,0,0,0.06); text-decoration: none; transition: color 0.2s; }
+ .mobile-nav a:hover { color: #C9A961; }
+ @media (max-width: 1024px) { nav { display: none; } .mobile-menu-btn { display: block; } }
 </style>
 <style>
 @media (max-width: 768px) {
-    .logo-img { height: 32px !important; }
-    .header-inner { padding: 0 16px !important; }
+ .logo-img { height: 32px !important; }
+ .header-inner { padding: 0 16px !important; }
 }
 </style>
 <!-- logo-mobile-fix -->
 </head>
 <body>
-    
-    <div class="mobile-nav" id="mobileNav">
-    <div class="mobile-nav-top">
-        <img src="images/logo-mcd.jpg" alt="Manx Crown Diamonds" class="logo-img">
-        <button class="mobile-nav-close" onclick="closeMobileNav()">&#x2715;</button>
-    </div>
-    <a href="index.html">Home</a>
-    <a href="diamond-rings.html">Rings</a>
-    <a href="website/earrings.html">Earrings</a>
-    <a href="website/bracelets.html">Bracelets</a>
-    <a href="website/necklaces.html">Necklaces</a>
-    <a href="watches.html">Watches</a>
-    <a href="bespoke-request.html">Bespoke</a>
-    <a href="website/about.html">About</a>
-    <a href="website/contact.html">Contact</a>
+ 
+ <div class="mobile-nav" id="mobileNav">
+ <div class="mobile-nav-top">
+ <img src="images/logo-mcd.jpg" alt="Manx Crown Diamonds" class="logo-img">
+ <button class="mobile-nav-close" onclick="closeMobileNav()">&#x2715;</button>
+ </div>
+ <a href="index.html">Home</a>
+ <a href="diamond-rings.html">Rings</a>
+ <a href="website/earrings.html">Earrings</a>
+ <a href="website/bracelets.html">Bracelets</a>
+ <a href="website/necklaces.html">Necklaces</a>
+ <a href="watches.html">Watches</a>
+ <a href="bespoke-request.html">Bespoke</a>
+ <a href="website/about.html">About</a>
+ <a href="website/contact.html">Contact</a>
 </div>
 
 <header>
-    <div class="header-inner">
-        <a href="index.html">
-            <img src="images/logo-mcd.jpg" alt="Manx Crown Diamonds" class="logo-img">
-        </a>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li class="has-dropdown">
-                    <a href="#">Jewellery</a>
-                    <div class="dropdown-panel">
-                        <a href="diamond-rings.html">Rings</a>
-                        <a href="website/earrings.html">Earrings</a>
-                        <a href="website/bracelets.html">Bracelets</a>
-                        <a href="website/necklaces.html">Necklaces</a>
-                    </div>
-                </li>
-                <li><a href="watches.html">Watches</a></li>
-                <li><a href="bespoke-request.html">Bespoke</a></li>
-                <li><a href="website/about.html">About</a></li>
-                <li><a href="website/contact.html">Contact</a></li>
-            </ul>
-        </nav>
-        <div class="header-actions">
-            <a href="basket.html" class="cart-link">&#128722;<span class="cart-badge" id="basketCount">0</span></a>
-            <button class="mobile-menu-btn" onclick="openMobileNav()">&#9776;</button>
-        </div>
-    </div>
+ <div class="header-inner">
+ <a href="index.html">
+ <img src="images/logo-mcd.jpg" alt="Manx Crown Diamonds" class="logo-img">
+ </a>
+ <nav>
+ <ul>
+ <li><a href="index.html">Home</a></li>
+ <li class="has-dropdown">
+ <a href="#">Jewellery</a>
+ <div class="dropdown-panel">
+ <a href="diamond-rings.html">Rings</a>
+ <a href="website/earrings.html">Earrings</a>
+ <a href="website/bracelets.html">Bracelets</a>
+ <a href="website/necklaces.html">Necklaces</a>
+ </div>
+ </li>
+ <li><a href="watches.html">Watches</a></li>
+ <li><a href="bespoke-request.html">Bespoke</a></li>
+ <li><a href="website/about.html">About</a></li>
+ <li><a href="website/contact.html">Contact</a></li>
+ </ul>
+ </nav>
+ <div class="header-actions">
+ <a href="basket.html" class="cart-link">&#128722;<span class="cart-badge" id="basketCount">0</span></a>
+ <button class="mobile-menu-btn" onclick="openMobileNav()">&#9776;</button>
+ </div>
+ </div>
 </header>
 <script>(function(){var b=JSON.parse(localStorage.getItem('mcdBasket')||'[]');var e=document.getElementById('basketCount');if(e){e.textContent=b.length;e.style.display=b.length>0?'flex':'none';}})();
 function openMobileNav(){document.getElementById('mobileNav').classList.add('open');}
 function closeMobileNav(){document.getElementById('mobileNav').classList.remove('open');}</script>
-    
-    <div class="container">
-        <h1>Terms & Conditions</h1>
-        <p class="updated">Last Updated: March 1, 2025</p>
-        
-        <div class="highlight">
-            <strong>Important:</strong> Please read these terms and conditions carefully before using our service or purchasing from Manx Crown Diamonds.
-        </div>
-        
-        <h2>1. Company Information</h2>
-        <p><strong>Company Name:</strong> Manx Crown Diamonds<br>
-        <strong>Registration Number:</strong> IOM Company No. 137799C<br>
-        <strong>Registered Address:</strong> Isle of Man<br>
-        <strong>Contact Email:</strong> <a href="mailto:andy@manxcrowndiamonds.com">andy@manxcrowndiamonds.com</a><br>
-        <strong>Phone:</strong> +44 7624 368505</p>
-        
-        <h2>2. Definitions</h2>
-        <ul>
-            <li><strong>"Company", "We", "Us", "Our"</strong> refers to Manx Crown Diamonds</li>
-            <li><strong>"Customer", "You", "Your"</strong> refers to the person placing an order</li>
-            <li><strong>"Products"</strong> refers to jewellery, diamonds, watches, and related items</li>
-            <li><strong>"Website"</strong> refers to www.manxcrowndiamonds.com</li>
-        </ul>
-        
-        <h2>3. Orders & Pricing</h2>
-        <h3>3.1 Order Acceptance</h3>
-        <p>All orders are subject to acceptance by Manx Crown Diamonds. We reserve the right to refuse any order at our discretion. Order confirmation will be sent via email.</p>
-        
-        <h3>3.2 Pricing</h3>
-        <p>All prices are quoted in British Pounds Sterling (GBP) and include VAT where applicable. Prices are subject to change without notice. The price charged will be the price displayed at the time of order.</p>
-        
-        <h3>3.3 Payment</h3>
-        <p>Payment must be received in full before items are shipped. We accept:</p>
-        <ul>
-            <li>Credit/Debit Cards (via Stripe)</li>
-            <li>Bank Transfer</li>
-            <li>PayPal</li>
-            <li>Cryptocurrency (by arrangement)</li>
-        </ul>
-        
-        <h2>4. Diamond & Gemstone Authentication</h2>
-        <h3>4.1 Certification</h3>
-        <p>All diamonds are certified by either IGI (International Gemological Institute) or GIA (Gemological Institute of America). Certificates will be provided with purchase.</p>
-        
-        <h3>4.2 Lab-Grown Diamonds</h3>
-        <p>Where products contain lab-grown diamonds, this will be clearly stated in the product description. Lab-grown diamonds are chemically, physically, and optically identical to natural diamonds.</p>
-        
-        <h2>5. Delivery & Shipping</h2>
-        <h3>5.1 Shipping Methods</h3>
-        <p>All items are shipped fully insured via tracked and signed-for delivery. Shipping costs will be calculated at checkout based on destination.</p>
-        
-        <h3>5.2 Delivery Times</h3>
-        <ul>
-            <li>UK & Isle of Man: 1-3 business days</li>
-            <li>Europe: 3-7 business days</li>
-            <li>International: 5-14 business days</li>
-        </ul>
-        
-        <h3>5.3 Free Shipping</h3>
-        <p>Orders over £5,000 qualify for free shipping within the UK and Isle of Man.</p>
-        
-        <h2>6. Returns & Refunds</h2>
-        <h3>6.1 30-Day Return Policy</h3>
-        <p>You may return any item within 30 days of receipt for a full refund, provided the item is:</p>
-        <ul>
-            <li>In original, unworn condition</li>
-            <li>With all original packaging and certificates</li>
-            <li>With proof of purchase</li>
-        </ul>
-        
-        <h3>6.2 Bespoke & Custom Items</h3>
-        <p>Custom-made or bespoke items cannot be returned unless faulty.</p>
-        
-        <h3>6.3 Return Process</h3>
-        <p>To initiate a return, contact us at <a href="mailto:andy@manxcrowndiamonds.com">andy@manxcrowndiamonds.com</a>. Items must be returned via insured, tracked shipping. Return shipping costs are the customer's responsibility unless the item is faulty.</p>
-        
-        <h3>6.4 Refund Timeline</h3>
-        <p>Refunds will be processed within 14 business days of receiving the returned item in acceptable condition.</p>
-        
-        <h2>7. Resizing & Alterations</h2>
-        <h3>7.1 Free Resizing</h3>
-        <p>One free ring resize is offered within 60 days of purchase. Additional resizing will incur charges based on complexity.</p>
-        
-        <h3>7.2 Limitations</h3>
-        <p>Some designs cannot be resized. We will advise at time of purchase if this applies.</p>
-        
-        <h2>8. Warranty & Repairs</h2>
-        <h3>8.1 Workmanship Warranty</h3>
-        <p>We warrant our workmanship for 12 months from date of purchase. This covers manufacturing defects but not:</p>
-        <ul>
-            <li>Normal wear and tear</li>
-            <li>Damage from misuse or accidents</li>
-            <li>Alterations by third parties</li>
-        </ul>
-        
-        <h3>8.2 Repair Services</h3>
-        <p>We offer lifetime repair services for items purchased from us at competitive rates.</p>
-        
-        <h2>9. Limitation of Liability</h2>
-        <p>To the extent permitted by Isle of Man law, our liability is limited to the purchase price of the item. We are not liable for:</p>
-        <ul>
-            <li>Indirect or consequential losses</li>
-            <li>Loss of profits or income</li>
-            <li>Loss of opportunity</li>
-            <li>Damage to items worn in activities for which they are not designed</li>
-        </ul>
-        
-        <h2>10. Privacy & Data Protection</h2>
-        <p>Your personal information is handled in accordance with our <a href="privacy-policy.html">Privacy Policy</a> and Isle of Man data protection laws.</p>
-        
-        <h2>11. Intellectual Property</h2>
-        <p>All content on our website, including images, text, and logos, is the property of Manx Crown Diamonds and protected by copyright laws. Unauthorized use is prohibited.</p>
-        
-        <h2>12. Governing Law</h2>
-        <p>These terms are governed by the laws of the Isle of Man. Any disputes will be subject to the exclusive jurisdiction of the Isle of Man courts.</p>
-        
-        <h2>13. Changes to Terms</h2>
-        <p>We reserve the right to update these terms at any time. The "Last Updated" date will reflect any changes. Continued use of our services constitutes acceptance of updated terms.</p>
-        
-        <h2>14. Contact Us</h2>
-        <p>For questions about these terms, please contact us:</p>
-        <p>
-            <strong>Email:</strong> <a href="mailto:andy@manxcrowndiamonds.com">andy@manxcrowndiamonds.com</a><br>
-            <strong>Phone:</strong> +44 7624 368505
-        </p>
-    </div>
-    <footer>
-        <p style="color: #C9A961; margin-bottom: 15px; font-size: 16px;">Manx Crown Diamonds</p>
-        <p style="color: #999; margin-bottom: 20px;"><a href="mailto:andy@manxcrowndiamonds.com">andy@manxcrowndiamonds.com</a> | +44 7624 368505</p>
-        <p style="margin-bottom: 20px;">
-            <a href="terms.html">Terms &amp; Conditions</a> |
-            <a href="privacy-policy.html">Privacy Policy</a>
-        </p>
-        <p style="color: #666;">&copy; 2025 Manx Crown Diamonds. All rights reserved.</p>
-    </footer>
+ 
+ <div class="container">
+ <h1>Terms & Conditions</h1>
+ <p class="updated">Last Updated: March 1, 2025</p>
+ 
+ <div class="highlight">
+ <strong>Important:</strong> Please read these terms and conditions carefully before using our service or purchasing from Manx Crown Diamonds.
+ </div>
+ 
+ <h2>1. Company Information</h2>
+ <p><strong>Company Name:</strong> Manx Crown Diamonds<br>
+ <strong>Registration Number:</strong> IOM Company No. 137799C<br>
+ <strong>Registered Address:</strong> Isle of Man<br>
+ <strong>Contact Email:</strong> <a href="mailto:andy@manxcrowndiamonds.com">andy@manxcrowndiamonds.com</a><br>
+ <strong>Phone:</strong> +44 7624 368505</p>
+ 
+ <h2>2. Definitions</h2>
+ <ul>
+ <li><strong>"Company", "We", "Us", "Our"</strong> refers to Manx Crown Diamonds</li>
+ <li><strong>"Customer", "You", "Your"</strong> refers to the person placing an order</li>
+ <li><strong>"Products"</strong> refers to jewellery, diamonds, watches, and related items</li>
+ <li><strong>"Website"</strong> refers to www.manxcrowndiamonds.com</li>
+ </ul>
+ 
+ <h2>3. Orders & Pricing</h2>
+ <h3>3.1 Order Acceptance</h3>
+ <p>All orders are subject to acceptance by Manx Crown Diamonds. We reserve the right to refuse any order at our discretion. Order confirmation will be sent via email.</p>
+ 
+ <h3>3.2 Pricing</h3>
+ <p>All prices are quoted in British Pounds Sterling (GBP) and include VAT where applicable. Prices are subject to change without notice. The price charged will be the price displayed at the time of order.</p>
+ 
+ <h3>3.3 Payment</h3>
+ <p>Payment must be received in full before items are shipped. We accept:</p>
+ <ul>
+ <li>Credit/Debit Cards (via Stripe)</li>
+ <li>Bank Transfer</li>
+ <li>PayPal</li>
+ <li>Cryptocurrency (by arrangement)</li>
+ </ul>
+ 
+ <h2>4. Diamond & Gemstone Authentication</h2>
+ <h3>4.1 Certification</h3>
+ <p>All diamonds are certified by either IGI (International Gemological Institute) or GIA (Gemological Institute of America). Certificates will be provided with purchase.</p>
+ 
+ <h3>4.2 Lab-Grown Diamonds</h3>
+ <p>Where products contain lab-grown diamonds, this will be clearly stated in the product description. Lab-grown diamonds are chemically, physically, and optically identical to natural diamonds.</p>
+ 
+ <h2>5. Delivery & Shipping</h2>
+ <h3>5.1 Shipping Methods</h3>
+ <p>All items are shipped fully insured via tracked and signed-for delivery. Shipping costs will be calculated at checkout based on destination.</p>
+ 
+ <h3>5.2 Delivery Times</h3>
+ <ul>
+ <li>UK & Isle of Man: 1-3 business days</li>
+ <li>Europe: 3-7 business days</li>
+ <li>International: 5-14 business days</li>
+ </ul>
+ 
+ <h3>5.3 Free Shipping</h3>
+ <p>Orders over £5,000 qualify for free shipping within the UK and Isle of Man.</p>
+ 
+ <h2>6. Returns & Refunds</h2>
+ <h3>6.1 30-Day Return Policy</h3>
+ <p>You may return any item within 30 days of receipt for a full refund, provided the item is:</p>
+ <ul>
+ <li>In original, unworn condition</li>
+ <li>With all original packaging and certificates</li>
+ <li>With proof of purchase</li>
+ </ul>
+ 
+ <h3>6.2 Bespoke & Custom Items</h3>
+ <p>Custom-made or bespoke items cannot be returned unless faulty.</p>
+ 
+ <h3>6.3 Return Process</h3>
+ <p>To initiate a return, contact us at <a href="mailto:andy@manxcrowndiamonds.com">andy@manxcrowndiamonds.com</a>. Items must be returned via insured, tracked shipping. Return shipping costs are the customer's responsibility unless the item is faulty.</p>
+ 
+ <h3>6.4 Refund Timeline</h3>
+ <p>Refunds will be processed within 14 business days of receiving the returned item in acceptable condition.</p>
+ 
+ <h2>7. Resizing & Alterations</h2>
+ <h3>7.1 Free Resizing</h3>
+ <p>One free ring resize is offered within 60 days of purchase. Additional resizing will incur charges based on complexity.</p>
+ 
+ <h3>7.2 Limitations</h3>
+ <p>Some designs cannot be resized. We will advise at time of purchase if this applies.</p>
+ 
+ <h2>8. Warranty & Repairs</h2>
+ <h3>8.1 Workmanship Warranty</h3>
+ <p>We warrant our workmanship for 12 months from date of purchase. This covers manufacturing defects but not:</p>
+ <ul>
+ <li>Normal wear and tear</li>
+ <li>Damage from misuse or accidents</li>
+ <li>Alterations by third parties</li>
+ </ul>
+ 
+ <h3>8.2 Repair Services</h3>
+ <p>We offer lifetime repair services for items purchased from us at competitive rates.</p>
+ 
+ <h2>9. Limitation of Liability</h2>
+ <p>To the extent permitted by Isle of Man law, our liability is limited to the purchase price of the item. We are not liable for:</p>
+ <ul>
+ <li>Indirect or consequential losses</li>
+ <li>Loss of profits or income</li>
+ <li>Loss of opportunity</li>
+ <li>Damage to items worn in activities for which they are not designed</li>
+ </ul>
+ 
+ <h2>10. Privacy & Data Protection</h2>
+ <p>Your personal information is handled in accordance with our <a href="privacy-policy.html">Privacy Policy</a> and Isle of Man data protection laws.</p>
+ 
+ <h2>11. Intellectual Property</h2>
+ <p>All content on our website, including images, text, and logos, is the property of Manx Crown Diamonds and protected by copyright laws. Unauthorized use is prohibited.</p>
+ 
+ <h2>12. Governing Law</h2>
+ <p>These terms are governed by the laws of the Isle of Man. Any disputes will be subject to the exclusive jurisdiction of the Isle of Man courts.</p>
+ 
+ <h2>13. Changes to Terms</h2>
+ <p>We reserve the right to update these terms at any time. The "Last Updated" date will reflect any changes. Continued use of our services constitutes acceptance of updated terms.</p>
+ 
+ <h2>14. Contact Us</h2>
+ <p>For questions about these terms, please contact us:</p>
+ <p>
+ <strong>Email:</strong> <a href="mailto:andy@manxcrowndiamonds.com">andy@manxcrowndiamonds.com</a><br>
+ <strong>Phone:</strong> +44 7624 368505
+ </p>
+ </div>
+ <footer>
+ <p style="color: #C9A961; margin-bottom: 15px; font-size: 16px;">Manx Crown Diamonds</p>
+ <p style="color: #999; margin-bottom: 20px;"><a href="mailto:andy@manxcrowndiamonds.com">andy@manxcrowndiamonds.com</a> | +44 7624 368505</p>
+ <p style="margin-bottom: 20px;">
+ <a href="terms.html">Terms &amp; Conditions</a> |
+ <a href="privacy-policy.html">Privacy Policy</a>
+ </p>
+ <p style="color: #666;">&copy; 2025 Manx Crown Diamonds. All rights reserved.</p>
+ </footer>
 </body>
 </html>

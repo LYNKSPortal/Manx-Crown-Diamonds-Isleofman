@@ -1,383 +1,383 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="format-detection" content="telephone=no">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Checkout - Manx Crown Diamonds</title>
+ <meta charset="UTF-8">
+ <meta name="format-detection" content="telephone=no">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Checkout - Manx Crown Diamonds</title>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
-    <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        :root {
-            --primary-gold: #C9A961;
-            --dark-navy: #2B2D42;
-            --deep-black: #0A0A0A;
-            --cream: #F8F6F0;
-        }
-        body { font-family: 'Montserrat', sans-serif; color: var(--dark-navy); background: #fafafa; }
-        h1, h2, h3 { font-family: 'Cormorant Garamond', serif; font-weight: 400; }
+ <style>
+ * { margin: 0; padding: 0; box-sizing: border-box; }
+ :root {
+ --primary-gold: #C9A961;
+ --dark-navy: #2B2D42;
+ --deep-black: #0A0A0A;
+ --cream: #F8F6F0;
+ }
+ body { font-family: 'Montserrat', sans-serif; color: var(--dark-navy); background: #fafafa; }
+ h1, h2, h3 { font-family: 'Cormorant Garamond', serif; font-weight: 400; }
 .checkout-wrap { max-width: 1200px; margin: 50px auto; padding: 0 40px; display: grid; grid-template-columns: 1fr 420px; gap: 50px; align-items: start; }
 
-        /* Left: form */
-        .checkout-form { background: white; padding: 45px; border: 1px solid rgba(201,169,97,0.1); }
-        .section-title { font-size: 26px; margin-bottom: 25px; padding-bottom: 15px; border-bottom: 1px solid rgba(201,169,97,0.15); }
+ /* Left: form */
+ .checkout-form { background: white; padding: 45px; border: 1px solid rgba(201,169,97,0.1); }
+ .section-title { font-size: 26px; margin-bottom: 25px; padding-bottom: 15px; border-bottom: 1px solid rgba(201,169,97,0.15); }
 
-        .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
-        .form-group { margin-bottom: 20px; }
-        .form-group label { display: block; font-size: 12px; letter-spacing: 1.5px; text-transform: uppercase; font-weight: 500; margin-bottom: 8px; color: var(--dark-navy); }
-        .form-group input, .form-group select, .form-group textarea {
-            width: 100%; padding: 14px 16px; border: 2px solid #E0E0E0; font-family: 'Montserrat', sans-serif;
-            font-size: 14px; transition: border-color 0.3s; background: white;
-        }
-        .form-group input:focus, .form-group select:focus, .form-group textarea:focus { outline: none; border-color: var(--primary-gold); }
-        .form-group textarea { resize: vertical; min-height: 90px; }
+ .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+ .form-group { margin-bottom: 20px; }
+ .form-group label { display: block; font-size: 12px; letter-spacing: 1.5px; text-transform: uppercase; font-weight: 500; margin-bottom: 8px; color: var(--dark-navy); }
+ .form-group input, .form-group select, .form-group textarea {
+ width: 100%; padding: 14px 16px; border: 2px solid #E0E0E0; font-family: 'Montserrat', sans-serif;
+ font-size: 14px; transition: border-color 0.3s; background: white;
+ }
+ .form-group input:focus, .form-group select:focus, .form-group textarea:focus { outline: none; border-color: var(--primary-gold); }
+ .form-group textarea { resize: vertical; min-height: 90px; }
 
-        /* Payment methods */
-        .payment-section { margin-top: 35px; }
-        .payment-options { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 25px; }
-        .payment-option { padding: 18px; border: 2px solid #E0E0E0; cursor: pointer; transition: all 0.3s; text-align: center; }
-        .payment-option:hover { border-color: var(--primary-gold); }
-        .payment-option.selected { border-color: var(--primary-gold); background: var(--cream); }
-        .payment-option .pay-icon { font-size: 26px; margin-bottom: 6px; display: block; }
-        .payment-option .pay-label { font-size: 12px; letter-spacing: 1px; text-transform: uppercase; font-weight: 500; }
-        .payment-coming { background: var(--cream); border: 1px dashed var(--primary-gold); padding: 20px; text-align: center; }
-        .payment-coming p { font-size: 13px; color: #8D8D8D; line-height: 1.6; }
-        .payment-coming strong { color: var(--dark-navy); display: block; margin-bottom: 5px; font-size: 14px; }
+ /* Payment methods */
+ .payment-section { margin-top: 35px; }
+ .payment-options { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 25px; }
+ .payment-option { padding: 18px; border: 2px solid #E0E0E0; cursor: pointer; transition: all 0.3s; text-align: center; }
+ .payment-option:hover { border-color: var(--primary-gold); }
+ .payment-option.selected { border-color: var(--primary-gold); background: var(--cream); }
+ .payment-option .pay-icon { font-size: 26px; margin-bottom: 6px; display: block; }
+ .payment-option .pay-label { font-size: 12px; letter-spacing: 1px; text-transform: uppercase; font-weight: 500; }
+ .payment-coming { background: var(--cream); border: 1px dashed var(--primary-gold); padding: 20px; text-align: center; }
+ .payment-coming p { font-size: 13px; color: #8D8D8D; line-height: 1.6; }
+ .payment-coming strong { color: var(--dark-navy); display: block; margin-bottom: 5px; font-size: 14px; }
 
-        .btn-place-order { width: 100%; padding: 20px; background: var(--primary-gold); color: white; border: none; cursor: pointer; text-transform: uppercase; font-size: 14px; letter-spacing: 2px; font-family: 'Montserrat', sans-serif; transition: background 0.3s; margin-top: 10px; }
-        .btn-place-order:hover { background: #B89852; }
+ .btn-place-order { width: 100%; padding: 20px; background: var(--primary-gold); color: white; border: none; cursor: pointer; text-transform: uppercase; font-size: 14px; letter-spacing: 2px; font-family: 'Montserrat', sans-serif; transition: background 0.3s; margin-top: 10px; }
+ .btn-place-order:hover { background: #B89852; }
 
-        /* Right: order summary */
-        .order-summary { background: white; padding: 35px; border: 1px solid rgba(201,169,97,0.1); position: sticky; top: 30px; }
-        .order-summary h2 { font-size: 26px; margin-bottom: 25px; }
-        .summary-item { display: flex; gap: 15px; padding: 15px 0; border-bottom: 1px solid rgba(201,169,97,0.1); align-items: center; }
-        .summary-item:last-of-type { border-bottom: none; }
-        .summary-img { width: 65px; height: 65px; object-fit: cover; background: var(--cream); flex-shrink: 0; }
-        .summary-img-placeholder { width: 65px; height: 65px; background: var(--cream); display: flex; align-items: center; justify-content: center; font-size: 24px; flex-shrink: 0; }
-        .summary-item-name { font-family: 'Cormorant Garamond', serif; font-size: 17px; margin-bottom: 3px; }
-        .summary-item-config { font-size: 12px; color: #999; line-height: 1.5; }
-        .summary-item-price { font-size: 16px; color: var(--primary-gold); margin-top: 5px; font-family: 'Cormorant Garamond', serif; }
-        .summary-total-row { display: flex; justify-content: space-between; padding: 18px 0 0; margin-top: 10px; border-top: 2px solid rgba(201,169,97,0.2); font-family: 'Cormorant Garamond', serif; font-size: 24px; }
-        .summary-total-row span:last-child { color: var(--primary-gold); }
-        .summary-note { font-size: 12px; color: #999; margin-top: 12px; line-height: 1.6; }
+ /* Right: order summary */
+ .order-summary { background: white; padding: 35px; border: 1px solid rgba(201,169,97,0.1); position: sticky; top: 30px; }
+ .order-summary h2 { font-size: 26px; margin-bottom: 25px; }
+ .summary-item { display: flex; gap: 15px; padding: 15px 0; border-bottom: 1px solid rgba(201,169,97,0.1); align-items: center; }
+ .summary-item:last-of-type { border-bottom: none; }
+ .summary-img { width: 65px; height: 65px; object-fit: cover; background: var(--cream); flex-shrink: 0; }
+ .summary-img-placeholder { width: 65px; height: 65px; background: var(--cream); display: flex; align-items: center; justify-content: center; font-size: 24px; flex-shrink: 0; }
+ .summary-item-name { font-family: 'Cormorant Garamond', serif; font-size: 17px; margin-bottom: 3px; }
+ .summary-item-config { font-size: 12px; color: #999; line-height: 1.5; }
+ .summary-item-price { font-size: 16px; color: var(--primary-gold); margin-top: 5px; font-family: 'Cormorant Garamond', serif; }
+ .summary-total-row { display: flex; justify-content: space-between; padding: 18px 0 0; margin-top: 10px; border-top: 2px solid rgba(201,169,97,0.2); font-family: 'Cormorant Garamond', serif; font-size: 24px; }
+ .summary-total-row span:last-child { color: var(--primary-gold); }
+ .summary-note { font-size: 12px; color: #999; margin-top: 12px; line-height: 1.6; }
 
-        /* Empty basket redirect */
-        .empty-msg { text-align: center; padding: 60px 40px; background: white; grid-column: 1/-1; }
-        .empty-msg h2 { font-size: 32px; margin-bottom: 15px; }
-        .empty-msg a { color: var(--primary-gold); }
+ /* Empty basket redirect */
+ .empty-msg { text-align: center; padding: 60px 40px; background: white; grid-column: 1/-1; }
+ .empty-msg h2 { font-size: 32px; margin-bottom: 15px; }
+ .empty-msg a { color: var(--primary-gold); }
 
-        /* Confirmation overlay */
-        #orderConfirm { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.6); z-index: 2000; align-items: center; justify-content: center; }
-        .confirm-box { background: white; padding: 60px; text-align: center; max-width: 480px; width: 90%; }
-        .confirm-box .tick { font-size: 56px; color: var(--primary-gold); margin-bottom: 20px; }
-        .confirm-box h2 { font-size: 34px; margin-bottom: 12px; }
-        .confirm-box p { color: #8D8D8D; font-size: 14px; line-height: 1.7; margin-bottom: 30px; }
-        .confirm-box a { display: inline-block; padding: 16px 40px; background: var(--primary-gold); color: white; text-decoration: none; text-transform: uppercase; font-size: 13px; letter-spacing: 2px; }
+ /* Confirmation overlay */
+ #orderConfirm { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.6); z-index: 2000; align-items: center; justify-content: center; }
+ .confirm-box { background: white; padding: 60px; text-align: center; max-width: 480px; width: 90%; }
+ .confirm-box .tick { font-size: 56px; color: var(--primary-gold); margin-bottom: 20px; }
+ .confirm-box h2 { font-size: 34px; margin-bottom: 12px; }
+ .confirm-box p { color: #8D8D8D; font-size: 14px; line-height: 1.7; margin-bottom: 30px; }
+ .confirm-box a { display: inline-block; padding: 16px 40px; background: var(--primary-gold); color: white; text-decoration: none; text-transform: uppercase; font-size: 13px; letter-spacing: 2px; }
 
-        footer { background: var(--deep-black); color: white; padding: 40px; text-align: center; font-size: 13px; margin-top: 60px; }
-        footer a { color: #C9A961; text-decoration: none; }
-        footer a:hover { text-decoration: underline; }
+ footer { background: var(--deep-black); color: white; padding: 40px; text-align: center; font-size: 13px; margin-top: 60px; }
+ footer a { color: #C9A961; text-decoration: none; }
+ footer a:hover { text-decoration: underline; }
 
-        @media (max-width: 900px) {
-            .checkout-wrap { grid-template-columns: 1fr; }
-            .order-summary { position: static; }
-            .checkout-wrap, .top-bar,            .form-row { grid-template-columns: 1fr; }
-        }
+ @media (max-width: 900px) {
+ .checkout-wrap { grid-template-columns: 1fr; }
+ .order-summary { position: static; }
+ .checkout-wrap, .top-bar, .form-row { grid-template-columns: 1fr; }
+ }
 
-            /* ── HEADER NAV ── */
-        header { background: #fff; position: sticky; top: 0; z-index: 1000; box-shadow: 0 1px 0 rgba(0,0,0,0.08); }
-        .header-inner { max-width: 1400px; margin: 0 auto; padding: 0 40px; height: 80px; display: flex; align-items: center; justify-content: space-between; gap: 40px; }
-        .logo-img { height: 52px; width: auto; display: block; opacity: 0.6; }
-        nav { flex: 1; display: flex; justify-content: center; }
-        nav ul { list-style: none; display: flex; align-items: center; gap: 0; }
-        nav ul li { position: relative; }
-        nav ul li a { display: block; padding: 28px 20px; font-size: 13px; letter-spacing: 1.5px; text-transform: uppercase; color: #2B2D42; text-decoration: none; transition: color 0.2s; }
-        nav ul li a:hover { color: #C9A961; }
-        .has-dropdown > a::after { content: ' ▾'; font-size: 10px; vertical-align: middle; }
-        .dropdown-panel { position: absolute; top: 100%; left: 50%; background: #fff; min-width: 200px; box-shadow: 0 12px 40px rgba(0,0,0,0.12); border-top: 2px solid #C9A961; opacity: 0; visibility: hidden; transform: translateX(-50%) translateY(-6px); transition: all 0.25s ease; }
-        .has-dropdown:hover .dropdown-panel { opacity: 1; visibility: visible; transform: translateX(-50%) translateY(0); }
-        .dropdown-panel a { display: block; padding: 14px 22px; font-size: 12px; letter-spacing: 1px; text-transform: uppercase; color: #2B2D42; border-bottom: 1px solid rgba(0,0,0,0.05); transition: all 0.2s; }
-        .dropdown-panel a:last-child { border-bottom: none; }
-        .dropdown-panel a:hover { color: #C9A961; background: #F8F6F0; padding-left: 28px; }
-        .header-actions { display: flex; align-items: center; gap: 16px; }
-        .cart-link { position: relative; font-size: 22px; color: #2B2D42; text-decoration: none; transition: color 0.2s; }
-        .cart-link:hover { color: #C9A961; }
-        .cart-badge { position: absolute; top: -6px; right: -8px; background: #2B2D42; color: white; border-radius: 50%; width: 18px; height: 18px; font-size: 11px; font-family: 'Montserrat', sans-serif; font-weight: 600; display: none; align-items: center; justify-content: center; }
-        .mobile-menu-btn { display: none; background: none; border: none; cursor: pointer; font-size: 24px; color: #2B2D42; }
-        .mobile-nav { display: none; position: fixed; inset: 0; background: #fff; z-index: 2000; flex-direction: column; padding: 30px; overflow-y: auto; }
-        .mobile-nav.open { display: flex; }
-        .mobile-nav-top { display: flex; justify-content: space-between; align-items: center; margin-bottom: 40px; }
-        .mobile-nav-close { background: none; border: none; font-size: 24px; cursor: pointer; color: #2B2D42; }
-        .mobile-nav a { display: block; font-size: 24px; font-family: 'Cormorant Garamond', serif; color: #2B2D42; padding: 14px 0; border-bottom: 1px solid rgba(0,0,0,0.06); text-decoration: none; transition: color 0.2s; }
-        .mobile-nav a:hover { color: #C9A961; }
-        @media (max-width: 1024px) { nav { display: none; } .mobile-menu-btn { display: block; } }
+ /* ── HEADER NAV ── */
+ header { background: #fff; position: sticky; top: 0; z-index: 1000; box-shadow: 0 1px 0 rgba(0,0,0,0.08); }
+ .header-inner { max-width: 1400px; margin: 0 auto; padding: 0 40px; height: 80px; display: flex; align-items: center; justify-content: space-between; gap: 40px; }
+ .logo-img { height: 52px; width: auto; display: block; opacity: 0.6; }
+ nav { flex: 1; display: flex; justify-content: center; }
+ nav ul { list-style: none; display: flex; align-items: center; gap: 0; }
+ nav ul li { position: relative; }
+ nav ul li a { display: block; padding: 28px 20px; font-size: 13px; letter-spacing: 1.5px; text-transform: uppercase; color: #2B2D42; text-decoration: none; transition: color 0.2s; }
+ nav ul li a:hover { color: #C9A961; }
+ .has-dropdown > a::after { content: ' ▾'; font-size: 10px; vertical-align: middle; }
+ .dropdown-panel { position: absolute; top: 100%; left: 50%; background: #fff; min-width: 200px; box-shadow: 0 12px 40px rgba(0,0,0,0.12); border-top: 2px solid #C9A961; opacity: 0; visibility: hidden; transform: translateX(-50%) translateY(-6px); transition: all 0.25s ease; }
+ .has-dropdown:hover .dropdown-panel { opacity: 1; visibility: visible; transform: translateX(-50%) translateY(0); }
+ .dropdown-panel a { display: block; padding: 14px 22px; font-size: 12px; letter-spacing: 1px; text-transform: uppercase; color: #2B2D42; border-bottom: 1px solid rgba(0,0,0,0.05); transition: all 0.2s; }
+ .dropdown-panel a:last-child { border-bottom: none; }
+ .dropdown-panel a:hover { color: #C9A961; background: #F8F6F0; padding-left: 28px; }
+ .header-actions { display: flex; align-items: center; gap: 16px; }
+ .cart-link { position: relative; font-size: 22px; color: #2B2D42; text-decoration: none; transition: color 0.2s; }
+ .cart-link:hover { color: #C9A961; }
+ .cart-badge { position: absolute; top: -6px; right: -8px; background: #2B2D42; color: white; border-radius: 50%; width: 18px; height: 18px; font-size: 11px; font-family: 'Montserrat', sans-serif; font-weight: 600; display: none; align-items: center; justify-content: center; }
+ .mobile-menu-btn { display: none; background: none; border: none; cursor: pointer; font-size: 24px; color: #2B2D42; }
+ .mobile-nav { display: none; position: fixed; inset: 0; background: #fff; z-index: 2000; flex-direction: column; padding: 30px; overflow-y: auto; }
+ .mobile-nav.open { display: flex; }
+ .mobile-nav-top { display: flex; justify-content: space-between; align-items: center; margin-bottom: 40px; }
+ .mobile-nav-close { background: none; border: none; font-size: 24px; cursor: pointer; color: #2B2D42; }
+ .mobile-nav a { display: block; font-size: 24px; font-family: 'Cormorant Garamond', serif; color: #2B2D42; padding: 14px 0; border-bottom: 1px solid rgba(0,0,0,0.06); text-decoration: none; transition: color 0.2s; }
+ .mobile-nav a:hover { color: #C9A961; }
+ @media (max-width: 1024px) { nav { display: none; } .mobile-menu-btn { display: block; } }
 </style>
 <style>
 @media (max-width: 768px) {
-    .logo-img { height: 32px !important; }
-    .header-inner { padding: 0 16px !important; }
+ .logo-img { height: 32px !important; }
+ .header-inner { padding: 0 16px !important; }
 }
 </style>
 <!-- logo-mobile-fix -->
 </head>
 <body>
-    <div class="mobile-nav" id="mobileNav">
-    <div class="mobile-nav-top">
-        <img src="images/logo-mcd.jpg" alt="Manx Crown Diamonds" class="logo-img">
-        <button class="mobile-nav-close" onclick="closeMobileNav()">&#x2715;</button>
-    </div>
-    <a href="index.html">Home</a>
-    <a href="diamond-rings.html">Rings</a>
-    <a href="website/earrings.html">Earrings</a>
-    <a href="website/bracelets.html">Bracelets</a>
-    <a href="website/necklaces.html">Necklaces</a>
-    <a href="watches.html">Watches</a>
-    <a href="bespoke-request.html">Bespoke</a>
-    <a href="website/about.html">About</a>
-    <a href="website/contact.html">Contact</a>
+ <div class="mobile-nav" id="mobileNav">
+ <div class="mobile-nav-top">
+ <img src="images/logo-mcd.jpg" alt="Manx Crown Diamonds" class="logo-img">
+ <button class="mobile-nav-close" onclick="closeMobileNav()">&#x2715;</button>
+ </div>
+ <a href="index.html">Home</a>
+ <a href="diamond-rings.html">Rings</a>
+ <a href="website/earrings.html">Earrings</a>
+ <a href="website/bracelets.html">Bracelets</a>
+ <a href="website/necklaces.html">Necklaces</a>
+ <a href="watches.html">Watches</a>
+ <a href="bespoke-request.html">Bespoke</a>
+ <a href="website/about.html">About</a>
+ <a href="website/contact.html">Contact</a>
 </div>
 
 <header>
-    <div class="header-inner">
-        <a href="index.html">
-            <img src="images/logo-mcd.jpg" alt="Manx Crown Diamonds" class="logo-img">
-        </a>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li class="has-dropdown">
-                    <a href="#">Jewellery</a>
-                    <div class="dropdown-panel">
-                        <a href="diamond-rings.html">Rings</a>
-                        <a href="website/earrings.html">Earrings</a>
-                        <a href="website/bracelets.html">Bracelets</a>
-                        <a href="website/necklaces.html">Necklaces</a>
-                    </div>
-                </li>
-                <li><a href="watches.html">Watches</a></li>
-                <li><a href="bespoke-request.html">Bespoke</a></li>
-                <li><a href="website/about.html">About</a></li>
-                <li><a href="website/contact.html">Contact</a></li>
-            </ul>
-        </nav>
-        <div class="header-actions">
-            <a href="basket.html" class="cart-link">&#128722;<span class="cart-badge" id="basketCount">0</span></a>
-            <button class="mobile-menu-btn" onclick="openMobileNav()">&#9776;</button>
-        </div>
-    </div>
+ <div class="header-inner">
+ <a href="index.html">
+ <img src="images/logo-mcd.jpg" alt="Manx Crown Diamonds" class="logo-img">
+ </a>
+ <nav>
+ <ul>
+ <li><a href="index.html">Home</a></li>
+ <li class="has-dropdown">
+ <a href="#">Jewellery</a>
+ <div class="dropdown-panel">
+ <a href="diamond-rings.html">Rings</a>
+ <a href="website/earrings.html">Earrings</a>
+ <a href="website/bracelets.html">Bracelets</a>
+ <a href="website/necklaces.html">Necklaces</a>
+ </div>
+ </li>
+ <li><a href="watches.html">Watches</a></li>
+ <li><a href="bespoke-request.html">Bespoke</a></li>
+ <li><a href="website/about.html">About</a></li>
+ <li><a href="website/contact.html">Contact</a></li>
+ </ul>
+ </nav>
+ <div class="header-actions">
+ <a href="basket.html" class="cart-link">&#128722;<span class="cart-badge" id="basketCount">0</span></a>
+ <button class="mobile-menu-btn" onclick="openMobileNav()">&#9776;</button>
+ </div>
+ </div>
 </header>
 <script>(function(){var b=JSON.parse(localStorage.getItem('mcdBasket')||'[]');var e=document.getElementById('basketCount');if(e){e.textContent=b.length;e.style.display=b.length>0?'flex':'none';}})();
 function openMobileNav(){document.getElementById('mobileNav').classList.add('open');}
 function closeMobileNav(){document.getElementById('mobileNav').classList.remove('open');}</script>
 
-    <div class="checkout-wrap" id="checkoutWrap">
-        <!-- Populated by JS -->
-    </div>
+ <div class="checkout-wrap" id="checkoutWrap">
+ <!-- Populated by JS -->
+ </div>
 
 <!-- Order Confirmation Overlay -->
 <div id="orderConfirm" style="display:none;position:fixed;inset:0;background:rgba(10,10,10,0.75);z-index:3000;align-items:center;justify-content:center;padding:20px;">
-    <div style="background:white;max-width:520px;width:100%;padding:60px 50px;text-align:center;position:relative;">
-        <div style="width:64px;height:64px;border-radius:50%;background:var(--cream);border:2px solid var(--primary-gold);display:flex;align-items:center;justify-content:center;margin:0 auto 24px;font-size:28px;">&#9670;</div>
-        <h2 style="font-family:'Cormorant Garamond',serif;font-size:36px;font-weight:400;color:var(--dark-navy);margin-bottom:10px;">Order Received</h2>
-        <p style="font-size:13px;color:#999;letter-spacing:2px;text-transform:uppercase;margin-bottom:28px;">Thank you, <span id="confirmName"></span></p>
+ <div style="background:white;max-width:520px;width:100%;padding:60px 50px;text-align:center;position:relative;">
+ <div style="width:64px;height:64px;border-radius:50%;background:var(--cream);border:2px solid var(--primary-gold);display:flex;align-items:center;justify-content:center;margin:0 auto 24px;font-size:28px;">&#9670;</div>
+ <h2 style="font-family:'Cormorant Garamond',serif;font-size:36px;font-weight:400;color:var(--dark-navy);margin-bottom:10px;">Order Received</h2>
+ <p style="font-size:13px;color:#999;letter-spacing:2px;text-transform:uppercase;margin-bottom:28px;">Thank you, <span id="confirmName"></span></p>
 
-        <div style="background:var(--cream);padding:20px 24px;margin-bottom:28px;text-align:left;">
-            <div style="display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px solid rgba(201,169,97,0.15);font-size:13px;">
-                <span style="color:#999;">Order Reference</span>
-                <strong style="color:var(--dark-navy);font-family:'Cormorant Garamond',serif;font-size:15px;" id="confirmRef"></strong>
-            </div>
-            <div style="display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px solid rgba(201,169,97,0.15);font-size:13px;">
-                <span style="color:#999;">Order Total</span>
-                <strong style="color:var(--primary-gold);font-family:'Cormorant Garamond',serif;font-size:15px;" id="confirmTotal"></strong>
-            </div>
-            <div style="display:flex;justify-content:space-between;padding:8px 0;font-size:13px;">
-                <span style="color:#999;">Confirmation sent to</span>
-                <strong style="color:var(--dark-navy);font-size:13px;" id="confirmEmail"></strong>
-            </div>
-        </div>
+ <div style="background:var(--cream);padding:20px 24px;margin-bottom:28px;text-align:left;">
+ <div style="display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px solid rgba(201,169,97,0.15);font-size:13px;">
+ <span style="color:#999;">Order Reference</span>
+ <strong style="color:var(--dark-navy);font-family:'Cormorant Garamond',serif;font-size:15px;" id="confirmRef"></strong>
+ </div>
+ <div style="display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px solid rgba(201,169,97,0.15);font-size:13px;">
+ <span style="color:#999;">Order Total</span>
+ <strong style="color:var(--primary-gold);font-family:'Cormorant Garamond',serif;font-size:15px;" id="confirmTotal"></strong>
+ </div>
+ <div style="display:flex;justify-content:space-between;padding:8px 0;font-size:13px;">
+ <span style="color:#999;">Confirmation sent to</span>
+ <strong style="color:var(--dark-navy);font-size:13px;" id="confirmEmail"></strong>
+ </div>
+ </div>
 
-        <p style="font-size:13px;color:#666;line-height:1.8;margin-bottom:10px;">We will be in touch <strong style="color:var(--dark-navy);">within 24 hours</strong> with bank transfer payment details.</p>
-        <p style="font-size:13px;color:#666;line-height:1.8;margin-bottom:32px;">Once payment is received, your piece goes straight into production on the Isle of Man.</p>
+ <p style="font-size:13px;color:#666;line-height:1.8;margin-bottom:10px;">We will be in touch <strong style="color:var(--dark-navy);">within 24 hours</strong> with bank transfer payment details.</p>
+ <p style="font-size:13px;color:#666;line-height:1.8;margin-bottom:32px;">Once payment is received, your piece goes straight into production on the Isle of Man.</p>
 
-        <a href="index.html" style="display:inline-block;padding:16px 40px;background:var(--dark-navy);color:white;text-decoration:none;text-transform:uppercase;font-size:12px;letter-spacing:2px;font-family:'Montserrat',sans-serif;transition:background 0.3s;" onmouseover="this.style.background='#C9A961'" onmouseout="this.style.background='var(--dark-navy)'">Continue Shopping</a>
+ <a href="index.html" style="display:inline-block;padding:16px 40px;background:var(--dark-navy);color:white;text-decoration:none;text-transform:uppercase;font-size:12px;letter-spacing:2px;font-family:'Montserrat',sans-serif;transition:background 0.3s;" onmouseover="this.style.background='#C9A961'" onmouseout="this.style.background='var(--dark-navy)'">Continue Shopping</a>
 
-        <p style="margin-top:20px;font-size:12px;color:#bbb;">Any questions? <a href="mailto:andy@manxcrowndiamonds.com" style="color:var(--primary-gold);text-decoration:none;">andy@manxcrowndiamonds.com</a></p>
-    </div>
+ <p style="margin-top:20px;font-size:12px;color:#bbb;">Any questions? <a href="mailto:andy@manxcrowndiamonds.com" style="color:var(--primary-gold);text-decoration:none;">andy@manxcrowndiamonds.com</a></p>
+ </div>
 </div>
 
-    <footer>
-        <p style="color: var(--primary-gold); margin-bottom: 15px; font-size: 16px;">Manx Crown Diamonds</p>
-        <p style="color: #999; margin-bottom: 20px;"><a href="mailto:andy@manxcrowndiamonds.com">andy@manxcrowndiamonds.com</a> | +44 7624 368505</p>
-        <p style="margin-bottom: 20px;">
-            <a href="terms.html">Terms &amp; Conditions</a> | 
-            <a href="privacy-policy.html">Privacy Policy</a>
-        </p>
-        <p style="color: #666;">&copy; 2025 Manx Crown Diamonds. All rights reserved.</p>
-    </footer>
+ <footer>
+ <p style="color: var(--primary-gold); margin-bottom: 15px; font-size: 16px;">Manx Crown Diamonds</p>
+ <p style="color: #999; margin-bottom: 20px;"><a href="mailto:andy@manxcrowndiamonds.com">andy@manxcrowndiamonds.com</a> | +44 7624 368505</p>
+ <p style="margin-bottom: 20px;">
+ <a href="terms.html">Terms &amp; Conditions</a> | 
+ <a href="privacy-policy.html">Privacy Policy</a>
+ </p>
+ <p style="color: #666;">&copy; 2025 Manx Crown Diamonds. All rights reserved.</p>
+ </footer>
 
-    <script>
-        const basket = JSON.parse(localStorage.getItem('mcdBasket') || '[]');
-        const wrap = document.getElementById('checkoutWrap');
+ <script>
+ const basket = JSON.parse(localStorage.getItem('mcdBasket') || '[]');
+ const wrap = document.getElementById('checkoutWrap');
 
-        if (basket.length === 0) {
-            wrap.innerHTML = `<div class="empty-msg"><h2>Your basket is empty</h2><p><a href="index.html">Continue shopping</a></p></div>`;
-        } else {
-            let total = 0;
-            let summaryHTML = '';
-            basket.forEach(item => {
-                total += item.price || 0;
-                const imgHTML = item.image
-                    ? `<img src="${item.image}" alt="${item.name}" class="summary-img">`
-                    : `<div class="summary-img-placeholder">&#128142;</div>`;
-                const configLines = item.configText ? item.configText.split(', ').join('<br>') : '';
-                summaryHTML += `
-                    <div class="summary-item">
-                        ${imgHTML}
-                        <div>
-                            <div class="summary-item-name">${item.name}</div>
-                            <div class="summary-item-config">${configLines}</div>
-                            <div class="summary-item-price">${item.priceText}</div>
-                        </div>
-                    </div>`;
-            });
+ if (basket.length === 0) {
+ wrap.innerHTML = `<div class="empty-msg"><h2>Your basket is empty</h2><p><a href="index.html">Continue shopping</a></p></div>`;
+ } else {
+ let total = 0;
+ let summaryHTML = '';
+ basket.forEach(item => {
+ total += item.price || 0;
+ const imgHTML = item.image
+ ? `<img src="${item.image}" alt="${item.name}" class="summary-img">`
+ : `<div class="summary-img-placeholder">&#128142;</div>`;
+ const configLines = item.configText ? item.configText.split(', ').join('<br>') : '';
+ summaryHTML += `
+ <div class="summary-item">
+ ${imgHTML}
+ <div>
+ <div class="summary-item-name">${item.name}</div>
+ <div class="summary-item-config">${configLines}</div>
+ <div class="summary-item-price">${item.priceText}</div>
+ </div>
+ </div>`;
+ });
 
-            wrap.innerHTML = `
-                <!-- Left: checkout form -->
-                <div class="checkout-form">
-                    <h2 class="section-title">Your Details</h2>
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label>First Name *</label>
-                            <input type="text" id="firstName" placeholder="Jane" required>
-                        </div>
-                        <div class="form-group">
-                            <label>Last Name *</label>
-                            <input type="text" id="lastName" placeholder="Smith" required>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label>Email Address *</label>
-                        <input type="email" id="email" placeholder="jane@example.com" required>
-                    </div>
-                    <div class="form-group">
-                        <label>Phone Number</label>
-                        <input type="tel" id="phone" placeholder="+44 7700 900000">
-                    </div>
-                    <div class="form-group">
-                        <label>Delivery Address *</label>
-                        <textarea id="address" placeholder="Street address, city, postcode, country" required></textarea>
-                    </div>
-                    <div class="form-group">
-                        <label>Order Notes (optional)</label>
-                        <textarea id="notes" placeholder="Any special requests or messages..."></textarea>
-                    </div>
+ wrap.innerHTML = `
+ <!-- Left: checkout form -->
+ <div class="checkout-form">
+ <h2 class="section-title">Your Details</h2>
+ <div class="form-row">
+ <div class="form-group">
+ <label>First Name *</label>
+ <input type="text" id="firstName" placeholder="Jane" required>
+ </div>
+ <div class="form-group">
+ <label>Last Name *</label>
+ <input type="text" id="lastName" placeholder="Smith" required>
+ </div>
+ </div>
+ <div class="form-group">
+ <label>Email Address *</label>
+ <input type="email" id="email" placeholder="jane@example.com" required>
+ </div>
+ <div class="form-group">
+ <label>Phone Number</label>
+ <input type="tel" id="phone" placeholder="+44 7700 900000">
+ </div>
+ <div class="form-group">
+ <label>Delivery Address *</label>
+ <textarea id="address" placeholder="Street address, city, postcode, country" required></textarea>
+ </div>
+ <div class="form-group">
+ <label>Order Notes (optional)</label>
+ <textarea id="notes" placeholder="Any special requests or messages..."></textarea>
+ </div>
 
-                    <div class="payment-section">
-                        <h2 class="section-title">How Payment Works</h2>
-                        <div style="display:flex;flex-direction:column;gap:0;margin-bottom:24px;">
-                            <div style="display:flex;align-items:flex-start;gap:14px;padding:16px 20px;background:var(--cream);border:1px solid rgba(201,169,97,0.15);">
-                                <span style="color:#C9A961;font-size:18px;flex-shrink:0;margin-top:1px;">①</span>
-                                <p style="font-size:13px;color:#555;line-height:1.7;">Place your order by filling in your details above and clicking <strong style="color:var(--dark-navy);">Place Order</strong> below.</p>
-                            </div>
-                            <div style="display:flex;align-items:flex-start;gap:14px;padding:16px 20px;background:white;border:1px solid rgba(201,169,97,0.15);border-top:none;">
-                                <span style="color:#C9A961;font-size:18px;flex-shrink:0;margin-top:1px;">②</span>
-                                <p style="font-size:13px;color:#555;line-height:1.7;">We will be in touch <strong style="color:var(--dark-navy);">within 24 hours</strong> by email with bank transfer payment details.</p>
-                            </div>
-                            <div style="display:flex;align-items:flex-start;gap:14px;padding:16px 20px;background:var(--cream);border:1px solid rgba(201,169,97,0.15);border-top:none;">
-                                <span style="color:#C9A961;font-size:18px;flex-shrink:0;margin-top:1px;">③</span>
-                                <p style="font-size:13px;color:#555;line-height:1.7;">Once payment is received your order goes into production. <strong style="color:var(--dark-navy);">Safe, simple, and no card fees.</strong></p>
-                            </div>
-                        </div>
-                        <p style="font-size:12px;color:#aaa;margin-bottom:18px;letter-spacing:0.5px;">&#128274;&nbsp; Secure Bank Transfer &nbsp;&bull;&nbsp; No Card Fees &nbsp;&bull;&nbsp; Isle of Man</p>
-                        <button class="btn-place-order" id="placeBtn" onclick="placeOrder()">Place Order &#8594;</button>
-                        <p id="orderError" style="display:none;color:#c0392b;font-size:13px;margin-top:12px;text-align:center;"></p>
-                    </div>
-                </div>
+ <div class="payment-section">
+ <h2 class="section-title">How Payment Works</h2>
+ <div style="display:flex;flex-direction:column;gap:0;margin-bottom:24px;">
+ <div style="display:flex;align-items:flex-start;gap:14px;padding:16px 20px;background:var(--cream);border:1px solid rgba(201,169,97,0.15);">
+ <span style="color:#C9A961;font-size:18px;flex-shrink:0;margin-top:1px;">①</span>
+ <p style="font-size:13px;color:#555;line-height:1.7;">Place your order by filling in your details above and clicking <strong style="color:var(--dark-navy);">Place Order</strong> below.</p>
+ </div>
+ <div style="display:flex;align-items:flex-start;gap:14px;padding:16px 20px;background:white;border:1px solid rgba(201,169,97,0.15);border-top:none;">
+ <span style="color:#C9A961;font-size:18px;flex-shrink:0;margin-top:1px;">②</span>
+ <p style="font-size:13px;color:#555;line-height:1.7;">We will be in touch <strong style="color:var(--dark-navy);">within 24 hours</strong> by email with bank transfer payment details.</p>
+ </div>
+ <div style="display:flex;align-items:flex-start;gap:14px;padding:16px 20px;background:var(--cream);border:1px solid rgba(201,169,97,0.15);border-top:none;">
+ <span style="color:#C9A961;font-size:18px;flex-shrink:0;margin-top:1px;">③</span>
+ <p style="font-size:13px;color:#555;line-height:1.7;">Once payment is received your order goes into production. <strong style="color:var(--dark-navy);">Safe, simple, and no card fees.</strong></p>
+ </div>
+ </div>
+ <p style="font-size:12px;color:#aaa;margin-bottom:18px;letter-spacing:0.5px;">&#128274;&nbsp; Secure Bank Transfer &nbsp;&bull;&nbsp; No Card Fees &nbsp;&bull;&nbsp; Isle of Man</p>
+ <button class="btn-place-order" id="placeBtn" onclick="placeOrder()">Place Order &#8594;</button>
+ <p id="orderError" style="display:none;color:#c0392b;font-size:13px;margin-top:12px;text-align:center;"></p>
+ </div>
+ </div>
 
-                <!-- Right: order summary -->
-                <div class="order-summary">
-                    <h2>Order Summary</h2>
-                    ${summaryHTML}
-                    <div class="summary-total-row">
-                        <span>Total</span>
-                        <span>£${total.toLocaleString()}</span>
-                    </div>
-                    <p class="summary-note">All prices include VAT where applicable. You will be charged the amount shown above.</p>
-                    <div style="margin-top: 16px; padding-top: 16px; border-top: 1px solid rgba(201,169,97,0.15); display: flex; align-items: flex-start; gap: 10px;">
-                        <span style="color: #C9A961; font-size: 14px; flex-shrink: 0; margin-top: 2px;">&#9670;</span>
-                        <div>
-                            <p style="font-size: 11px; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; color: #2B2D42; margin-bottom: 4px; font-family: 'Montserrat', sans-serif;">3–5 Week Delivery</p>
-                            <p style="font-size: 12px; color: #8D8D8D; line-height: 1.6; font-family: 'Montserrat', sans-serif;">Every piece is made to order. We always aim to be as quick as we possibly can — but we ask for 3–5 weeks to make sure we meet your expectations.</p>
-                        </div>
-                    </div>
-                </div>`;
-        }
+ <!-- Right: order summary -->
+ <div class="order-summary">
+ <h2>Order Summary</h2>
+ ${summaryHTML}
+ <div class="summary-total-row">
+ <span>Total</span>
+ <span>£${total.toLocaleString()}</span>
+ </div>
+ <p class="summary-note">All prices include VAT where applicable. You will be charged the amount shown above.</p>
+ <div style="margin-top: 16px; padding-top: 16px; border-top: 1px solid rgba(201,169,97,0.15); display: flex; align-items: flex-start; gap: 10px;">
+ <span style="color: #C9A961; font-size: 14px; flex-shrink: 0; margin-top: 2px;">&#9670;</span>
+ <div>
+ <p style="font-size: 11px; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; color: #2B2D42; margin-bottom: 4px; font-family: 'Montserrat', sans-serif;">3–5 Week Delivery</p>
+ <p style="font-size: 12px; color: #8D8D8D; line-height: 1.6; font-family: 'Montserrat', sans-serif;">Every piece is made to order. We always aim to be as quick as we possibly can — but we ask for 3–5 weeks to make sure we meet your expectations.</p>
+ </div>
+ </div>
+ </div>`;
+ }
 
-        async function placeOrder() {
-            const firstName = document.getElementById('firstName').value.trim();
-            const lastName  = document.getElementById('lastName').value.trim();
-            const email     = document.getElementById('email').value.trim();
-            const address   = document.getElementById('address').value.trim();
-            const errorEl   = document.getElementById('orderError');
-            const placeBtn  = document.getElementById('placeBtn');
+ async function placeOrder() {
+ const firstName = document.getElementById('firstName').value.trim();
+ const lastName = document.getElementById('lastName').value.trim();
+ const email = document.getElementById('email').value.trim();
+ const address = document.getElementById('address').value.trim();
+ const errorEl = document.getElementById('orderError');
+ const placeBtn = document.getElementById('placeBtn');
 
-            errorEl.style.display = 'none';
+ errorEl.style.display = 'none';
 
-            if (!firstName || !lastName || !email || !address) {
-                errorEl.textContent = 'Please fill in all required fields.';
-                errorEl.style.display = 'block';
-                return;
-            }
-            if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
-                errorEl.textContent = 'Please enter a valid email address.';
-                errorEl.style.display = 'block';
-                return;
-            }
+ if (!firstName || !lastName || !email || !address) {
+ errorEl.textContent = 'Please fill in all required fields.';
+ errorEl.style.display = 'block';
+ return;
+ }
+ if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+ errorEl.textContent = 'Please enter a valid email address.';
+ errorEl.style.display = 'block';
+ return;
+ }
 
-            placeBtn.textContent = 'Placing order\u2026';
-            placeBtn.disabled = true;
+ placeBtn.textContent = 'Placing order\u2026';
+ placeBtn.disabled = true;
 
-            const phone    = document.getElementById('phone').value.trim();
-            const notes    = document.getElementById('notes').value.trim();
-            const total    = basket.reduce((s, i) => s + (i.price || 0), 0);
-            const itemList = basket.map(i => `${i.name} — ${i.priceText}${i.configText ? ' (' + i.configText + ')' : ''}`).join('\n');
-            const orderRef = 'MCD-' + Date.now().toString(36).toUpperCase().slice(-6);
+ const phone = document.getElementById('phone').value.trim();
+ const notes = document.getElementById('notes').value.trim();
+ const total = basket.reduce((s, i) => s + (i.price || 0), 0);
+ const itemList = basket.map(i => `${i.name} — ${i.priceText}${i.configText ? ' (' + i.configText + ')' : ''}`).join('\n');
+ const orderRef = 'MCD-' + Date.now().toString(36).toUpperCase().slice(-6);
 
-            // Send order notification email to Andy
-            try {
-                const fd = new FormData();
-                fd.append('_subject', `New Order ${orderRef} — ${firstName} ${lastName} — £${total.toLocaleString()}`);
-                fd.append('Order Ref',  orderRef);
-                fd.append('Name',       `${firstName} ${lastName}`);
-                fd.append('Email',      email);
-                fd.append('Phone',      phone || 'Not provided');
-                fd.append('Address',    address);
-                fd.append('Items',      itemList);
-                fd.append('Total',      `£${total.toLocaleString()}`);
-                fd.append('Notes',      notes || 'None');
-                fd.append('_template',  'table');
-                fd.append('_replyto',   email);
+ // Send order notification email to Andy
+ try {
+ const fd = new FormData();
+ fd.append('_subject', `New Order ${orderRef} — ${firstName} ${lastName} — £${total.toLocaleString()}`);
+ fd.append('Order Ref', orderRef);
+ fd.append('Name', `${firstName} ${lastName}`);
+ fd.append('Email', email);
+ fd.append('Phone', phone || 'Not provided');
+ fd.append('Address', address);
+ fd.append('Items', itemList);
+ fd.append('Total', `£${total.toLocaleString()}`);
+ fd.append('Notes', notes || 'None');
+ fd.append('_template', 'table');
+ fd.append('_replyto', email);
 
-                await fetch('https://formsubmit.co/ajax/andy@manxcrowndiamonds.com', {
-                    method: 'POST',
-                    body: fd
-                });
-            } catch (e) {
-                // Silent fail — still show confirmation
-            }
+ await fetch('https://formsubmit.co/ajax/andy@manxcrowndiamonds.com', {
+ method: 'POST',
+ body: fd
+ });
+ } catch (e) {
+ // Silent fail — still show confirmation
+ }
 
-            // Clear basket
-            localStorage.removeItem('mcdBasket');
+ // Clear basket
+ localStorage.removeItem('mcdBasket');
 
-            // Show confirmation overlay
-            document.getElementById('confirmName').textContent    = firstName;
-            document.getElementById('confirmEmail').textContent   = email;
-            document.getElementById('confirmRef').textContent     = orderRef;
-            document.getElementById('confirmTotal').textContent   = `£${total.toLocaleString()}`;
-            const overlay = document.getElementById('orderConfirm');
-            overlay.style.display = 'flex';
-            document.body.style.overflow = 'hidden';
-        }
-    </script>
+ // Show confirmation overlay
+ document.getElementById('confirmName').textContent = firstName;
+ document.getElementById('confirmEmail').textContent = email;
+ document.getElementById('confirmRef').textContent = orderRef;
+ document.getElementById('confirmTotal').textContent = `£${total.toLocaleString()}`;
+ const overlay = document.getElementById('orderConfirm');
+ overlay.style.display = 'flex';
+ document.body.style.overflow = 'hidden';
+ }
+ </script>
 </body>
 </html>

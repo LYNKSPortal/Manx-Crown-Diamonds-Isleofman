@@ -1,249 +1,248 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="format-detection" content="telephone=no">
-    <meta name="viewport" content="width=1080">
-    <title>MCD – Pear Necklace Poster (1080×1350 Portrait)</title>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
-    <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        html { background: #F8F6F0; width: 1080px; height: 1350px; overflow: hidden; }
-        body { width: 1080px; height: 1350px; overflow: hidden; background: #F8F6F0; margin: 0; }
+ <meta charset="UTF-8">
+ <meta name="format-detection" content="telephone=no">
+ <meta name="viewport" content="width=1080">
+ <title>MCD – Pear Necklace Poster (1080×1350 Portrait)</title>
+ <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+ <style>
+ * { margin: 0; padding: 0; box-sizing: border-box; }
+ html { background: #F8F6F0; width: 1080px; height: 1350px; overflow: hidden; }
+ body { width: 1080px; height: 1350px; overflow: hidden; background: #F8F6F0; margin: 0; }
 
-        .poster {
-            width: 1080px;
-            height: 1350px;
-            position: relative;
-            background: #F8F6F0;
-            overflow: hidden;
-        }
+ .poster {
+ width: 1080px;
+ height: 1350px;
+ position: relative;
+ background: #F8F6F0;
+ overflow: hidden;
+ }
 
-        /* Full width photo — upper 70% */
-        .photo-zone {
-            position: relative;
-            height: 900px;
-            overflow: hidden;
-        }
-        .photo-zone img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            object-position: center 20%;
-            filter: brightness(0.88);
-        }
-        /* Cream fade at bottom of photo into text area */
-        .photo-zone::after {
-            content: '';
-            position: absolute;
-            inset: 0;
-            background: linear-gradient(to bottom,
-                rgba(248,246,240,0) 50%,
-                rgba(248,246,240,0.7) 80%,
-                rgba(248,246,240,1) 100%);
-        }
+ /* Full width photo — upper 70% */
+ .photo-zone {
+ position: relative;
+ height: 900px;
+ overflow: hidden;
+ }
+ .photo-zone img {
+ width: 100%;
+ height: 100%;
+ object-fit: cover;
+ object-position: center 20%;
+ filter: brightness(0.88);
+ }
+ /* Cream fade at bottom of photo into text area */
+ .photo-zone::after {
+ content: '';
+ position: absolute;
+ inset: 0;
+ background: linear-gradient(to bottom,
+ rgba(248,246,240,0) 50%,
+ rgba(248,246,240,0.7) 80%,
+ rgba(248,246,240,1) 100%);
+ }
 
-        /* Gold strip accent */
-        .gold-strip {
-            height: 5px;
-            background: linear-gradient(90deg, #C9A961, #e8d08a, #C9A961);
-        }
+ /* Gold strip accent */
+ .gold-strip {
+ height: 5px;
+ background: linear-gradient(90deg, #C9A961, #e8d08a, #C9A961);
+ }
 
-        /* Lower content area */
-        .content-zone {
-            padding: 50px 90px 60px;
-            background: #F8F6F0;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
-        }
+ /* Lower content area */
+ .content-zone {
+ padding: 50px 90px 60px;
+ background: #F8F6F0;
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ text-align: center;
+ }
 
-        .logo-area {
-            margin-bottom: 28px;
-        }
-        .logo-area img {
-            height: 54px;
-            width: auto;
-            opacity: 0.85;
-            mix-blend-mode: multiply;
-        }
+ .logo-area {
+ margin-bottom: 28px;
+ }
+ .logo-area img {
+ height: 54px;
+ width: auto;
+ opacity: 0.85;
+ mix-blend-mode: multiply;
+ }
 
-        .rule {
-            display: flex;
-            align-items: center;
-            gap: 16px;
-            width: 400px;
-            margin-bottom: 28px;
-        }
-        .rule-line { flex: 1; height: 1px; background: rgba(201,169,97,0.5); }
-        .rule-diamond { color: #C9A961; font-size: 11px; }
+ .rule {
+ display: flex;
+ align-items: center;
+ gap: 16px;
+ width: 400px;
+ margin-bottom: 28px;
+ }
+ .rule-line { flex: 1; height: 1px; background: rgba(201,169,97,0.5); }
+ .rule-diamond { color: #C9A961; font-size: 11px; }
 
-        .eyebrow {
-            font-family: 'Montserrat', sans-serif;
-            font-size: 10.5px;
-            font-weight: 500;
-            letter-spacing: 5.5px;
-            text-transform: uppercase;
-            color: #C9A961;
-            margin-bottom: 14px;
-        }
+ .eyebrow {
+ font-family: 'Montserrat', sans-serif;
+ font-size: 10.5px;
+ font-weight: 500;
+ letter-spacing: 5.5px;
+ text-transform: uppercase;
+ color: #C9A961;
+ margin-bottom: 14px;
+ }
 
-        .title {
-            font-family: 'Cormorant Garamond', serif;
-            font-size: 68px;
-            font-weight: 300;
-            line-height: 1;
-            color: #2B2D42;
-            letter-spacing: 2px;
-            margin-bottom: 8px;
-        }
-        .title em {
-            font-style: italic;
-            font-size: 52px;
-            color: #C9A961;
-            display: block;
-            margin-top: 4px;
-        }
+ .title {
+ font-family: 'Cormorant Garamond', serif;
+ font-size: 68px;
+ font-weight: 300;
+ line-height: 1;
+ color: #2B2D42;
+ letter-spacing: 2px;
+ margin-bottom: 8px;
+ }
+ .title em {
+ font-style: italic;
+ font-size: 52px;
+ color: #C9A961;
+ display: block;
+ margin-top: 4px;
+ }
 
-        .body-text {
-            font-family: 'Montserrat', sans-serif;
-            font-size: 12px;
-            font-weight: 300;
-            line-height: 2;
-            color: #8D8D8D;
-            max-width: 560px;
-            margin: 24px 0 32px;
-        }
+ .body-text {
+ font-family: 'Montserrat', sans-serif;
+ font-size: 12px;
+ font-weight: 300;
+ line-height: 2;
+ color: #8D8D8D;
+ max-width: 560px;
+ margin: 24px 0 32px;
+ }
 
-        .details-row {
-            display: flex;
-            gap: 50px;
-            margin-bottom: 36px;
-        }
-        .detail {
-            text-align: center;
-        }
-        .detail-value {
-            font-family: 'Cormorant Garamond', serif;
-            font-size: 32px;
-            font-weight: 400;
-            color: #2B2D42;
-            display: block;
-        }
-        .detail-label {
-            font-family: 'Montserrat', sans-serif;
-            font-size: 9.5px;
-            letter-spacing: 3px;
-            text-transform: uppercase;
-            color: #aaa;
-        }
+ .details-row {
+ display: flex;
+ gap: 50px;
+ margin-bottom: 36px;
+ }
+ .detail {
+ text-align: center;
+ }
+ .detail-value {
+ font-family: 'Cormorant Garamond', serif;
+ font-size: 32px;
+ font-weight: 400;
+ color: #2B2D42;
+ display: block;
+ }
+ .detail-label {
+ font-family: 'Montserrat', sans-serif;
+ font-size: 9.5px;
+ letter-spacing: 3px;
+ text-transform: uppercase;
+ color: #aaa;
+ }
 
-        .price-row {
-            display: flex;
-            align-items: baseline;
-            gap: 8px;
-            margin-bottom: 36px;
-        }
-        .price-from-label {
-            font-family: 'Montserrat', sans-serif;
-            font-size: 11px;
-            letter-spacing: 3px;
-            text-transform: uppercase;
-            color: #aaa;
-        }
-        .price-val {
-            font-family: 'Cormorant Garamond', serif;
-            font-size: 52px;
-            font-weight: 300;
-            color: #C9A961;
-        }
+ .price-row {
+ display: flex;
+ align-items: baseline;
+ gap: 8px;
+ margin-bottom: 36px;
+ }
+ .price-from-label {
+ font-family: 'Montserrat', sans-serif;
+ font-size: 11px;
+ letter-spacing: 3px;
+ text-transform: uppercase;
+ color: #aaa;
+ }
+ .price-val {
+ font-family: 'Cormorant Garamond', serif;
+ font-size: 52px;
+ font-weight: 300;
+ color: #C9A961;
+ }
 
-        .url-footer {
-            font-family: 'Montserrat', sans-serif;
-            font-size: 11px;
-            letter-spacing: 3.5px;
-            text-transform: uppercase;
-            color: #bbb;
-        }
+ .url-footer {
+ font-family: 'Montserrat', sans-serif;
+ font-size: 11px;
+ letter-spacing: 3.5px;
+ text-transform: uppercase;
+ color: #bbb;
+ }
 
-        /* Border on photo */
-        .photo-border-top {
-            position: absolute;
-            top: 0; left: 0; right: 0;
-            height: 5px;
-            background: linear-gradient(90deg, transparent, #C9A961, transparent);
-            z-index: 5;
-        }
-        .photo-border-sides-l,
-        .photo-border-sides-r {
-            position: absolute;
-            top: 0; bottom: -5px;
-            width: 5px;
-            background: linear-gradient(180deg, #C9A961, transparent);
-            z-index: 5;
-        }
-        .photo-border-sides-l { left: 0; }
-        .photo-border-sides-r { right: 0; }
-    </style>
+ /* Border on photo */
+ .photo-border-top {
+ position: absolute;
+ top: 0; left: 0; right: 0;
+ height: 5px;
+ background: linear-gradient(90deg, transparent, #C9A961, transparent);
+ z-index: 5;
+ }
+ .photo-border-sides-l,
+ .photo-border-sides-r {
+ position: absolute;
+ top: 0; bottom: -5px;
+ width: 5px;
+ background: linear-gradient(180deg, #C9A961, transparent);
+ z-index: 5;
+ }
+ .photo-border-sides-l { left: 0; }
+ .photo-border-sides-r { right: 0; }
+ </style>
 </head>
 <body>
 <div class="poster">
 
-    <div class="photo-zone">
-        <div class="photo-border-top"></div>
-        <div class="photo-border-sides-l"></div>
-        <div class="photo-border-sides-r"></div>
-        <img src="../images/pear-necklace.PNG" alt="Pear Diamond Necklace">
-    </div>
+ <div class="photo-zone">
+ <div class="photo-border-top"></div>
+ <div class="photo-border-sides-l"></div>
+ <div class="photo-border-sides-r"></div>
+ <img src="../images/pear-necklace.PNG" alt="Pear Diamond Necklace">
+ </div>
 
-    <div class="gold-strip"></div>
+ <div class="gold-strip"></div>
 
-    <div class="content-zone">
-        <div class="logo-area">
-            <img src="../images/logo-mcd.jpg" alt="Manx Crown Diamonds">
-        </div>
+ <div class="content-zone">
+ <div class="logo-area">
+ <img src="../images/logo-mcd.jpg" alt="Manx Crown Diamonds">
+ </div>
 
-        <div class="rule">
-            <div class="rule-line"></div>
-            <span class="rule-diamond">◆</span>
-            <div class="rule-line"></div>
-        </div>
+ <div class="rule">
+ <div class="rule-line"></div>
+ <span class="rule-diamond">◆</span>
+ <div class="rule-line"></div>
+ </div>
 
-        <p class="eyebrow">Pear Cut Diamond</p>
-        <h1 class="title">
-            The Pear
-            <em>Necklace</em>
-        </h1>
+ <p class="eyebrow">Pear Cut Diamond</p>
+ <h1 class="title">
+ The Pear
+ <em>Necklace</em>
+ </h1>
 
-        <p class="body-text">
-            An elegant pear-cut lab-grown diamond pendant,<br>
-            based on the Isle of Man. Available in your<br>
-            choice of metal, chain length and diamond clarity.
-        </p>
+ <p class="body-text">
+ An elegant pear-cut lab-grown diamond pendant,<br> Available in your<br>
+ choice of metal, chain length and diamond clarity.
+ </p>
 
-        <div class="details-row">
-            <div class="detail">
-                <span class="detail-value">IGI</span>
-                <span class="detail-label">Certified</span>
-            </div>
-            <div class="detail">
-                <span class="detail-value">18K</span>
-                <span class="detail-label">Gold Options</span>
-            </div>
-            <div class="detail">
-                <span class="detail-value">3–5w</span>
-                <span class="detail-label">Delivery</span>
-            </div>
-        </div>
+ <div class="details-row">
+ <div class="detail">
+ <span class="detail-value">IGI</span>
+ <span class="detail-label">Certified</span>
+ </div>
+ <div class="detail">
+ <span class="detail-value">18K</span>
+ <span class="detail-label">Gold Options</span>
+ </div>
+ <div class="detail">
+ <span class="detail-value">3–5w</span>
+ <span class="detail-label">Delivery</span>
+ </div>
+ </div>
 
-        <div class="price-row">
-            <span class="price-from-label">From</span>
-            <span class="price-val">£950</span>
-        </div>
+ <div class="price-row">
+ <span class="price-from-label">From</span>
+ <span class="price-val">£950</span>
+ </div>
 
-        <span class="url-footer">manxcrowndiamonds.com</span>
-    </div>
+ <span class="url-footer">manxcrowndiamonds.com</span>
+ </div>
 
 </div>
 </body>
