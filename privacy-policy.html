@@ -33,9 +33,19 @@
         table th, table td { padding: 12px; border: 1px solid #E0E0E0; text-align: left; font-size: 14px; }
         table th { background: #F8F6F0; font-weight: 600; }
         
-        footer { background: #0A0A0A; color: white; padding: 40px; text-align: center; margin-top: 80px; }
-        footer a { color: #C9A961; text-decoration: none; }
-        footer a:hover { text-decoration: underline; }
+        footer { background: #0A0A0A; color: rgba(255,255,255,0.7); padding: 70px 40px 30px; }
+        .footer-grid { max-width: 1200px; margin: 0 auto 50px; display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 60px; }
+        .footer-brand .logo-img { height: 44px; margin-bottom: 20px; filter: invert(1); mix-blend-mode: screen; }
+        .footer-brand p { font-size: 13px; line-height: 1.8; font-weight: 300; margin-bottom: 24px; }
+        .footer-col h4 { font-family: 'Montserrat', sans-serif; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: #C9A961; margin-bottom: 20px; font-weight: 600; }
+        .footer-col a { display: block; color: rgba(255,255,255,0.6); font-size: 13px; margin-bottom: 12px; transition: color 0.2s; font-weight: 300; text-decoration: none; }
+        .footer-col a:hover { color: #C9A961; }
+        .footer-col address { font-style: normal; font-size: 13px; line-height: 1.8; font-weight: 300; }
+        .footer-bottom { max-width: 1200px; margin: 0 auto; padding-top: 30px; border-top: 1px solid rgba(255,255,255,0.08); display: flex; justify-content: space-between; align-items: center; font-size: 12px; gap: 20px; flex-wrap: wrap; }
+        .footer-bottom a { color: rgba(255,255,255,0.5); transition: color 0.2s; text-decoration: none; }
+        .footer-bottom a:hover { color: #C9A961; }
+        .footer-legal { display: flex; gap: 24px; }
+        @media (max-width: 768px) { .footer-grid { grid-template-columns: 1fr 1fr; gap: 30px; } }
         
         @media (max-width: 768px) {
             h1 { font-size: 36px; }
@@ -364,13 +374,42 @@ function closeMobileNav(){document.getElementById('mobileNav').classList.remove(
         <h2>15. Consent to This Policy</h2>
         <p>By using ou
     <footer>
-        <p style="color: #C9A961; margin-bottom: 15px; font-size: 16px;">Manx Crown Diamonds</p>
-        <p style="color: #999; margin-bottom: 20px;"><a href="mailto:andy@manxcrowndiamonds.com">andy@manxcrowndiamonds.com</a> | +44 7624 368505</p>
-        <p style="margin-bottom: 20px;">
-            <a href="terms.html">Terms &amp; Conditions</a> | 
-            <a href="privacy-policy.html">Privacy Policy</a>
-        </p>
-        <p style="color: #666;">&copy; 2025 Manx Crown Diamonds. All rights reserved.</p>
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <img src="images/logo-mcd.jpg" alt="Manx Crown Diamonds" class="logo-img">
+                <p>Luxury bespoke jewellery handcrafted on the Isle of Man. Specialists in certified diamonds, engagement rings, and one-of-a-kind commissions.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Collections</h4>
+                <a href="diamond-rings.html">Rings</a>
+                <a href="website/earrings.html">Earrings</a>
+                <a href="website/bracelets.html">Bracelets</a>
+                <a href="website/necklaces.html">Necklaces</a>
+                <a href="watches.html">Watches</a>
+            </div>
+            <div class="footer-col">
+                <h4>About</h4>
+                <a href="website/about.html">Our Story</a>
+                <a href="bespoke-request.html">Bespoke Service</a>
+                <a href="website/services.html">Services</a>
+                <a href="website/contact.html">Contact Us</a>
+            </div>
+            <div class="footer-col">
+                <h4>Contact</h4>
+                <address>
+                    Isle of Man<br><br>
+                    <a href="mailto:andy@manxcrowndiamonds.com">andy@manxcrowndiamonds.com</a><br>
+                    <a href="tel:+447624368505">+44 7624 368505</a>
+                </address>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2025 Manx Crown Diamonds. All rights reserved.</p>
+            <div class="footer-legal">
+                <a href="terms.html">Terms &amp; Conditions</a>
+                <a href="privacy-policy.html">Privacy Policy</a>
+            </div>
+        </div>
     </footer>
 </body>
 </html>
