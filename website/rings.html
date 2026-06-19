@@ -9,11 +9,7 @@
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { font-family: 'Montserrat', sans-serif; color: #2B2D42; }
         h1, h2, h3 { font-family: 'Cormorant Garamond', serif; font-weight: 400; }
-        
-        .top-bar { background: #0A0A0A; color: #F8F6F0; padding: 12px 40px; font-size: 13px; display: flex; justify-content: space-between; }
-        .top-bar a { white-space: nowrap; color: #F8F6F0; text-decoration: none; margin-right: 20px; }
-        
-        header { background: white; box-shadow: 0 2px 20px rgba(0,0,0,0.05); position: sticky; top: 0; z-index: 1000; }
+header { background: white; box-shadow: 0 2px 20px rgba(0,0,0,0.05); position: sticky; top: 0; z-index: 1000; }
         .header-content { padding: 25px 40px; display: flex; justify-content: space-between; align-items: center; }
         .logo-image { height: 60px; }
         
@@ -82,25 +78,9 @@
             nav ul { flex-direction: column; gap: 15px; }
             .header-content { flex-direction: column; gap: 20px; }
         }
-    
-        @media (max-width: 768px) {
-            .top-bar { padding: 8px 16px; align-items: flex-start; justify-content: space-between; font-size: 11px; }
-            .top-bar > div:first-child { display: flex; flex-direction: column; gap: 2px; }
-            .top-bar > div:last-child { text-align: right; padding-left: 10px; max-width: 38%; }
-            .top-bar a { margin-right: 0; white-space: nowrap; }
-        }
-        /* mobile-top-bar-fix */
 </style>
 </head>
 <body>
-            <div class="top-bar">
-        <div>
-            <a href="mailto:andy@manxcrowndiamonds.com">andy@manxcrowndiamonds.com</a>
-            <a href="tel:+447624368505" style="white-space:nowrap;">+44 7624 368505</a>
-        </div>
-
-        <div>Isle of Man | IGI &amp; GIA Certified</div>
-    </div>
     
     <header>
         <div class="header-content">

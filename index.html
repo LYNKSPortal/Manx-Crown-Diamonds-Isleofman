@@ -36,29 +36,7 @@
         a { text-decoration: none; }
 
         /* ── TOP BAR ── */
-        .top-bar {
-            background: var(--black);
-            color: var(--cream);
-            font-size: 12px;
-            letter-spacing: 0.5px;
-            padding: 10px 0;
-        }
-        .top-bar-inner {
-            max-width: 1400px;
-            margin: 0 auto;
-            padding: 0 40px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        .top-bar a {
-            color: var(--cream);
-            margin-right: 24px;
-            transition: color 0.2s;
-        }
-        .top-bar a:hover { color: var(--gold); }
-
-        /* ── HEADER ── */
+/* ── HEADER ── */
         header {
             background: #fff;
             position: sticky;
@@ -713,10 +691,7 @@
         }
 
         @media (max-width: 768px) {
-            .top-bar-inner { padding: 0 16px; align-items: center; }
-            .top-bar-inner > div:first-child { display: flex; flex-direction: column; gap: 2px; }
-            .top-bar a { margin-right: 0; }
-            .hero { min-height: 70vh; padding: 60px 24px; }
+.hero { min-height: 70vh; padding: 60px 24px; }
             .section { padding: 70px 24px; }
             .carousel-slide { grid-template-columns: 1fr; min-height: auto; }
             .slide-info { padding: 36px 30px; }
@@ -734,14 +709,6 @@
             .slide-img { height: 280px; }
             .footer-grid { grid-template-columns: 1fr; }
         }
-    
-        @media (max-width: 768px) {
-            .top-bar-inner { padding: 0 16px; align-items: flex-start; justify-content: space-between; font-size: 11px; }
-            .top-bar-inner > div:first-child { display: flex; flex-direction: column; gap: 2px; }
-            .top-bar-inner > div:last-child { text-align: right; padding-left: 10px; max-width: 38%; }
-            .top-bar a { margin-right: 0; white-space: nowrap; }
-        }
-        /* mobile-top-bar-fix */
 </style>
 </head>
 <body>
@@ -761,16 +728,6 @@
     <a href="website/about.html">About</a>
     <a href="website/contact.html">Contact</a>
 </div>
-
-<!-- Top Bar -->
-<div class="top-bar">
-    <div class="top-bar-inner">
-        <div>
-            <a href="mailto:andy@manxcrowndiamonds.com">andy@manxcrowndiamonds.com</a>
-            <a href="tel:+447624368505">+44 7624 368505</a>
-        </div>
-        <div>Isle of Man | IGI &amp; GIA Certified</div>
-    </div>
 </div>
 
 <!-- Header -->

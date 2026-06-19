@@ -24,22 +24,7 @@
         h1, h2, h3 { font-family: 'Cormorant Garamond', serif; font-weight: 400; }
 
         /* Header */
-        .top-bar {
-            background: var(--deep-black);
-            color: var(--cream);
-            padding: 12px 40px;
-            font-size: 13px;
-            display: flex;
-            justify-content: space-between;
-        }
-
-        .top-bar a { white-space: nowrap;
-            color: var(--cream);
-            text-decoration: none;
-            margin-right: 20px;
-        }
-
-        header {
+header {
             background: white;
             box-shadow: 0 2px 20px rgba(0,0,0,0.05);
         }
@@ -304,8 +289,7 @@
             .form-container { padding: 40px 30px; }
             .form-header h2 { font-size: 28px; }
             .info-grid { grid-template-columns: 1fr; gap: 30px; }
-            .top-bar { flex-direction: column; gap: 10px; font-size: 12px; }
-        }
+}
 
         /* File upload */
         .upload-area { border: 2px dashed #C9A961; padding: 35px 20px; text-align: center; cursor: pointer; transition: all 0.3s; background: #fdfcf8; position: relative; }
@@ -346,25 +330,9 @@
         .mobile-nav a { display: block; font-size: 24px; font-family: 'Cormorant Garamond', serif; color: #2B2D42; padding: 14px 0; border-bottom: 1px solid rgba(0,0,0,0.06); text-decoration: none; transition: color 0.2s; }
         .mobile-nav a:hover { color: #C9A961; }
         @media (max-width: 1024px) { nav { display: none; } .mobile-menu-btn { display: block; } }
-    
-        @media (max-width: 768px) {
-            .top-bar { padding: 8px 16px; align-items: flex-start; justify-content: space-between; font-size: 11px; }
-            .top-bar > div:first-child { display: flex; flex-direction: column; gap: 2px; }
-            .top-bar > div:last-child { text-align: right; padding-left: 10px; max-width: 38%; }
-            .top-bar a { margin-right: 0; white-space: nowrap; }
-        }
-        /* mobile-top-bar-fix */
 </style>
 </head>
 <body>
-            <div class="top-bar">
-        <div>
-            <a href="mailto:andy@manxcrowndiamonds.com">andy@manxcrowndiamonds.com</a>
-            <a href="tel:+447624368505" style="white-space:nowrap;">+44 7624 368505</a>
-        </div>
-
-        <div>Isle of Man | IGI &amp; GIA Certified</div>
-    </div>
 
     <div class="mobile-nav" id="mobileNav">
     <div class="mobile-nav-top">
