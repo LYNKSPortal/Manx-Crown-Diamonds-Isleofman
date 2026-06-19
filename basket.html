@@ -66,8 +66,13 @@
         footer a:hover { text-decoration: underline; }
 
         @media (max-width: 768px) {
-            .basket-item { grid-template-columns: 80px 1fr; gap: 15px; }
-            .remove-btn { grid-column: 1 / -1; }
+            .basket-item { grid-template-columns: 100px 1fr; gap: 14px; padding: 16px; align-items: start; }
+            .item-image, .item-image-placeholder { width: 100px; height: 100px; }
+            .item-name { font-size: 15px; margin-bottom: 4px; }
+            .item-config { font-size: 12px; margin-bottom: 8px; }
+            .item-price { font-size: 17px; }
+            .remove-btn { font-size: 11px; }
+            .remove-btn { grid-column: 2; }
             .top-bar, .header-content, .page-header, .basket-container { padding-left: 20px; padding-right: 20px; }
         }
             /* ── HEADER NAV ── */
