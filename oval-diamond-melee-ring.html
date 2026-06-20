@@ -363,7 +363,7 @@ function closeMobileNav(){document.getElementById('mobileNav').classList.remove(
  ];
  let config = { metal: '18k-white', metalPrice: 0, metalDisplay: '18K White Gold', carat: 1.0, diamondPrice: 0, clarity: 'VS2', clarityPrice: 0, size: '' };
  let basePrice = 1750;
- const CLARITY_PCTS = { 'VS2': 0, 'VS1': 0.025, 'VVS2': 0.035, 'VVS1': 0.05 };
+ const CLARITY_PCTS = { 'VS2': 0, 'VS1': 0.005, 'VVS2': 0.01, 'VVS1': 0.015 };
 
  function updateClarityPrices() {
  const subTotal = basePrice + config.metalPrice + (config.caratPrice || 0) + (config.diamondPrice || 0);
