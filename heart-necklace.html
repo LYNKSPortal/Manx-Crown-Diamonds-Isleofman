@@ -173,8 +173,8 @@
  <!-- Config Column -->
  <div>
  <h1 class="product-title">Silver Heart Necklace</h1>
- <div class="product-price" id="totalPrice">£230</div>
- <p class="product-description">A beautifully crafted heart pendant set with moissanite stones in sterling silver A romantic and timeless piece, perfect as a gift or for yourself. Moissanite offers exceptional brilliance and fire — a stunning and accessible alternative to diamond. Choose your preferred chain length to complete the piece.</p>
+ <div class="product-price" id="totalPrice">£90</div>
+ <p class="product-description">A beautifully crafted heart pendant set with moissanite stones in sterling silver A romantic and timeless piece, perfect as a gift or for yourself. Moissanite offers exceptional brilliance and fire — a stunning and accessible alternative to diamond. Supplied on a 50cm sterling silver chain.</p>
 
  <label class="config-label">Select Metal</label>
  <div class="config-options" id="metalOptions">
@@ -187,13 +187,7 @@
  <div class="config-option" data-metal="18k-rose" onclick="selectMetal(this)">18K Rose Gold</div>
  </div>
 
- <label class="config-label">Chain Length</label>
- <select class="size-select" id="lengthSelect" onchange="selectLength(this.value)">
- <option value="">— Please select a length —</option>
- <option value="44 cm">44 cm — Standard</option>
- <option value="47 cm">47 cm — Long</option>
- <option value="50 cm">50 cm — Extra Long</option>
- </select>
+ <p style="font-size:13px;color:#8D8D8D;margin-bottom:20px;">Chain length: 50cm (standard)</p>
 
  <div class="product-actions">
  <button class="btn btn-primary" onclick="addToBasket()">Add to Basket</button>
@@ -213,7 +207,7 @@
 
  <script>
  const PRICES = {
- 'silver': { '44 cm': 230, '47 cm': 255, '50 cm': 280 },
+ 'silver': { '44 cm': 90, '47 cm': 90, '50 cm': 90 },
  '9k-white': { '44 cm': 800, '47 cm': 850, '50 cm': 900 },
  '9k-yellow': { '44 cm': 800, '47 cm': 850, '50 cm': 900 },
  '9k-rose': { '44 cm': 800, '47 cm': 850, '50 cm': 900 },
@@ -227,7 +221,7 @@
  'images/Heart-necklace2.JPG',
  'images/Heart-necklace3.JPG'
  ];
- let config = { metal: 'Silver', metalKey: 'silver', length: '' };
+ let config = { metal: 'Silver', metalKey: 'silver', length: '50 cm' };
 
  function changeImage(index) {
  document.getElementById('mainImage').src = images[index];
