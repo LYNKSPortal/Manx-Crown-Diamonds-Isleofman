@@ -313,5 +313,39 @@ function closeMobileNav(){document.getElementById('mobileNav').classList.remove(
  </div>
  </div>
 
+
+<!-- Mobile sticky price bar -->
+<div id="mobileStickyBar" style="display:none;position:fixed;bottom:0;left:0;right:0;z-index:999;background:#fff;border-top:1px solid rgba(201,169,97,0.3);padding:12px 20px;align-items:center;justify-content:space-between;box-shadow:0 -4px 20px rgba(0,0,0,0.1);">
+  <div>
+    <div style="font-size:11px;letter-spacing:1px;text-transform:uppercase;color:#999;font-family:'Montserrat',sans-serif;">Price</div>
+    <div id="stickyPrice" style="font-family:'Cormorant Garamond',serif;font-size:24px;color:#C9A961;"></div>
+  </div>
+  <button onclick="addToBasket()" style="background:#C9A961;color:#fff;border:none;padding:14px 28px;font-family:'Montserrat',sans-serif;font-size:12px;letter-spacing:1.5px;text-transform:uppercase;cursor:pointer;">Add to Basket</button>
+</div>
+<script>
+(function(){
+  var bar = document.getElementById('mobileStickyBar');
+  var stickyPrice = document.getElementById('stickyPrice');
+  var mainPrice = document.querySelector('.product-price');
+  if(!bar || !mainPrice) return;
+
+  function updateStickyPrice(){
+    if(stickyPrice) stickyPrice.textContent = mainPrice.textContent;
+  }
+  updateStickyPrice();
+
+  var obs = new MutationObserver(updateStickyPrice);
+  obs.observe(mainPrice, {childList:true, characterData:true, subtree:true});
+
+  function checkVisibility(){
+    if(window.innerWidth > 768){ bar.style.display='none'; return; }
+    var rect = mainPrice.getBoundingClientRect();
+    bar.style.display = rect.bottom < 0 ? 'flex' : 'none';
+  }
+  window.addEventListener('scroll', checkVisibility, {passive:true});
+  window.addEventListener('resize', checkVisibility, {passive:true});
+  checkVisibility();
+})();
+</script>
 </body>
 </html>
