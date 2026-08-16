@@ -393,10 +393,10 @@ function closeMobileNav(){document.getElementById('mobileNav').classList.remove(
  },
  body: JSON.stringify({
  checkout_reference: orderRef,
- amount: total,
+ amount: parseFloat(total.toFixed(2)),
  currency: 'GBP',
  description: `Manx Crown Diamonds — ${orderRef}`,
- return_url: `https://www.manxcrowndiamonds.com/success.html?ref=${orderRef}`
+ redirect_url: `https://www.manxcrowndiamonds.com/success.html?ref=${orderRef}`
  })
  });
 
@@ -407,6 +407,8 @@ function closeMobileNav(){document.getElementById('mobileNav').classList.remove(
 
  const data = await res.json();
  checkoutId = data.id;
+ errorEl.textContent = 'Debug: id=' + checkoutId + ' status=' + data.status;
+ errorEl.style.display = 'block';
  } catch (e) {
  const msg = (e && e.message) ? e.message : String(e);
  alert('SumUp error: ' + msg);
