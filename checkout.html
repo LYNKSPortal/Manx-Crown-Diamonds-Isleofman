@@ -281,23 +281,10 @@ function closeMobileNav(){document.getElementById('mobileNav').classList.remove(
  </div>
 
  <div class="payment-section">
- <h2 class="section-title">How Payment Works</h2>
- <div style="display:flex;flex-direction:column;gap:0;margin-bottom:24px;">
- <div style="display:flex;align-items:flex-start;gap:14px;padding:16px 20px;background:var(--cream);border:1px solid rgba(201,169,97,0.15);">
- <span style="color:#C9A961;font-size:18px;flex-shrink:0;margin-top:1px;">①</span>
- <p style="font-size:13px;color:#555;line-height:1.7;">Place your order by filling in your details above and clicking <strong style="color:var(--dark-navy);">Place Order</strong> below.</p>
- </div>
- <div style="display:flex;align-items:flex-start;gap:14px;padding:16px 20px;background:white;border:1px solid rgba(201,169,97,0.15);border-top:none;">
- <span style="color:#C9A961;font-size:18px;flex-shrink:0;margin-top:1px;">②</span>
- <p style="font-size:13px;color:#555;line-height:1.7;">We will be in touch <strong style="color:var(--dark-navy);">within 24 hours</strong> by email with bank transfer payment details.</p>
- </div>
- <div style="display:flex;align-items:flex-start;gap:14px;padding:16px 20px;background:var(--cream);border:1px solid rgba(201,169,97,0.15);border-top:none;">
- <span style="color:#C9A961;font-size:18px;flex-shrink:0;margin-top:1px;">③</span>
- <p style="font-size:13px;color:#555;line-height:1.7;">Once payment is received your order goes into production. <strong style="color:var(--dark-navy);">Safe, simple, and no card fees.</strong></p>
- </div>
- </div>
- <p style="font-size:12px;color:#aaa;margin-bottom:18px;letter-spacing:0.5px;">&#128274;&nbsp; Secure Bank Transfer &nbsp;&bull;&nbsp; No Card Fees &nbsp;&bull;&nbsp; Isle of Man</p>
- <button class="btn-place-order" id="placeBtn" onclick="placeOrder()">Place Order &#8594;</button>
+ <h2 class="section-title">Secure Payment</h2>
+ <p style="font-size:13px;color:#555;line-height:1.7;margin-bottom:24px;">Fill in your details above and click <strong style="color:var(--dark-navy);">Pay Now</strong>. You will be taken to a secure SumUp payment page to complete your purchase by card. Once payment is confirmed your order goes straight into production.</p>
+ <p style="font-size:12px;color:#aaa;margin-bottom:18px;letter-spacing:0.5px;">&#128274;&nbsp; Secured by SumUp &nbsp;&bull;&nbsp; Visa &bull; Mastercard &bull; Amex &nbsp;&bull;&nbsp; 256-bit SSL</p>
+ <button class="btn-place-order" id="placeBtn" onclick="placeOrder()">Pay Now &#8594;</button>
  <p id="orderError" style="display:none;color:#c0392b;font-size:13px;margin-top:12px;text-align:center;"></p>
  </div>
  </div>
@@ -342,7 +329,7 @@ function closeMobileNav(){document.getElementById('mobileNav').classList.remove(
  return;
  }
 
- placeBtn.textContent = 'Placing order\u2026';
+ placeBtn.textContent = 'Redirecting to payment…';
  placeBtn.disabled = true;
 
  const phone = document.getElementById('phone').value.trim();
@@ -351,40 +338,47 @@ function closeMobileNav(){document.getElementById('mobileNav').classList.remove(
  const itemList = basket.map(i => `${i.name} — ${i.priceText}${i.configText ? ' (' + i.configText + ')' : ''}`).join('\n');
  const orderRef = 'MCD-' + Date.now().toString(36).toUpperCase().slice(-6);
 
- // Send order notification email to Andy
- try {
- const fd = new FormData();
- fd.append('_subject', `New Order ${orderRef} — ${firstName} ${lastName} — £${total.toLocaleString()}`);
- fd.append('Order Ref', orderRef);
- fd.append('Name', `${firstName} ${lastName}`);
- fd.append('Email', email);
- fd.append('Phone', phone || 'Not provided');
- fd.append('Address', address);
- fd.append('Items', itemList);
- fd.append('Total', `£${total.toLocaleString()}`);
- fd.append('Notes', notes || 'None');
- fd.append('_template', 'table');
- fd.append('_replyto', email);
+ // Save order details so success.html can retrieve them after SumUp redirect
+ localStorage.setItem('mcdPendingOrder', JSON.stringify({
+ orderRef, firstName, lastName, email, phone, address, notes,
+ total, itemList, basket
+ }));
 
- await fetch('https://formsubmit.co/ajax/andy@manxcrowndiamonds.com', {
+ // Create SumUp hosted checkout
+ let checkoutId;
+ try {
+ const res = await fetch('https://api.sumup.com/v0.1/checkouts', {
  method: 'POST',
- body: fd
+ headers: {
+ 'Authorization': 'Bearer sup_pk_qZxWv5wB1MJAfnkfgvTXVCijMSK5LpdoR',
+ 'Content-Type': 'application/json'
+ },
+ body: JSON.stringify({
+ checkout_reference: orderRef,
+ amount: total,
+ currency: 'GBP',
+ description: `Manx Crown Diamonds — ${orderRef}`,
+ return_url: `https://www.manxcrowndiamonds.com/success.html?ref=${orderRef}`
+ })
  });
- } catch (e) {
- // Silent fail — still show confirmation
+
+ if (!res.ok) {
+ const err = await res.json().catch(() => ({}));
+ throw new Error(err.message || `SumUp error ${res.status}`);
  }
 
- // Clear basket
- localStorage.removeItem('mcdBasket');
+ const data = await res.json();
+ checkoutId = data.id;
+ } catch (e) {
+ errorEl.textContent = 'Payment could not be started. Please try again or contact us directly.';
+ errorEl.style.display = 'block';
+ placeBtn.textContent = 'Pay Now →';
+ placeBtn.disabled = false;
+ return;
+ }
 
- // Show confirmation overlay
- document.getElementById('confirmName').textContent = firstName;
- document.getElementById('confirmEmail').textContent = email;
- document.getElementById('confirmRef').textContent = orderRef;
- document.getElementById('confirmTotal').textContent = `£${total.toLocaleString()}`;
- const overlay = document.getElementById('orderConfirm');
- overlay.style.display = 'flex';
- document.body.style.overflow = 'hidden';
+ // Redirect to SumUp hosted payment page
+ window.location.href = `https://checkout.sumup.com/pay/${checkoutId}`;
  }
  </script>
 </body>
