@@ -409,7 +409,7 @@ function closeMobileNav(){document.getElementById('mobileNav').classList.remove(
  const data = await res.json();
  checkoutId = data.id;
  } catch (e) {
- errorEl.textContent = 'Payment could not be started. Please try again or contact us directly.';
+ errorEl.textContent = 'Error: ' + (e && e.message ? e.message : String(e));
  errorEl.style.display = 'block';
  placeBtn.textContent = 'Pay Now →';
  placeBtn.disabled = false;
