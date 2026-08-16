@@ -409,7 +409,9 @@ function closeMobileNav(){document.getElementById('mobileNav').classList.remove(
  const data = await res.json();
  checkoutId = data.id;
  } catch (e) {
- errorEl.textContent = 'Error: ' + (e && e.message ? e.message : String(e));
+ const msg = (e && e.message) ? e.message : String(e);
+ alert('SumUp error: ' + msg);
+ errorEl.textContent = msg || 'Unknown error';
  errorEl.style.display = 'block';
  placeBtn.textContent = 'Pay Now →';
  placeBtn.disabled = false;
