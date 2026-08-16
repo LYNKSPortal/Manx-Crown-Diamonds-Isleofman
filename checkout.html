@@ -386,10 +386,9 @@ function closeMobileNav(){document.getElementById('mobileNav').classList.remove(
  // Create SumUp hosted checkout
  let checkoutId;
  try {
- const res = await fetch('https://api.sumup.com/v0.1/checkouts', {
+ const res = await fetch('https://mcd-sumup.andrewasbridge1.workers.dev', {
  method: 'POST',
  headers: {
- 'Authorization': 'Bearer sup_pk_qZxWv5wB1MJAfnkfgvTXVCijMSK5LpdoR',
  'Content-Type': 'application/json'
  },
  body: JSON.stringify({
