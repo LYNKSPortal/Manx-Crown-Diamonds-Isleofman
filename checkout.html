@@ -272,8 +272,42 @@ function closeMobileNav(){document.getElementById('mobileNav').classList.remove(
  <input type="tel" id="phone" placeholder="+44 7700 900000">
  </div>
  <div class="form-group">
- <label>Delivery Address *</label>
- <textarea id="address" placeholder="Street address, city, postcode, country" required></textarea>
+ <label>Street Address *</label>
+ <textarea id="address" placeholder="House number and street name" required style="min-height:70px;"></textarea>
+ </div>
+ <div class="form-row">
+ <div class="form-group">
+ <label>City *</label>
+ <input type="text" id="city" placeholder="Douglas" required>
+ </div>
+ <div class="form-group">
+ <label>Postcode *</label>
+ <input type="text" id="postcode" placeholder="IM1 1AA" required>
+ </div>
+ </div>
+ <div class="form-group">
+ <label>Country *</label>
+ <select id="country" required>
+ <option value="">Select country...</option>
+ <option value="Isle of Man">Isle of Man</option>
+ <option value="United Kingdom">United Kingdom</option>
+ <option value="Ireland">Ireland</option>
+ <option value="United States">United States</option>
+ <option value="Canada">Canada</option>
+ <option value="Australia">Australia</option>
+ <option value="New Zealand">New Zealand</option>
+ <option value="France">France</option>
+ <option value="Germany">Germany</option>
+ <option value="Spain">Spain</option>
+ <option value="Italy">Italy</option>
+ <option value="Netherlands">Netherlands</option>
+ <option value="Belgium">Belgium</option>
+ <option value="Switzerland">Switzerland</option>
+ <option value="Sweden">Sweden</option>
+ <option value="Norway">Norway</option>
+ <option value="Denmark">Denmark</option>
+ <option value="Other">Other</option>
+ </select>
  </div>
  <div class="form-group">
  <label>Order Notes (optional)</label>
@@ -318,7 +352,11 @@ function closeMobileNav(){document.getElementById('mobileNav').classList.remove(
 
  errorEl.style.display = 'none';
 
- if (!firstName || !lastName || !email || !address) {
+ const city = document.getElementById('city').value.trim();
+ const postcode = document.getElementById('postcode').value.trim();
+ const country = document.getElementById('country').value.trim();
+
+ if (!firstName || !lastName || !email || !address || !city || !postcode || !country) {
  errorEl.textContent = 'Please fill in all required fields.';
  errorEl.style.display = 'block';
  return;
@@ -340,7 +378,8 @@ function closeMobileNav(){document.getElementById('mobileNav').classList.remove(
 
  // Save order details so success.html can retrieve them after SumUp redirect
  localStorage.setItem('mcdPendingOrder', JSON.stringify({
- orderRef, firstName, lastName, email, phone, address, notes,
+ orderRef, firstName, lastName, email, phone,
+ address, city, postcode, country, notes,
  total, itemList, basket
  }));
 
