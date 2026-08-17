@@ -318,6 +318,39 @@ function closeMobileNav(){document.getElementById('mobileNav').classList.remove(
  <div class="payment-section">
  <h2 class="section-title">Secure Payment</h2>
  <p style="font-size:13px;color:#555;line-height:1.7;margin-bottom:24px;">Fill in your details above and click <strong style="color:var(--dark-navy);">Pay Now</strong>. Enter your card details securely to complete your purchase. Once payment is confirmed your order goes straight into production.</p>
+ <!-- Trust badges -->
+ <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:24px;">
+   <div style="border:1px solid rgba(201,169,97,0.2);padding:14px 10px;text-align:center;background:#fafafa;">
+     <div style="font-size:22px;margin-bottom:6px;">🔒</div>
+     <div style="font-family:'Montserrat',sans-serif;font-size:10px;letter-spacing:1px;text-transform:uppercase;color:#2B2D42;font-weight:600;">256-bit SSL</div>
+     <div style="font-family:'Montserrat',sans-serif;font-size:10px;color:#999;margin-top:2px;">Secure checkout</div>
+   </div>
+   <div style="border:1px solid rgba(201,169,97,0.2);padding:14px 10px;text-align:center;background:#fafafa;">
+     <div style="font-size:22px;margin-bottom:6px;">💎</div>
+     <div style="font-family:'Montserrat',sans-serif;font-size:10px;letter-spacing:1px;text-transform:uppercase;color:#2B2D42;font-weight:600;">IGI Certified</div>
+     <div style="font-family:'Montserrat',sans-serif;font-size:10px;color:#999;margin-top:2px;">Authenticated diamonds</div>
+   </div>
+   <div style="border:1px solid rgba(201,169,97,0.2);padding:14px 10px;text-align:center;background:#fafafa;">
+     <div style="font-size:22px;margin-bottom:6px;">🏝️</div>
+     <div style="font-family:'Montserrat',sans-serif;font-size:10px;letter-spacing:1px;text-transform:uppercase;color:#2B2D42;font-weight:600;">Isle of Man</div>
+     <div style="font-family:'Montserrat',sans-serif;font-size:10px;color:#999;margin-top:2px;">Co. No. 137799C</div>
+   </div>
+   <div style="border:1px solid rgba(201,169,97,0.2);padding:14px 10px;text-align:center;background:#fafafa;">
+     <div style="font-size:22px;margin-bottom:6px;">↩️</div>
+     <div style="font-family:'Montserrat',sans-serif;font-size:10px;letter-spacing:1px;text-transform:uppercase;color:#2B2D42;font-weight:600;">30-Day Returns</div>
+     <div style="font-family:'Montserrat',sans-serif;font-size:10px;color:#999;margin-top:2px;">Hassle-free policy</div>
+   </div>
+   <div style="border:1px solid rgba(201,169,97,0.2);padding:14px 10px;text-align:center;background:#fafafa;">
+     <div style="font-size:22px;margin-bottom:6px;">📦</div>
+     <div style="font-family:'Montserrat',sans-serif;font-size:10px;letter-spacing:1px;text-transform:uppercase;color:#2B2D42;font-weight:600;">Free Insured</div>
+     <div style="font-family:'Montserrat',sans-serif;font-size:10px;color:#999;margin-top:2px;">Tracked delivery</div>
+   </div>
+   <div style="border:1px solid rgba(201,169,97,0.2);padding:14px 10px;text-align:center;background:#fafafa;">
+     <div style="font-size:22px;margin-bottom:6px;">⭐</div>
+     <div style="font-family:'Montserrat',sans-serif;font-size:10px;letter-spacing:1px;text-transform:uppercase;color:#2B2D42;font-weight:600;">Handcrafted</div>
+     <div style="font-family:'Montserrat',sans-serif;font-size:10px;color:#999;margin-top:2px;">Made to order</div>
+   </div>
+ </div>
  <p style="font-size:12px;color:#aaa;margin-bottom:18px;letter-spacing:0.5px;">&#128274;&nbsp; Secured by SumUp &nbsp;&bull;&nbsp; Visa &bull; Mastercard &bull; Amex &nbsp;&bull;&nbsp; 256-bit SSL</p>
  <button class="btn-place-order" id="placeBtn" onclick="placeOrder()">Pay Now &#8594;</button>
  <p id="orderError" style="display:none;color:#c0392b;font-size:13px;margin-top:12px;text-align:center;"></p>
