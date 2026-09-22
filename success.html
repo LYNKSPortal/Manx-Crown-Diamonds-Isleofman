@@ -121,6 +121,17 @@ header { background: #fff; box-shadow: 0 1px 0 rgba(0,0,0,0.08); }
 
  <script>
  var order = JSON.parse(localStorage.getItem('mcdPendingOrder') || 'null');
+
+ // Guard: if no real order exists, this page was accessed directly — do nothing
+ if (!order || !order.orderRef || !order.email || !order.total) {
+   document.querySelector('.success-card h1').textContent = 'Page Not Found';
+   document.querySelector('.subtitle').textContent = 'This page is only accessible after completing a purchase.';
+   document.querySelector('.order-items').style.display = 'none';
+   document.querySelector('.info-boxes').style.display = 'none';
+   document.querySelectorAll('.btn-home, .btn-secondary').forEach(function(b){ b.style.display='none'; });
+   // Don't send any emails
+ } else {
+
  var basket = order ? order.basket : JSON.parse(localStorage.getItem('mcdBasket') || '[]');
  var container = document.getElementById('orderItems');
 
@@ -231,6 +242,7 @@ header { background: #fff; box-shadow: 0 1px 0 rgba(0,0,0,0.08); }
 
  localStorage.removeItem('mcdBasket');
  localStorage.removeItem('mcdPendingOrder');
+ } // end order guard
  </script>
 </body>
 </html>
