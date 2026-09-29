@@ -16,7 +16,7 @@
  <meta http-equiv="Expires" content="0">
  <meta name="format-detection" content="telephone=no">
  <meta name="viewport" content="width=device-width, initial-scale=1.0">
- <title>Melee Diamond Band - Configure Your Ring - Manx Crown Diamonds</title>
+ <title>Melee Diamond Ring - Configure Your Ring - Manx Crown Diamonds</title>
  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
  <style>
  * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -133,10 +133,10 @@
 {
   "@context": "https://schema.org",
   "@type": "Product",
-  "name": "Melee Diamond Band",
+  "name": "Melee Diamond Ring",
   "description": "Oval diamond melee ring — configure your carat, metal and size. IGI & GIA certified. Manx Crown Diamonds, Isle of Man.",
-  "image": "https://www.manxcrowndiamonds.com/images/melee-band.jpg",
-  "url": "https://www.manxcrowndiamonds.com/melee-diamond-band.html",
+  "image": "https://www.manxcrowndiamonds.com/images/melee-diamondring.jpg",
+  "url": "https://www.manxcrowndiamonds.com/melee-diamond-ring.html",
   "brand": {
     "@type": "Brand",
     "name": "Manx Crown Diamonds"
@@ -146,7 +146,7 @@
     "priceCurrency": "GBP",
     "price": "1750",
     "availability": "https://schema.org/InStock",
-    "url": "https://www.manxcrowndiamonds.com/melee-diamond-band.html",
+    "url": "https://www.manxcrowndiamonds.com/melee-diamond-ring.html",
     "seller": {
       "@type": "Organization",
       "name": "Manx Crown Diamonds"
@@ -208,11 +208,11 @@ function closeMobileNav(){document.getElementById('mobileNav').classList.remove(
  <div class="product-detail">
  <!-- Image Column -->
  <div>
- <img id="mainImage" src="images/melee-band.jpg" alt="Melee Diamond Band" class="main-image">
+ <img id="mainImage" src="images/melee-diamondring.jpg" alt="Melee Diamond Ring" class="main-image">
  <div class="thumbnail-grid">
- <img src="images/melee-band.jpg" alt="View 1" class="thumbnail active" onclick="changeImage(0)">
- <img src="images/melee-band2.jpg" alt="View 2" class="thumbnail" onclick="changeImage(1)">
- <img src="images/melee-band3.jpg" alt="View 3" class="thumbnail" onclick="changeImage(2)">
+ <img src="images/melee-diamondring.jpg" alt="View 1" class="thumbnail active" onclick="changeImage(0)">
+ <img src="images/melee-diamondring2.jpg" alt="View 2" class="thumbnail" onclick="changeImage(1)">
+ <img src="images/melee-diamondring3.jpg" alt="View 3" class="thumbnail" onclick="changeImage(2)">
  </div>
  <div style="margin-top: 24px; border-top: 1px solid rgba(201,169,97,0.2); padding-top: 20px; display: flex; flex-direction: column; gap: 12px;">
  <div style="display: flex; align-items: flex-start; gap: 12px;">
@@ -234,7 +234,7 @@ function closeMobileNav(){document.getElementById('mobileNav').classList.remove(
 
  <!-- Config Column -->
  <div>
- <h1 class="product-title">Melee Diamond Band</h1>
+ <h1 class="product-title">Melee Diamond Ring</h1>
  <div class="product-price" id="totalPrice">£3,300</div>
  <p class="product-description">An elegant band of brilliant-cut lab-grown melee diamonds set in your choice of precious metal. IGI certified as standard, this timeless piece delivers continuous diamond sparkle from every angle.</p>
 
@@ -400,9 +400,9 @@ function closeMobileNav(){document.getElementById('mobileNav').classList.remove(
  <script src="js/prices.js"></script>
  <script>
  const images = [
- 'images/melee-band.jpg',
- 'images/melee-band2.jpg',
- 'images/melee-band3.jpg'
+ 'images/melee-diamondring.jpg',
+ 'images/melee-diamondring2.jpg',
+ 'images/melee-diamondring3.jpg'
  ];
  let config = { metal: '18k-white', metalPrice: 0, metalDisplay: '18K White Gold', carat: 1.0, diamondPrice: 0, clarity: 'VS2', clarityPrice: 0, size: '' };
  let basePrice = 1750;
@@ -473,8 +473,8 @@ function closeMobileNav(){document.getElementById('mobileNav').classList.remove(
  }
  function enquireNow() {
  const sizeText = config.size ? `Ring Size: UK ${config.size}` : 'Ring Size: Not yet selected';
- const message = `Hi, I'm interested in the Melee Diamond Band:\n\nMetal: ${config.metalDisplay}\nDiamond: ${config.carat}ct Lab-Grown\n${sizeText}\n\nCould you please provide more details?`;
- window.location.href = `mailto:andy@manxcrowndiamonds.com?subject=Enquiry: Melee Diamond Band&body=${encodeURIComponent(message)}`;
+ const message = `Hi, I'm interested in the Melee Diamond Ring:\n\nMetal: ${config.metalDisplay}\nDiamond: ${config.carat}ct Lab-Grown\n${sizeText}\n\nCould you please provide more details?`;
+ window.location.href = `mailto:andy@manxcrowndiamonds.com?subject=Enquiry: Melee Diamond Ring&body=${encodeURIComponent(message)}`;
  }
 
  function addToBasket() {
@@ -530,7 +530,7 @@ function closeMobileNav(){document.getElementById('mobileNav').classList.remove(
  if (el) { el.textContent = basket.length; el.style.display = basket.length > 0 ? 'flex' : 'none'; }
  }
 
- document.addEventListener('DOMContentLoaded', function() { initFromPrices('melee-diamond-band', function(p) { basePrice = p; }); updateBasketCount(); updateClarityPrices(); updatePrice(); });
+ document.addEventListener('DOMContentLoaded', function() { initFromPrices('melee-diamond-ring', function(p) { basePrice = p; }); updateBasketCount(); updateClarityPrices(); updatePrice(); });
  </script>
 
  <!-- Added to basket confirmation -->
