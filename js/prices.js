@@ -400,6 +400,24 @@ const PRICES = {
         // clarity pricing is percentage-based (VS1: 2.5%, VVS2: 3.5%, VVS1: 5%) — computed dynamically in JS
     },
 
+    'hawaiian-diamond-ring': {
+        base: 1550,
+        metals: {
+            '18k-white':  0,
+            '18k-yellow': 0,
+            '18k-rose':   0,
+            '9k-white':   -300,
+            '9k-yellow':  -300,
+            '9k-rose':    -300,
+            'platinum':   100
+        },
+        carats: {
+            '1.0': 0,    '1.5': 400,  '2.0': 800,
+            '3.0': 1800, '4.0': 2800, '5.0': 3800,
+            '6.0': 4900, '7.0': 6000, '8.0': 7000
+        },
+    },
+
     'diamond-band': {
         base: 1650,
         metals: {
