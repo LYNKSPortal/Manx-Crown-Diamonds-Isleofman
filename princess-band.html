@@ -229,14 +229,6 @@ function closeMobileNav(){document.getElementById('mobileNav').classList.remove(
  <div class="config-option" data-price="100" onclick="selectMetal(this)">Platinum</div>
  </div>
 
- <label class="config-label">Clarity Grade</label>
- <div class="config-options" id="clarityOptions">
- <div class="config-option diamond-option selected" data-clarity="VS2" data-price="0" onclick="selectClarity(this)"><span class="diamond-size">VS2</span><span class="diamond-price">Base</span></div>
- <div class="config-option diamond-option" data-clarity="VS1" data-price="0" onclick="selectClarity(this)"><span class="diamond-size">VS1</span><span class="diamond-price">+£0</span></div>
- <div class="config-option diamond-option" data-clarity="VVS2" data-price="0" onclick="selectClarity(this)"><span class="diamond-size">VVS2</span><span class="diamond-price">+£0</span></div>
- <div class="config-option diamond-option" data-clarity="VVS1" data-price="0" onclick="selectClarity(this)"><span class="diamond-size">VVS1</span><span class="diamond-price">+£0</span></div>
- </div>
-
  <div class="config-label-row"><span class="config-label">Select Ring Size (UK)</span></div>
  <select class="size-select" id="sizeSelect" onchange="selectSize(this.value)">
  <option value="">— Please select a size —</option>
@@ -312,26 +304,8 @@ function closeMobileNav(){document.getElementById('mobileNav').classList.remove(
  'images/princess-band2.jpg',
  'images/princess-band3.jpg'
  ];
- let config = { metal: '18K White Gold', metalPrice: 0, clarity: 'VS2', clarityPrice: 0, size: '' };
+ let config = { metal: '18K White Gold', metalPrice: 0, size: '' };
  let basePrice = 1550;
- const CLARITY_PCTS = { 'VS2': 0, 'VS1': 0.005, 'VVS2': 0.01, 'VVS1': 0.015 };
-
- function updateClarityPrices() {
- const subTotal = basePrice + config.metalPrice + (config.caratPrice || 0) + (config.diamondPrice || 0);
- document.querySelectorAll('#clarityOptions .config-option').forEach(function(el) {
- const grade = el.querySelector('.diamond-size').textContent.trim();
- const pct = CLARITY_PCTS[grade] || 0;
- const addOn = Math.round(subTotal * pct);
- el.dataset.price = addOn;
- const priceSpan = el.querySelector('.diamond-price');
- if (priceSpan) {
- priceSpan.textContent = addOn === 0 ? 'Base' : '+£' + addOn.toLocaleString();
- }
- if (el.classList.contains('selected')) {
- config.clarityPrice = addOn;
- }
- });
- }
 
  function changeImage(index) {
  document.getElementById('mainImage').src = images[index];
@@ -342,26 +316,18 @@ function closeMobileNav(){document.getElementById('mobileNav').classList.remove(
  el.classList.add('selected');
  config.metal = el.textContent.trim();
  config.metalPrice = parseInt(el.dataset.price);
- updateClarityPrices();
- updatePrice();
- }
- function selectClarity(el) {
- document.querySelectorAll('#clarityOptions .config-option').forEach(o => o.classList.remove('selected'));
- el.classList.add('selected');
- config.clarity = el.querySelector('.diamond-size').textContent.trim();
- config.clarityPrice = parseInt(el.dataset.price);
  updatePrice();
  }
  function selectSize(value) {
  config.size = value;
  }
  function updatePrice() {
- const total = basePrice + config.metalPrice + config.clarityPrice;
+ const total = basePrice + config.metalPrice;
  document.getElementById('totalPrice').textContent = '£' + total.toLocaleString();
  }
  function enquireNow() {
  const sizeText = config.size || 'Not yet selected';
- const message = `Hi, I'm interested in the Princess Band:\n\nMetal: ${config.metal}\nClarity Grade: ${config.clarity}\nRing Size: ${sizeText}\n\nCould you please provide more details?`;
+ const message = `Hi, I'm interested in the Princess Band:\n\nMetal: ${config.metal}\nRing Size: ${sizeText}\n\nCould you please provide more details?`;
  window.location.href = `mailto:andy@manxcrowndiamonds.com?subject=Enquiry: Princess Band&body=${encodeURIComponent(message)}`;
  }
  document.getElementById('sizeModal').addEventListener('click', function(e) {
@@ -421,7 +387,7 @@ function closeMobileNav(){document.getElementById('mobileNav').classList.remove(
  if (el) { el.textContent = basket.length; el.style.display = basket.length > 0 ? 'flex' : 'none'; }
  }
 
- document.addEventListener('DOMContentLoaded', function() { initFromPrices('princess-band', function(p) { basePrice = p; }); updateBasketCount(); updateClarityPrices(); updatePrice(); });
+ document.addEventListener('DOMContentLoaded', function() { initFromPrices('princess-band', function(p) { basePrice = p; }); updateBasketCount(); updatePrice(); });
  </script>
 
  <!-- Added to basket confirmation -->
