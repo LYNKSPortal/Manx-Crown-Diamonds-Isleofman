@@ -368,6 +368,19 @@ const PRICES = {
         }
     },
 
+    'wishbone-band': {
+        base: 1250,
+        metals: {
+            '18k-white':  0,
+            '18k-yellow': 0,
+            '18k-rose':   0,
+            '9k-white':   -450,
+            '9k-yellow':  -450,
+            '9k-rose':    -450,
+            'platinum':   0
+        }
+    },
+
     'princess-band': {
         base: 1550,
         metals: {
